@@ -230,7 +230,7 @@ I'm Aaron — based in Orange County, CA. I'm transitioning into data engineerin
 Currently preparing for the **DP-600** and **DP-700** Fabric certifications.
 
 If you have questions about the project or want to connect:
-- [LinkedIn](https://linkedin.com/in/your-profile) *linkedin.com/in/aaronmrogers2 *
+- [LinkedIn](https://linkedin.com/in/aaronmrogers2)
 - [DirectLakeLab](https://directlakelab.com)
 
 ---
