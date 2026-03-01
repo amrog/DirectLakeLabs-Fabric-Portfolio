@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "RetailOps_Bronze_Ingest"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2ff53618-7899-8d4f-414e-4c54b44091cd"
+  }
+}

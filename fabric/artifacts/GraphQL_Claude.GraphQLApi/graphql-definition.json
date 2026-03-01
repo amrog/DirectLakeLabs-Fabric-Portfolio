@@ -1,0 +1,413 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/graphqlApi/definition/1.0.0/schema.json",
+  "datasources": [
+    {
+      "objects": [
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "_batch_id": "_batch_id",
+            "_ingested_at": "_ingested_at",
+            "_source_file": "_source_file",
+            "city": "city",
+            "country": "country",
+            "created_at": "created_at",
+            "customer_id": "customer_id",
+            "email": "email",
+            "first_name": "first_name",
+            "is_active": "is_active",
+            "last_name": "last_name",
+            "loyalty_tier": "loyalty_tier",
+            "phone": "phone",
+            "postal_code": "postal_code",
+            "state": "state",
+            "street": "street"
+          },
+          "graphqlType": "bronze_customers",
+          "relationships": [],
+          "sourceObject": "dbo.bronze_customers",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "_batch_id": "_batch_id",
+            "_ingested_at": "_ingested_at",
+            "_source_file": "_source_file",
+            "created_at": "created_at",
+            "discount_amount": "discount_amount",
+            "order_id": "order_id",
+            "order_item_id": "order_item_id",
+            "product_id": "product_id",
+            "quantity": "quantity",
+            "tax_amount": "tax_amount",
+            "unit_price": "unit_price"
+          },
+          "graphqlType": "bronze_order_items",
+          "relationships": [],
+          "sourceObject": "dbo.bronze_order_items",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "_batch_id": "_batch_id",
+            "_ingested_at": "_ingested_at",
+            "_source_file": "_source_file",
+            "channel": "channel",
+            "customer_id": "customer_id",
+            "order_datetime": "order_datetime",
+            "order_id": "order_id",
+            "order_status": "order_status",
+            "payment_method": "payment_method",
+            "ship_city": "ship_city",
+            "ship_country": "ship_country",
+            "ship_postal_code": "ship_postal_code",
+            "ship_state": "ship_state",
+            "updated_at": "updated_at"
+          },
+          "graphqlType": "bronze_orders",
+          "relationships": [],
+          "sourceObject": "dbo.bronze_orders",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "_batch_id": "_batch_id",
+            "_ingested_at": "_ingested_at",
+            "_source_file": "_source_file",
+            "brand": "brand",
+            "category": "category",
+            "effective_from": "effective_from",
+            "effective_to": "effective_to",
+            "is_discontinued": "is_discontinued",
+            "list_price": "list_price",
+            "product_id": "product_id",
+            "product_name": "product_name",
+            "sku": "sku",
+            "unit_cost": "unit_cost"
+          },
+          "graphqlType": "bronze_products",
+          "relationships": [],
+          "sourceObject": "dbo.bronze_products",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "category": "category",
+            "est_cogs": "est_cogs",
+            "est_gross_profit": "est_gross_profit",
+            "net_sales": "net_sales",
+            "order_date": "order_date",
+            "orders": "orders",
+            "units": "units"
+          },
+          "graphqlType": "gold_category_performance",
+          "relationships": [],
+          "sourceObject": "dbo.gold_category_performance",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "avg_order_value": "avg_order_value",
+            "customer_id": "customer_id",
+            "last_order_datetime": "last_order_datetime",
+            "lifetime_net_sales": "lifetime_net_sales",
+            "lifetime_orders": "lifetime_orders"
+          },
+          "graphqlType": "gold_customer_value",
+          "relationships": [],
+          "sourceObject": "dbo.gold_customer_value",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "cancelled_refunded_net_sales": "cancelled_refunded_net_sales",
+            "channel": "channel",
+            "gross_sales": "gross_sales",
+            "net_sales": "net_sales",
+            "order_date": "order_date",
+            "orders": "orders",
+            "recognized_net_sales": "recognized_net_sales",
+            "tax_amount": "tax_amount"
+          },
+          "graphqlType": "gold_daily_sales",
+          "relationships": [],
+          "sourceObject": "dbo.gold_daily_sales",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "city": "city",
+            "country": "country",
+            "created_at": "created_at",
+            "customer_id": "customer_id",
+            "email": "email",
+            "first_name": "first_name",
+            "is_active": "is_active",
+            "last_name": "last_name",
+            "loyalty_tier": "loyalty_tier",
+            "Order_Bucket": "Order_Bucket",
+            "phone": "phone",
+            "postal_code": "postal_code",
+            "state": "state"
+          },
+          "graphqlType": "gold_dim_customer",
+          "relationships": [],
+          "sourceObject": "dbo.gold_dim_customer",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "date_key": "date_key",
+            "day": "day",
+            "day_name": "day_name",
+            "month": "month",
+            "month_name": "month_name",
+            "quarter": "quarter",
+            "week_of_year": "week_of_year",
+            "year": "year"
+          },
+          "graphqlType": "gold_dim_date",
+          "relationships": [],
+          "sourceObject": "dbo.gold_dim_date",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "brand": "brand",
+            "category": "category",
+            "effective_from": "effective_from",
+            "effective_to": "effective_to",
+            "is_discontinued": "is_discontinued",
+            "list_price": "list_price",
+            "product_id": "product_id",
+            "product_name": "product_name",
+            "sku": "sku",
+            "unit_cost": "unit_cost"
+          },
+          "graphqlType": "gold_dim_product",
+          "relationships": [],
+          "sourceObject": "dbo.gold_dim_product",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "channel": "channel",
+            "customer_id": "customer_id",
+            "discount_amount": "discount_amount",
+            "gross_sales": "gross_sales",
+            "net_sales": "net_sales",
+            "order_date": "order_date",
+            "order_datetime": "order_datetime",
+            "order_id": "order_id",
+            "order_item_id": "order_item_id",
+            "order_status": "order_status",
+            "payment_method": "payment_method",
+            "product_id": "product_id",
+            "quantity": "quantity",
+            "tax_amount": "tax_amount",
+            "unit_price": "unit_price"
+          },
+          "graphqlType": "gold_fact_sales",
+          "relationships": [],
+          "sourceObject": "dbo.gold_fact_sales",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "_batch_id": "_batch_id",
+            "_ingested_at": "_ingested_at",
+            "_source_file": "_source_file",
+            "city": "city",
+            "country": "country",
+            "created_at": "created_at",
+            "customer_id": "customer_id",
+            "email": "email",
+            "first_name": "first_name",
+            "is_active": "is_active",
+            "last_name": "last_name",
+            "loyalty_tier": "loyalty_tier",
+            "phone": "phone",
+            "postal_code": "postal_code",
+            "state": "state",
+            "street": "street"
+          },
+          "graphqlType": "silver_customers",
+          "relationships": [],
+          "sourceObject": "dbo.silver_customers",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "_batch_id": "_batch_id",
+            "_ingested_at": "_ingested_at",
+            "_source_file": "_source_file",
+            "created_at": "created_at",
+            "discount_amount": "discount_amount",
+            "gross_sales": "gross_sales",
+            "net_sales": "net_sales",
+            "order_id": "order_id",
+            "order_item_id": "order_item_id",
+            "product_id": "product_id",
+            "quantity": "quantity",
+            "tax_amount": "tax_amount",
+            "unit_price": "unit_price"
+          },
+          "graphqlType": "silver_order_items",
+          "relationships": [],
+          "sourceObject": "dbo.silver_order_items",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "_batch_id": "_batch_id",
+            "_ingested_at": "_ingested_at",
+            "_source_file": "_source_file",
+            "channel": "channel",
+            "customer_id": "customer_id",
+            "order_datetime": "order_datetime",
+            "order_id": "order_id",
+            "order_status": "order_status",
+            "payment_method": "payment_method",
+            "ship_city": "ship_city",
+            "ship_country": "ship_country",
+            "ship_postal_code": "ship_postal_code",
+            "ship_state": "ship_state",
+            "updated_at": "updated_at"
+          },
+          "graphqlType": "silver_orders",
+          "relationships": [],
+          "sourceObject": "dbo.silver_orders",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "_batch_id": "_batch_id",
+            "_ingested_at": "_ingested_at",
+            "_source_file": "_source_file",
+            "brand": "brand",
+            "category": "category",
+            "effective_from": "effective_from",
+            "effective_to": "effective_to",
+            "is_discontinued": "is_discontinued",
+            "list_price": "list_price",
+            "product_id": "product_id",
+            "product_name": "product_name",
+            "sku": "sku",
+            "unit_cost": "unit_cost"
+          },
+          "graphqlType": "silver_products",
+          "relationships": [],
+          "sourceObject": "dbo.silver_products",
+          "sourceObjectType": "Table"
+        }
+      ],
+      "sourceItemId": "9390985e-62f5-4539-8f3f-3f1d29eaeca5",
+      "sourceType": "SqlAnalyticsEndpoint",
+      "sourceWorkspaceId": "bfb13f36-a445-478e-a53d-9f19dcb161ab"
+    }
+  ]
+}

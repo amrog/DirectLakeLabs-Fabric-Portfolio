@@ -1,0 +1,111 @@
+table gold_dim_product
+	lineageTag: 55714aaf-a0ca-4f73-abac-eeadbe6bcd43
+	sourceLineageTag: [dbo].[gold_dim_product]
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 888317fa-89fb-4f59-839f-afd2e0a0c2f5
+		sourceLineageTag: product_id
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku
+		dataType: string
+		lineageTag: 563304ff-f3d6-484b-b532-a0162fe90f7d
+		sourceLineageTag: sku
+		summarizeBy: none
+		sourceColumn: sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: c6f45989-8af9-4342-8bb0-0b064c7dd873
+		sourceLineageTag: product_name
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: 1d3fedbf-e6af-473e-abc2-b1a4e038e120
+		sourceLineageTag: category
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand
+		dataType: string
+		lineageTag: 07ded74e-21db-4b68-b30f-200ba20e6a1e
+		sourceLineageTag: brand
+		summarizeBy: none
+		sourceColumn: brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_cost
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 70e32588-3ad5-4c47-8888-b7428623ed49
+		sourceLineageTag: unit_cost
+		summarizeBy: none
+		sourceColumn: unit_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column list_price
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 1dcde5d1-2d03-4557-aa18-542b583b9cb5
+		sourceLineageTag: list_price
+		summarizeBy: none
+		sourceColumn: list_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column is_discontinued
+		dataType: int64
+		formatString: 0
+		lineageTag: 86711814-e626-4572-b775-6cbff9be6709
+		sourceLineageTag: is_discontinued
+		summarizeBy: none
+		sourceColumn: is_discontinued
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_from
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1f2a09a2-723c-482c-adf0-a1fd6938732a
+		sourceLineageTag: effective_from
+		summarizeBy: none
+		sourceColumn: effective_from
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_to
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9d4fc7b1-4bdf-49a1-8cbc-c8b051889c53
+		sourceLineageTag: effective_to
+		summarizeBy: none
+		sourceColumn: effective_to
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_dim_product = entity
+		mode: directLake
+		source
+			entityName: gold_dim_product
+			schemaName: dbo
+			expressionSource: 'DirectLake - RetailOps_LH'
+

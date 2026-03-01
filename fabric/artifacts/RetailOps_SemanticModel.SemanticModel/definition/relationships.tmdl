@@ -1,0 +1,12 @@
+relationship ca890215-2439-4a45-5f26-b4423fcb9f5f
+	fromColumn: gold_fact_sales.order_date
+	toColumn: gold_dim_date.date_key
+
+relationship ff0b4049-4942-5094-a39e-c5ded8bc8427
+	fromColumn: gold_fact_sales.customer_id
+	toColumn: gold_dim_customer.customer_id
+
+relationship 0d09e0ea-3fe0-bcf2-452f-25f2247fb80a
+	fromColumn: gold_fact_sales.product_id
+	toColumn: gold_dim_product.product_id
+

@@ -1,0 +1,168 @@
+table gold_fact_sales
+	lineageTag: b1b4173f-fdc3-4c09-a137-aebfeff08174
+	sourceLineageTag: [dbo].[gold_fact_sales]
+
+	column order_item_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8492118c-ec67-4816-8712-75afaaa31aa0
+		sourceLineageTag: order_item_id
+		summarizeBy: sum
+		sourceColumn: order_item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b265c590-6698-4b5d-8098-9688f69b2c55
+		sourceLineageTag: order_id
+		summarizeBy: sum
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: bdf1b3c5-3e2e-4ec3-ba2a-bcaf160828de
+		sourceLineageTag: customer_id
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 593315f3-588c-4e1e-8966-41eaf29eb40d
+		sourceLineageTag: product_id
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 19e2a628-c404-4585-8b47-70d9784be2f2
+		sourceLineageTag: order_date
+		summarizeBy: none
+		sourceColumn: order_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_datetime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7d4aa3db-8a0e-4ab7-b236-17a6460c1f01
+		sourceLineageTag: order_datetime
+		summarizeBy: none
+		sourceColumn: order_datetime
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: b7a866c8-96bb-4fb8-8d7c-8730d33b4f54
+		sourceLineageTag: order_status
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel
+		dataType: string
+		lineageTag: 17a7d883-2a01-4b91-94e4-2f4963bf7c7d
+		sourceLineageTag: channel
+		summarizeBy: none
+		sourceColumn: channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_method
+		dataType: string
+		lineageTag: 0be3b7f2-d404-479a-acfb-35aa479a2db4
+		sourceLineageTag: payment_method
+		summarizeBy: none
+		sourceColumn: payment_method
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: ba7a4503-c5f0-4e06-bb3f-69f8336e36e9
+		sourceLineageTag: quantity
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit_price
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d4929fa1-68b7-4a07-a394-738a3fb3d4b8
+		sourceLineageTag: unit_price
+		summarizeBy: sum
+		sourceColumn: unit_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column discount_amount
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: f7de7dac-1ae9-40f0-a51a-c728573bd42b
+		sourceLineageTag: discount_amount
+		summarizeBy: sum
+		sourceColumn: discount_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column tax_amount
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: f4bbcca1-3455-4e96-89d4-10a8d1a0b3d3
+		sourceLineageTag: tax_amount
+		summarizeBy: sum
+		sourceColumn: tax_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column gross_sales
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 34fa1a41-7173-444a-863d-81f1926ae5fa
+		sourceLineageTag: gross_sales
+		summarizeBy: sum
+		sourceColumn: gross_sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column net_sales
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 63bf1cab-0947-4d28-add4-ab2cc6545d36
+		sourceLineageTag: net_sales
+		summarizeBy: sum
+		sourceColumn: net_sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	partition gold_fact_sales = entity
+		mode: directLake
+		source
+			entityName: gold_fact_sales
+			schemaName: dbo
+			expressionSource: 'DirectLake - RetailOps_LH'
+

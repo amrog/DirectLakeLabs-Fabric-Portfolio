@@ -1,0 +1,402 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "pipeline_start_time",
+          "value": {
+            "value": "@utcNow()",
+            "type": "Expression"
+          }
+        },
+        "policy": {
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Set Start Time",
+        "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "197bfd90-17c3-aad2-4c31-f1a9c872aeed",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "pipeline_name": {
+              "value": "RetailOps_Master_Pipeline",
+              "type": "string"
+            },
+            "pipieline_run_id": {
+              "value": {
+                "value": "@pipeline().RunId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "run_date": {
+              "value": {
+                "value": "@pipeline().parameters.run_date",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "layer": {
+              "value": "pipeline",
+              "type": "string"
+            },
+            "status": {
+              "value": "STARTED",
+              "type": "string"
+            },
+            "error_message": {
+              "value": "",
+              "type": "string"
+            },
+            "duration_seconds": {
+              "value": "",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Audit STARTED",
+        "dependsOn": [
+          {
+            "activity": "Set Start Time",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "9174656b-6cf0-b7ff-4db5-3a46f06ca693",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "run_date": {
+              "value": {
+                "value": "@pipeline().parameters.run_date",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "source_folder": {
+              "value": {
+                "value": "@pipeline().parameters.source_folder",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "run_mode": {
+              "value": {
+                "value": "@pipeline().parameters.run_mode",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "00:30:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Bronze Ingest",
+        "dependsOn": [
+          {
+            "activity": "Audit STARTED",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "a2e683b5-9d70-ac6c-4297-c8f4c8f4564e",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "run_date": {
+              "value": {
+                "value": "@pipeline().parameters.run_date",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Silver Clean",
+        "dependsOn": [
+          {
+            "activity": "Bronze Ingest",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "7e4d754d-033b-8edd-4caf-2afccc2f64a4",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "run_date": {
+              "value": {
+                "value": "@pipeline().parameters.run_date",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 1,
+          "retryIntervalInSeconds": 60,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Gold Modeleing",
+        "dependsOn": [
+          {
+            "activity": "Silver Clean",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "197bfd90-17c3-aad2-4c31-f1a9c872aeed",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "pipeline_name": {
+              "value": "RetailOps_Master_Pipeline",
+              "type": "string"
+            },
+            "pipeline_run_id": {
+              "value": {
+                "value": "@pipeline().RunId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "run_date": {
+              "value": {
+                "value": "@pipeline().parameters.run_date",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "layer": {
+              "value": "pipeline",
+              "type": "string"
+            },
+            "status": {
+              "value": "SUCCESS",
+              "type": "string"
+            },
+            "error_message": {
+              "value": "",
+              "type": "string"
+            },
+            "duration_seconds": {
+              "value": "",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Audit Success",
+        "dependsOn": [
+          {
+            "activity": "Gold Modeleing",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "197bfd90-17c3-aad2-4c31-f1a9c872aeed",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "pipeline_name": {
+              "value": "RetailOps_Master_Pipeline",
+              "type": "string"
+            },
+            "pipeline_run_id": {
+              "value": {
+                "value": "@pipeline().RunId",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "run_date": {
+              "value": {
+                "value": "@pipeline().parameters.run_date",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "layer": {
+              "value": "bronze",
+              "type": "string"
+            },
+            "status": {
+              "value": "FAILED",
+              "type": "string"
+            },
+            "error_message": {
+              "value": "Bronze layer failed - check Monitor hub for details",
+              "type": "string"
+            },
+            "duration_seconds": {
+              "value": "",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Audit BRONZE FAILED",
+        "dependsOn": [
+          {
+            "activity": "Bronze Ingest",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "197bfd90-17c3-aad2-4c31-f1a9c872aeed",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "layer": {
+              "value": "silver",
+              "type": "string"
+            },
+            "error_message": {
+              "value": "Silver layer failed - check Monitor hub for details",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Audit SILVER FAILED",
+        "dependsOn": [
+          {
+            "activity": "Silver Clean",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "197bfd90-17c3-aad2-4c31-f1a9c872aeed",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "layer": {
+              "value": "gold",
+              "type": "string"
+            },
+            "error_message": {
+              "value": "Gold layer failed - check Monitor hub for details",
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Audit GOLD FAILED",
+        "dependsOn": [
+          {
+            "activity": "Gold Modeleing",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ]
+      }
+    ],
+    "parameters": {
+      "run_date": {
+        "type": "string"
+      },
+      "source_folder": {
+        "type": "string",
+        "defaultValue": "raw/retailops"
+      },
+      "run_mode": {
+        "type": "string",
+        "defaultValue": "overwrite"
+      }
+    },
+    "variables": {
+      "pipeline_start_time": {
+        "type": "String"
+      },
+      "bronze_status": {
+        "type": "String"
+      },
+      "silver_status": {
+        "type": "String"
+      },
+      "gold_status": {
+        "type": "String"
+      }
+    }
+  }
+}
