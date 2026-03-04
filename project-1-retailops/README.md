@@ -181,8 +181,6 @@ Single-page dashboard with:
 
 ## Screenshots
 
-## Screenshots
-
 | | |
 |---|---|
 | ![Workspace](workspace_overview.png) | ![Lakehouse](lakehouse_structure.png) |
@@ -192,7 +190,7 @@ Single-page dashboard with:
 | ![Gold Modeling](notebook_gold_model.png) | ![Report](power_bi_report.png) |
 | Gold star schema in Spark SQL | Final Power BI dashboard |
 | ![Semantic Model](semantic_model_overview.png) | ![Semantic Diagram](semantic_model_diagram.png) |
-| Semantic model tables | Star schema relationships ||
+| Semantic model tables | Star schema relationships |
 
 ---
 
