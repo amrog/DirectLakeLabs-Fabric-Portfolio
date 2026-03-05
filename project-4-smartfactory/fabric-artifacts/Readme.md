@@ -1,0 +1,1 @@
+This is an auto-created file for project-4-smartfactory/fabric-artifacts
