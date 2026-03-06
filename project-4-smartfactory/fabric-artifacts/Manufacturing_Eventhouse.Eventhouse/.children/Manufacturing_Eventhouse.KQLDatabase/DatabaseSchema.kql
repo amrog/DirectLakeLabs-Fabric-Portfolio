@@ -1,0 +1,5 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table sensorreadings (event_time:datetime, device_id:string, zone:string, equipment_type:string, temperature_celsius:real, pressure_psi:real, vibration_mms:real, humidity_percent:real, is_anomaly:bool, EventProcessedUtcTime:datetime, PartitionId:long, EventEnqueuedUtcTime:datetime) 

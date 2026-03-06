@@ -1,0 +1,52 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "2f4f93fe-6c66-4ade-a43d-86388a980007",
+        "clusterUri": "https://trd-2z6fed9curaren8bp5.z8.kusto.fabric.microsoft.com",
+        "type": "Fabric",
+        "databaseItemId": "7cdbff02-5f9e-4c20-bf3b-723f752e71eb",
+        "databaseItemName": "Manufacturing_Eventhouse"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "f71b49aa-7b35-495e-8b20-5739a239813b",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\nYOUR_TABLE_HERE\n| take 100\n\n// See how many records are in the table.\nYOUR_TABLE_HERE\n| count\n\n// This query returns the number of ingestions per hour in the given table.\nYOUR_TABLE_HERE\n| summarize IngestionCount = count() by bin(ingestion_time(), 1h)\n\n",
+        "title": "Tab",
+        "dataSourceId": "2f4f93fe-6c66-4ade-a43d-86388a980007"
+      },
+      {
+        "id": "dfd70b99-3316-48f0-af1e-84bc0d5c91ed",
+        "content": "sensorreadings\n| take 10\n\n\nsensorreadings\n| project event_time, device_id, temperature_celsius\n| take 5",
+        "title": "",
+        "dataSourceId": "2f4f93fe-6c66-4ade-a43d-86388a980007"
+      },
+      {
+        "id": "674fb6c0-383d-4a21-b267-b9e6967d6db5",
+        "content": "sensorreadings\n| count \n\n\nsensorreadings\n| summarize arg_max(event_time, *) by device_id\n| project event_time, device_id, zone, equipment_type,\n          temperature_celsius, pressure_psi, vibration_mms, humidity_percent\n| order by device_id asc",
+        "title": "",
+        "dataSourceId": "2f4f93fe-6c66-4ade-a43d-86388a980007"
+      },
+      {
+        "id": "bf6dd473-dbe2-47b6-b6f1-ae36bb930b02",
+        "content": "\n.alter column sensorreadings.event_time type = datetime\n\nsensorreadings\n| where ingestion_time() > ago(24h) \n| summarize\n    avg_temp = round(avg(temperature_celsius), 2),\n    avg_pressure = round(avg(pressure_psi), 2),\n    avg_vibration = round(avg(vibration_mms), 2),\n    avg_humidity = round(avg(humidity_percent), 2)\n  by device_id\n| order by device_id asc",
+        "title": "",
+        "dataSourceId": "2f4f93fe-6c66-4ade-a43d-86388a980007"
+      },
+      {
+        "id": "aae8e154-8b13-4a96-ae39-710805fc6d95",
+        "content": "sensorreadings\n| where temperature_celsius > 90\n     or pressure_psi > 38\n     or vibration_mms > 4.0\n     or humidity_percent > 65\n| project event_time, device_id, zone, equipment_type,\n          temperature_celsius, pressure_psi, vibration_mms, humidity_percent\n| order by event_time desc",
+        "title": "",
+        "dataSourceId": "2f4f93fe-6c66-4ade-a43d-86388a980007"
+      },
+      {
+        "id": "7c7ea450-bb80-4fba-88a0-251bdb2f5cc6",
+        "content": "sensorreadings\n| summarize\n    avg_temp = round(avg(temperature_celsius), 2),\n    max_temp = round(max(temperature_celsius), 2),\n    avg_vibration = round(avg(vibration_mms), 2),\n    anomaly_count = countif(is_anomaly == true)\n  by bin(event_time, 30s)\n| order by event_time asc\n\n\nsensorreadings\n| where ingestion_time() > ago(24h) \n| summarize\n    total_readings = count(),\n    anomaly_count = countif(is_anomaly == true),\n    anomaly_rate = round(100.0 * countif(is_anomaly == true) / count(), 2),\n    max_temp = round(max(temperature_celsius), 2),\n    max_vibration = round(max(vibration_mms), 2)\n  by zone\n| order by anomaly_rate desc\n\n\n",
+        "title": "",
+        "dataSourceId": "2f4f93fe-6c66-4ade-a43d-86388a980007"
+      }
+    ]
+  }
+}

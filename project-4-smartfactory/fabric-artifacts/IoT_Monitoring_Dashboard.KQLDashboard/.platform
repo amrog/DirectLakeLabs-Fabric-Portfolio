@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDashboard",
+    "displayName": "IoT_Monitoring_Dashboard",
+    "description": "IoT_Monitoring_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ba5c9946-052d-a639-4521-db13e53c3883"
+  }
+}
