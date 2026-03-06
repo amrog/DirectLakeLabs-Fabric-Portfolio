@@ -1,0 +1,256 @@
+{
+  "schema_version": 68,
+  "autoRefresh": {
+    "enabled": true,
+    "minInterval": "30s"
+  },
+  "tiles": [
+    {
+      "id": "20cac39c-2157-4562-9e57-110e2b5a87a3",
+      "queryRef": {
+        "kind": "query",
+        "queryId": "c2639104-2523-47b9-9cca-6ff1814e51b4"
+      },
+      "title": "Current Sensor Status",
+      "visualType": "table",
+      "pageId": "09e7f1d9-0973-4754-b884-d3d7aa2163a8",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "a8457b9b-e97f-4493-949b-34599ec71d43",
+      "title": "Average Temperature (30s windows)",
+      "visualType": "line",
+      "pageId": "09e7f1d9-0973-4754-b884-d3d7aa2163a8",
+      "layout": {
+        "x": 0,
+        "y": 7,
+        "width": 9,
+        "height": 4
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "803d5290-db7b-40f4-bbd6-2b1a4170c322"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "79247d4f-8f68-4146-aec5-9cdb04555019",
+      "title": "Vibration (Last 5 min)",
+      "visualType": "card",
+      "pageId": "09e7f1d9-0973-4754-b884-d3d7aa2163a8",
+      "layout": {
+        "x": 0,
+        "y": 11,
+        "width": 9,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "9263dd72-3f3a-4a6d-998b-d35c6dd5690f"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorRules": []
+      }
+    },
+    {
+      "id": "64092152-7bab-4989-a244-b508548a800a",
+      "title": "Anomalies by Zone (Last 10 min)",
+      "visualType": "bar",
+      "pageId": "09e7f1d9-0973-4754-b884-d3d7aa2163a8",
+      "layout": {
+        "x": 9,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "a6be1596-d460-4f51-be48-adef20c4ebe5"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "30ef1dbb-b520-4cfa-a7d4-a725ea249e79",
+      "title": "Critical Threshold Breaches",
+      "visualType": "table",
+      "pageId": "09e7f1d9-0973-4754-b884-d3d7aa2163a8",
+      "layout": {
+        "x": 9,
+        "y": 7,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "6e59340c-8605-40d2-93c5-3e26941934c5"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "6e037f60-9b13-406f-868f-ac0b8d28c2e9",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "kind": "kusto-trident",
+      "id": "7ab0f606-a250-4498-b6d6-f2416b8c8b02",
+      "name": "Manufacturing_Eventhouse",
+      "clusterUri": "",
+      "database": "752e71eb-723f-bf3b-4c20-5f9e7cdbff02",
+      "workspace": "00000000-0000-0000-0000-000000000000",
+      "scopeId": "kusto-trident"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "09e7f1d9-0973-4754-b884-d3d7aa2163a8"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ab0f606-a250-4498-b6d6-f2416b8c8b02"
+      },
+      "text": "sensorreadings\r\n| summarize arg_max(event_time, *) by device_id\r\n| project\r\n    Device = device_id,\r\n    Zone = zone,\r\n    Equipment = equipment_type,\r\n    [\"Temp (°C)\"] = temperature_celsius,\r\n    [\"Pressure (PSI)\"] = pressure_psi,\r\n    [\"Vibration (mm/s)\"] = vibration_mms,\r\n    [\"Last Reading\"] = event_time\r\n| order by Device asc",
+      "id": "c2639104-2523-47b9-9cca-6ff1814e51b4",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ab0f606-a250-4498-b6d6-f2416b8c8b02"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | take 100\nsensorreadings\n| summarize avg_temp = round(avg(temperature_celsius), 2) by bin(event_time, 30s)\n| order by event_time asc",
+      "id": "803d5290-db7b-40f4-bbd6-2b1a4170c322",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ab0f606-a250-4498-b6d6-f2416b8c8b02"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | take 100\nsensorreadings\n| where ingestion_time() > ago(24h)\n| summarize\n    current_avg = round(avg(vibration_mms), 2),\n    max_reading = round(max(vibration_mms), 2)\n| project strcat(\"Avg: \", tostring(current_avg), \" mm/s  |  Max: \", tostring(max_reading), \" mm/s\")",
+      "id": "9263dd72-3f3a-4a6d-998b-d35c6dd5690f",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ab0f606-a250-4498-b6d6-f2416b8c8b02"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | take 100\nsensorreadings\n| where ingestion_time() > ago(24h)\n| summarize anomalies = countif(is_anomaly == true) by zone\n| order by anomalies desc",
+      "id": "a6be1596-d460-4f51-be48-adef20c4ebe5",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ab0f606-a250-4498-b6d6-f2416b8c8b02"
+      },
+      "text": "// Please enter your KQL query (Example):\n// <table name>\n// | where <datetime column> between (['_startTime'] .. ['_endTime']) // Time range filtering\n// | take 100\nsensorreadings\n| where temperature_celsius > 100 \n     or pressure_psi > 42 \n     or vibration_mms > 5.5 \n     or humidity_percent > 75\n| project \n    [\"Time\"] = ingestion_time(),\n    Device = device_id,\n    Zone = zone,\n    [\"Temp\"] = temperature_celsius,\n    [\"Pressure\"] = pressure_psi,\n    [\"Vibration\"] = vibration_mms\n| order by [\"Time\"] desc\n| take 20",
+      "id": "6e59340c-8605-40d2-93c5-3e26941934c5",
+      "usedVariables": []
+    }
+  ]
+}

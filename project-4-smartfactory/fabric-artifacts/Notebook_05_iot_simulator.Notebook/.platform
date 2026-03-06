@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Notebook_05_iot_simulator"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a3f4cf25-7e18-b8a7-4f58-30533542b5a9"
+  }
+}

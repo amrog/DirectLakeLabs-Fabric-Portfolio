@@ -1,0 +1,335 @@
+{
+  "sources": [
+    {
+      "id": "750df199-0252-4315-9bb6-cd76383353fd",
+      "name": "iot_sensor_input",
+      "type": "CustomEndpoint",
+      "properties": {}
+    }
+  ],
+  "destinations": [
+    {
+      "id": "58b316b6-4cc1-41c3-9202-d39c04c97682",
+      "name": "sensorkqldestination",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "752e71eb-723f-bf3b-4c20-5f9e7cdbff02",
+        "databaseName": "Manufacturing_Eventhouse",
+        "tableName": "sensorreadings",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "GroupBy"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "GroupBy",
+          "schema": {
+            "columns": [
+              {
+                "name": "device_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "zone",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "AVG_temperature_celsius",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "MAX_vibration_mms",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Window_End_Time",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ad49075a-b454-4326-8c1d-ddec9fa4e6b2",
+      "name": "SensorLakehouse",
+      "type": "Lakehouse",
+      "properties": {
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "004c632b-c3b7-aed5-4b18-c05280f0c6f4",
+        "schema": "dbo",
+        "deltaTable": "iot_sensor_raw",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "IoT_Eventstream-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "IoT_Eventstream-stream",
+          "schema": {
+            "columns": []
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "b45eda57-b205-4dc1-884b-79565a8f6873",
+      "name": "IoT_Eventstream-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "iot_sensor_input"
+        }
+      ]
+    }
+  ],
+  "operators": [
+    {
+      "name": "FilterTemp",
+      "type": "Filter",
+      "inputNodes": [
+        {
+          "name": "IoT_Eventstream-stream"
+        }
+      ],
+      "properties": {
+        "conditions": [
+          {
+            "column": {
+              "expressionType": "ColumnReference",
+              "node": null,
+              "columnName": "temperature_celsius",
+              "columnPathSegments": []
+            },
+            "operatorType": "GreaterThan",
+            "value": {
+              "expressionType": "Literal",
+              "dataType": "Float",
+              "value": "50"
+            }
+          }
+        ]
+      },
+      "inputSchemas": [
+        {
+          "name": "IoT_Eventstream-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "event_time",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "device_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "zone",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "equipment_type",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "temperature_celsius",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "pressure_psi",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vibration_mms",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "humidity_percent",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "is_anomaly",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GroupBy",
+      "type": "GroupBy",
+      "inputNodes": [
+        {
+          "name": "FilterTemp"
+        }
+      ],
+      "properties": {
+        "aggregations": [
+          {
+            "aggregateFunction": "Average",
+            "arguments": [],
+            "column": {
+              "expressionType": "ColumnReference",
+              "node": null,
+              "columnName": "temperature_celsius",
+              "columnPathSegments": []
+            },
+            "alias": "AVG_temperature_celsius"
+          },
+          {
+            "aggregateFunction": "Maximum",
+            "arguments": [],
+            "column": {
+              "expressionType": "ColumnReference",
+              "node": null,
+              "columnName": "vibration_mms",
+              "columnPathSegments": []
+            },
+            "alias": "MAX_vibration_mms"
+          }
+        ],
+        "groupBy": [
+          {
+            "expressionType": "ColumnReference",
+            "node": null,
+            "columnName": "device_id",
+            "columnPathSegments": []
+          },
+          {
+            "expressionType": "ColumnReference",
+            "node": null,
+            "columnName": "zone",
+            "columnPathSegments": []
+          }
+        ],
+        "window": {
+          "type": "Tumbling",
+          "properties": {
+            "duration": {
+              "value": 30,
+              "unit": "Second"
+            },
+            "offset": {
+              "value": 0,
+              "unit": "Second"
+            }
+          }
+        }
+      },
+      "inputSchemas": [
+        {
+          "name": "FilterTemp",
+          "schema": {
+            "columns": [
+              {
+                "name": "event_time",
+                "type": "DateTime",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "device_id",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "zone",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "equipment_type",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "temperature_celsius",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "pressure_psi",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "vibration_mms",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "humidity_percent",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "is_anomaly",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "compatibilityLevel": "1.1"
+}
