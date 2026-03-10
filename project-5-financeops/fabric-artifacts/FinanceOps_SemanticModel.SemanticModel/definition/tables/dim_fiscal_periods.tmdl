@@ -1,0 +1,97 @@
+table dim_fiscal_periods
+	lineageTag: 231d95d0-9502-40cd-9601-5d22ebe7ae57
+	sourceLineageTag: [dbo_marts].[dim_fiscal_periods]
+
+	column fiscal_period_key
+		dataType: string
+		lineageTag: e33a38e8-f6f7-4532-94a2-681284638729
+		sourceLineageTag: fiscal_period_key
+		summarizeBy: none
+		sourceColumn: fiscal_period_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_period_id
+		dataType: string
+		lineageTag: 8a279917-5a45-4b8b-bce6-95b48a177743
+		sourceLineageTag: fiscal_period_id
+		summarizeBy: none
+		sourceColumn: fiscal_period_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 7fbf7ac4-b2e0-4fa4-9c25-03b467ba6e90
+		sourceLineageTag: fiscal_year
+		summarizeBy: none
+		sourceColumn: fiscal_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_month
+		dataType: int64
+		formatString: 0
+		lineageTag: f77b0336-561c-4242-9e3c-77ded7d209c3
+		sourceLineageTag: fiscal_month
+		summarizeBy: none
+		sourceColumn: fiscal_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_quarter
+		dataType: string
+		lineageTag: 18845443-e021-41ff-b738-f2d6d1252701
+		sourceLineageTag: fiscal_quarter
+		summarizeBy: none
+		sourceColumn: fiscal_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column period_start_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 94ecc018-2164-4ed9-85b0-96f037c5d903
+		sourceLineageTag: period_start_date
+		summarizeBy: none
+		sourceColumn: period_start_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column period_end_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: acfd2162-aa4d-43f1-96c5-27bbf25ff224
+		sourceLineageTag: period_end_date
+		summarizeBy: none
+		sourceColumn: period_end_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_closed
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ba9ae5e-f02f-4a3d-803a-8a364468f9ab
+		sourceLineageTag: is_closed
+		summarizeBy: none
+		sourceColumn: is_closed
+
+		annotation SummarizationSetBy = Automatic
+
+	column period_display_name
+		dataType: string
+		lineageTag: 9df2eb3b-bd20-4368-b26a-fcb0e5878615
+		sourceLineageTag: period_display_name
+		summarizeBy: none
+		sourceColumn: period_display_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_fiscal_periods = entity
+		mode: directLake
+		source
+			entityName: dim_fiscal_periods
+			schemaName: dbo_marts
+			expressionSource: 'DirectLake - FinanceOps_DW'
+

@@ -1,0 +1,124 @@
+table dim_accounts
+	lineageTag: d31b3527-7c31-408f-b959-bffebdacaf03
+	sourceLineageTag: [dbo_marts].[dim_accounts]
+
+	measure 'Total Revenue' = ```
+			
+			    CALCULATE(
+			        SUM(fact_gl_activity[credit_amount]) - SUM(fact_gl_activity[debit_amount]),
+			        dim_accounts[account_type] = "Revenue"
+			    )
+			```
+		lineageTag: 3bfccaf6-579c-4e35-b676-2dc88069576d
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Expenses' = ```
+			
+			    CALCULATE(
+			        SUM(fact_gl_activity[debit_amount]) - SUM(fact_gl_activity[credit_amount]),
+			        dim_accounts[account_type] = "Expense"
+			    )
+			```
+		lineageTag: 76de28e0-01bf-4e4b-90e2-66c30b1be21e
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gross Margin %' = ```
+			
+			    DIVIDE(
+			        [Total Revenue] - CALCULATE([Total Expenses], dim_accounts[account_subgroup] = "Cost of Revenue"),
+			        [Total Revenue],
+			        0
+			    )
+			```
+		lineageTag: 5726f5c7-be65-41f7-a254-4319190ce5da
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column account_key
+		dataType: string
+		lineageTag: 949f6582-dbdc-4df7-8e0d-9c581582cb48
+		sourceLineageTag: account_key
+		summarizeBy: none
+		sourceColumn: account_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_id
+		dataType: string
+		lineageTag: 16a526bb-1f39-4198-bf0a-c24270a16ab7
+		sourceLineageTag: account_id
+		summarizeBy: none
+		sourceColumn: account_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_name
+		dataType: string
+		lineageTag: db70fa52-6f68-48c0-802e-14db8bf74a82
+		sourceLineageTag: account_name
+		summarizeBy: none
+		sourceColumn: account_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_type
+		dataType: string
+		lineageTag: 36889b1f-8a30-4aa9-8bf5-9bb8c0b74522
+		sourceLineageTag: account_type
+		summarizeBy: none
+		sourceColumn: account_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column financial_statement
+		dataType: string
+		lineageTag: 0dc2477a-da50-48c1-b12a-758d66ca84d2
+		sourceLineageTag: financial_statement
+		summarizeBy: none
+		sourceColumn: financial_statement
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_subgroup
+		dataType: string
+		lineageTag: 1ee8a775-a922-491d-b8a6-b7f48105a6da
+		sourceLineageTag: account_subgroup
+		summarizeBy: none
+		sourceColumn: account_subgroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_active
+		dataType: int64
+		formatString: 0
+		lineageTag: 76ab9cfb-2273-45a5-8cd5-a1e7a1469ab0
+		sourceLineageTag: is_active
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	column normal_balance_type
+		dataType: string
+		lineageTag: 4af7610d-78d9-42a9-95fb-93ebf7bc0a0a
+		sourceLineageTag: normal_balance_type
+		summarizeBy: none
+		sourceColumn: normal_balance_type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_accounts = entity
+		mode: directLake
+		source
+			entityName: dim_accounts
+			schemaName: dbo_marts
+			expressionSource: 'DirectLake - FinanceOps_DW'
+

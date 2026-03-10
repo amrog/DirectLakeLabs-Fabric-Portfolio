@@ -1,0 +1,66 @@
+table dim_cost_centers
+	lineageTag: ec548f74-ec7c-456a-a776-f5acd9b5171f
+	sourceLineageTag: [dbo_marts].[dim_cost_centers]
+
+	column cost_center_key
+		dataType: string
+		lineageTag: fc5da932-59b6-421f-aa44-5c8aae8de892
+		sourceLineageTag: cost_center_key
+		summarizeBy: none
+		sourceColumn: cost_center_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost_center_id
+		dataType: string
+		lineageTag: aa9e2d80-d49b-4ced-8425-e0ab058ea69d
+		sourceLineageTag: cost_center_id
+		summarizeBy: none
+		sourceColumn: cost_center_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost_center_name
+		dataType: string
+		lineageTag: c9b363a5-b962-4f7e-be7e-d2405c724856
+		sourceLineageTag: cost_center_name
+		summarizeBy: none
+		sourceColumn: cost_center_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_group
+		dataType: string
+		lineageTag: 0b31734a-767f-4a3f-8e4d-abe65fc90023
+		sourceLineageTag: department_group
+		summarizeBy: none
+		sourceColumn: department_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_name
+		dataType: string
+		lineageTag: ec297755-0835-407d-936f-9d097b2d60fb
+		sourceLineageTag: manager_name
+		summarizeBy: none
+		sourceColumn: manager_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_active
+		dataType: int64
+		formatString: 0
+		lineageTag: bde00896-920e-4191-b3f8-45a9ce848708
+		sourceLineageTag: is_active
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_cost_centers = entity
+		mode: directLake
+		source
+			entityName: dim_cost_centers
+			schemaName: dbo_marts
+			expressionSource: 'DirectLake - FinanceOps_DW'
+

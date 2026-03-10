@@ -1,0 +1,11 @@
+expression 'DirectLake - FinanceOps_DW' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/33690ddf-e33e-450e-b433-2dfd36785519/61764733-0171-4b3f-806f-fd284621e821", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: e07562ca-0f60-4482-9640-facc2fed9320
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw].[journal_entries]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[raw].[journal_entry_lines]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo_raw].[budget_allocations]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo_raw].[fiscal_periods]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo_raw].[chart_of_accounts]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo_raw].[cost_centers]"}},"objectType":"Table"}]
+

@@ -1,0 +1,210 @@
+{
+  "config": "{\"version\":\"5.70\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU02\",\"type\":2,\"version\":{\"visual\":\"2.6.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ecf4d8a442691d0cb825",
+      "config": "{}",
+      "name": "e95f6127b29377c9d763",
+      "parameters": "[{\"name\":\"58f505a46e0a165227a4\",\"boundFilter\":\"ef65b7a1b5e946989a77\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_accounts\"}},\"Property\":\"account_name\"}}}]",
+      "type": 1
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY26SU02",
+            "path": "BaseThemes/CY26SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Executive Summary",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "37425f43330d0040e8b9",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1af5c42810ace03dad02\",\"layouts\":[{\"id\":0,\"position\":{\"x\":492.5130344108446,\"y\":22.690302398331593,\"z\":1000,\"width\":206.88216892596452,\"height\":126.7987486965589,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(rpt_income_statement.operating_revenue)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_income_statement\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"operating_revenue\"}},\"Function\":0},\"Name\":\"Sum(rpt_income_statement.operating_revenue)\",\"NativeReferenceName\":\"Sum of operating_revenue\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"operating_revenue\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.4}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Operating Revenue'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 126.80,
+          "width": 206.88,
+          "x": 492.51,
+          "y": 22.69,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"1d1a13b01d0a1cc72387\",\"layouts\":[{\"id\":0,\"position\":{\"x\":246.92387904066734,\"y\":168.17518248175182,\"z\":4000,\"width\":938.3107403545359,\"height\":252.2627737226277,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"rpt_income_statement.fiscal_month\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(rpt_income_statement.operating_revenue)\"}],\"Series\":[{\"queryRef\":\"rpt_income_statement.fiscal_year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_income_statement\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"fiscal_month\"},\"Name\":\"rpt_income_statement.fiscal_month\",\"NativeReferenceName\":\"fiscal_month\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"operating_revenue\"}},\"Function\":0},\"Name\":\"Sum(rpt_income_statement.operating_revenue)\",\"NativeReferenceName\":\"Sum of operating_revenue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"fiscal_year\"},\"Name\":\"rpt_income_statement.fiscal_year\",\"NativeReferenceName\":\"fiscal_year\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"operating_revenue\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Fiscal Month'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"titleFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"13D\"}}}}}],\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Operating Revenue'\"}}},\"titleFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}],\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'TopCenter'\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'FY'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Monthly Revenue Trend'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 252.26,
+          "width": 938.31,
+          "x": 246.92,
+          "y": 168.18,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"67b4e9d06acda7566d66\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":174.14619592242664,\"z\":6000,\"width\":116.86126305320735,\"height\":201.64296369965192,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"listSlicer\",\"projections\":{\"Values\":[{\"queryRef\":\"rpt_income_statement.fiscal_year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_income_statement\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"fiscal_year\"},\"Name\":\"rpt_income_statement.fiscal_year\",\"NativeReferenceName\":\"fiscal_year\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'FY'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 201.64,
+          "width": 116.86,
+          "x": 0.00,
+          "y": 174.15,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"bee2e6181106a30a38dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":247.59538598047914,\"y\":420.23070097604256,\"z\":5000,\"width\":937.0008873114463,\"height\":246.45962732919253,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"rpt_income_statement.fiscal_month\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(rpt_income_statement.gross_margin_pct)\"}],\"Y2\":[{\"queryRef\":\"Sum(rpt_income_statement.operating_margin_pct)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_income_statement\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"fiscal_month\"},\"Name\":\"rpt_income_statement.fiscal_month\",\"NativeReferenceName\":\"fiscal_month\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"gross_margin_pct\"}},\"Function\":0},\"Name\":\"Sum(rpt_income_statement.gross_margin_pct)\",\"NativeReferenceName\":\"Gross Margin %\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"operating_margin_pct\"}},\"Function\":0},\"Name\":\"Sum(rpt_income_statement.operating_margin_pct)\",\"NativeReferenceName\":\"Operating Margin %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"gross_margin_pct\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(rpt_income_statement.gross_margin_pct)\":{\"displayName\":\"Gross Margin %\"},\"Sum(rpt_income_statement.operating_margin_pct)\":{\"displayName\":\"Operating Margin %\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'TopCenter'\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Gross Margin %'\"}}}}}],\"categoryAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Fiscal Month'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Gross Margin & Operating Margin'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 246.46,
+          "width": 937.00,
+          "x": 247.60,
+          "y": 420.23,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"ce5a50603b2360884993\",\"layouts\":[{\"id\":0,\"position\":{\"x\":978.3524504692388,\"y\":22.690302398331593,\"z\":3000,\"width\":206.88216892596452,\"height\":126.7987486965589,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(rpt_income_statement.operating_income)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_income_statement\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"operating_income\"}},\"Function\":0},\"Name\":\"Sum(rpt_income_statement.operating_income)\",\"NativeReferenceName\":\"Sum of operating_income\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"operating_income\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.4}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Operating Income'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 126.80,
+          "width": 206.88,
+          "x": 978.35,
+          "y": 22.69,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"e0d624ffd644ad32a821\",\"layouts\":[{\"id\":0,\"position\":{\"x\":246.92387904066734,\"y\":22.690302398331593,\"z\":0,\"width\":208.21689259645464,\"height\":128.133472367049,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(rpt_income_statement.net_income)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_income_statement\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"net_income\"}},\"Function\":0},\"Name\":\"Sum(rpt_income_statement.net_income)\",\"NativeReferenceName\":\"Sum of net_income\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"net_income\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.4}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Net Income'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.13,
+          "width": 208.22,
+          "x": 246.92,
+          "y": 22.69,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"eabdaf359ed718aeee7a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":734.0980187695516,\"y\":21.3555787278415,\"z\":2000,\"width\":208.21689259645464,\"height\":128.133472367049,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(rpt_income_statement.gross_profit)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_income_statement\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"gross_profit\"}},\"Function\":0},\"Name\":\"Sum(rpt_income_statement.gross_profit)\",\"NativeReferenceName\":\"Sum of gross_profit\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"gross_profit\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.4}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Gross Profit'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 128.13,
+          "width": 208.22,
+          "x": 734.10,
+          "y": 21.36,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"ed22e135ed6b45e0cecd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":21.76827449030333,\"z\":6001,\"width\":236.01392342118348,\"height\":88.21879661859771,\"tabOrder\":6001}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Finance Ops GL Report\",\"textStyle\":{\"fontFamily\":\"Segoe UI Semibold\",\"fontSize\":\"20pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 88.22,
+          "width": 236.01,
+          "x": 0.00,
+          "y": 21.77,
+          "z": 6001.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Budget vs Actuals",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "7cbeca78090103d9109a",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"cba92e8509e61b9b3a6d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":43.12867286102534,\"y\":22.14715633404004,\"z\":2000,\"width\":144.53933607478763,\"height\":412.6364916973776,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"rpt_budget_vs_actuals.fiscal_period_id\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_budget_vs_actuals\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"fiscal_period_id\"},\"Name\":\"rpt_budget_vs_actuals.fiscal_period_id\",\"NativeReferenceName\":\"fiscal_period_id\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Fiscal Period'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 412.64,
+          "width": 144.54,
+          "x": 43.13,
+          "y": 22.15,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"da7ef88430c453061e16\",\"layouts\":[{\"id\":0,\"position\":{\"x\":329.35805859502835,\"y\":420.42359737617215,\"z\":1000,\"width\":856.7452581852332,\"height\":299.56943041306795,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"rpt_budget_vs_actuals.account_name\"},{\"queryRef\":\"rpt_budget_vs_actuals.cost_center_name\"},{\"queryRef\":\"Sum(rpt_budget_vs_actuals.budget_amount)\"},{\"queryRef\":\"Sum(rpt_budget_vs_actuals.actual_amount)\"},{\"queryRef\":\"Sum(rpt_budget_vs_actuals.variance_amount)\"},{\"queryRef\":\"Sum(rpt_budget_vs_actuals.variance_pct)\"},{\"queryRef\":\"rpt_budget_vs_actuals.variance_status\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_budget_vs_actuals\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"account_name\"},\"Name\":\"rpt_budget_vs_actuals.account_name\",\"NativeReferenceName\":\"Account\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"cost_center_name\"},\"Name\":\"rpt_budget_vs_actuals.cost_center_name\",\"NativeReferenceName\":\"Cost Center\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"budget_amount\"}},\"Function\":0},\"Name\":\"Sum(rpt_budget_vs_actuals.budget_amount)\",\"NativeReferenceName\":\"Budget\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"actual_amount\"}},\"Function\":0},\"Name\":\"Sum(rpt_budget_vs_actuals.actual_amount)\",\"NativeReferenceName\":\"Actual\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"variance_amount\"}},\"Function\":0},\"Name\":\"Sum(rpt_budget_vs_actuals.variance_amount)\",\"NativeReferenceName\":\"Variance \"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"variance_pct\"}},\"Function\":0},\"Name\":\"Sum(rpt_budget_vs_actuals.variance_pct)\",\"NativeReferenceName\":\"Variance %\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"variance_status\"},\"Name\":\"rpt_budget_vs_actuals.variance_status\",\"NativeReferenceName\":\"Variance Status\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"variance_amount\"}},\"Function\":0}}}]},\"columnProperties\":{\"rpt_budget_vs_actuals.account_name\":{\"displayName\":\"Account\"},\"rpt_budget_vs_actuals.cost_center_name\":{\"displayName\":\"Cost Center\"},\"Sum(rpt_budget_vs_actuals.budget_amount)\":{\"displayName\":\"Budget\"},\"Sum(rpt_budget_vs_actuals.actual_amount)\":{\"displayName\":\"Actual\"},\"Sum(rpt_budget_vs_actuals.variance_amount)\":{\"displayName\":\"Variance \"},\"Sum(rpt_budget_vs_actuals.variance_pct)\":{\"displayName\":\"Variance %\"},\"rpt_budget_vs_actuals.variance_status\":{\"displayName\":\"Variance Status\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 299.57,
+          "width": 856.75,
+          "x": 329.36,
+          "y": 420.42,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f9ba98f20621bb73ca79\",\"layouts\":[{\"id\":0,\"position\":{\"x\":329.35805859502835,\"y\":21.774783363451387,\"z\":0,\"width\":856.7452581852332,\"height\":398.6488140127207,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"rpt_budget_vs_actuals.cost_center_name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(rpt_budget_vs_actuals.budget_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"rpt_budget_vs_actuals\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"cost_center_name\"},\"Name\":\"rpt_budget_vs_actuals.cost_center_name\",\"NativeReferenceName\":\"cost_center_name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"budget_amount\"}},\"Function\":0},\"Name\":\"Sum(rpt_budget_vs_actuals.budget_amount)\",\"NativeReferenceName\":\"Sum of budget_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"budget_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Budget Amount'\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Budget_ Amount by Cost Center'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 398.65,
+          "width": 856.75,
+          "x": 329.36,
+          "y": 21.77,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F8F9FA'\"}}}}}}}]}}",
+      "displayName": "GL Drill-Through",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"ef65b7a1b5e946989a77\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_accounts\"}},\"Property\":\"account_name\"}},\"type\":\"Categorical\",\"howCreated\":5}]",
+      "height": 720.00,
+      "name": "ecf4d8a442691d0cb825",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"12b2e46f261bc0d959e3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":0,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"6d9f40647a9c44b28edc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":159.69265356649925,\"y\":170.1834118299919,\"z\":1000,\"width\":1120.1798545796041,\"height\":386.99241594217335,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_gl_activity.posting_date\"},{\"queryRef\":\"fact_gl_activity.journal_entry_id\"},{\"queryRef\":\"fact_gl_activity.je_description\"},{\"queryRef\":\"dim_accounts.account_name\"},{\"queryRef\":\"dim_cost_centers.cost_center_name\"},{\"queryRef\":\"Sum(fact_gl_activity.debit_amount)\"},{\"queryRef\":\"Sum(fact_gl_activity.credit_amount)\"},{\"queryRef\":\"Sum(fact_gl_activity.net_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_gl_activity\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"dim_accounts\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_cost_centers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"posting_date\"},\"Name\":\"fact_gl_activity.posting_date\",\"NativeReferenceName\":\"Posting Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"journal_entry_id\"},\"Name\":\"fact_gl_activity.journal_entry_id\",\"NativeReferenceName\":\"Journal  Entry\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"je_description\"},\"Name\":\"fact_gl_activity.je_description\",\"NativeReferenceName\":\"Journal Description\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"debit_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_gl_activity.debit_amount)\",\"NativeReferenceName\":\"Debit Amount\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"credit_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_gl_activity.credit_amount)\",\"NativeReferenceName\":\"Credit Amount\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"net_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_gl_activity.net_amount)\",\"NativeReferenceName\":\"Net Amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"account_name\"},\"Name\":\"dim_accounts.account_name\",\"NativeReferenceName\":\"Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"cost_center_name\"},\"Name\":\"dim_cost_centers.cost_center_name\",\"NativeReferenceName\":\"Cost Center\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"credit_amount\"}},\"Function\":0}}}]},\"columnProperties\":{\"fact_gl_activity.posting_date\":{\"displayName\":\"Posting Date\"},\"fact_gl_activity.journal_entry_id\":{\"displayName\":\"Journal  Entry\"},\"fact_gl_activity.je_description\":{\"displayName\":\"Journal Description\"},\"dim_accounts.account_name\":{\"displayName\":\"Name\"},\"dim_cost_centers.cost_center_name\":{\"displayName\":\"Cost Center\"},\"Sum(fact_gl_activity.debit_amount)\":{\"displayName\":\"Debit Amount\"},\"Sum(fact_gl_activity.credit_amount)\":{\"displayName\":\"Credit Amount\"},\"Sum(fact_gl_activity.net_amount)\":{\"displayName\":\"Net Amount\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 386.99,
+          "width": 1120.18,
+          "x": 159.69,
+          "y": 170.18,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"768555a15d6985550830\",\"layouts\":[{\"id\":0,\"position\":{\"x\":175.23445837305604,\"y\":575.566954566798,\"z\":2000,\"width\":224.96848276156464,\"height\":129.38601858307604,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(fact_gl_activity.debit_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_gl_activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"debit_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_gl_activity.debit_amount)\",\"NativeReferenceName\":\"Sum of debit_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"debit_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"cardCalloutArea\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundFillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Debit Amount'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 129.39,
+          "width": 224.97,
+          "x": 175.23,
+          "y": 575.57,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"ec4615e7052c4937ee57\",\"layouts\":[{\"id\":0,\"position\":{\"x\":424.6813770827698,\"y\":575.566954566798,\"z\":3000,\"width\":224.96848276156464,\"height\":129.38601858307604,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(fact_gl_activity.credit_amount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_gl_activity\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"credit_amount\"}},\"Function\":0},\"Name\":\"Sum(fact_gl_activity.credit_amount)\",\"NativeReferenceName\":\"Sum of credit_amount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"credit_amount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"cardCalloutArea\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"backgroundFillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Credit Amount'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.4}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 129.39,
+          "width": 224.97,
+          "x": 424.68,
+          "y": 575.57,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"ee33d181307bb57e1b74\",\"layouts\":[{\"id\":0,\"position\":{\"x\":159.69265356649925,\"y\":19.815876719930564,\"z\":4000,\"width\":982.634357347145,\"height\":139.87677684656867,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_accounts.account_type\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_accounts\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"account_type\"},\"Name\":\"dim_accounts.account_type\",\"NativeReferenceName\":\"account_type\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Account Type'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 139.88,
+          "width": 982.63,
+          "x": 159.69,
+          "y": 19.82,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

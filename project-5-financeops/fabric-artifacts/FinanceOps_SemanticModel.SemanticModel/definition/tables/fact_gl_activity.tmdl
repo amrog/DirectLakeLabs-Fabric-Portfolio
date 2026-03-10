@@ -1,0 +1,127 @@
+table fact_gl_activity
+	lineageTag: 0c6badba-2b10-4686-b221-bd7a82496262
+	sourceLineageTag: [dbo_marts].[fact_gl_activity]
+
+	column account_key
+		dataType: string
+		lineageTag: b82e0d31-0721-491d-8869-8a680910b270
+		sourceLineageTag: account_key
+		summarizeBy: none
+		sourceColumn: account_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost_center_key
+		dataType: string
+		lineageTag: fe643213-0751-4bce-a301-5268a02d1493
+		sourceLineageTag: cost_center_key
+		summarizeBy: none
+		sourceColumn: cost_center_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_period_key
+		dataType: string
+		lineageTag: 274b7306-027f-424b-932a-aad49dbfd982
+		sourceLineageTag: fiscal_period_key
+		summarizeBy: none
+		sourceColumn: fiscal_period_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column journal_entry_id
+		dataType: string
+		lineageTag: c0b37ee0-472b-443d-9bc1-94d10f03d78f
+		sourceLineageTag: journal_entry_id
+		summarizeBy: none
+		sourceColumn: journal_entry_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column line_number
+		dataType: int64
+		formatString: 0
+		lineageTag: 580ef09d-3d2b-4c4b-b533-ccb67def4c4e
+		sourceLineageTag: line_number
+		summarizeBy: sum
+		sourceColumn: line_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column posting_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2b76fbd8-e9ab-4974-9cd3-6921fcb7c16d
+		sourceLineageTag: posting_date
+		summarizeBy: none
+		sourceColumn: posting_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column je_description
+		dataType: string
+		lineageTag: 23b5866d-41de-44b5-99aa-619741cf5355
+		sourceLineageTag: je_description
+		summarizeBy: none
+		sourceColumn: je_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_system
+		dataType: string
+		lineageTag: e4ee51bb-1f68-4e9e-98c0-cdd28a1f1f72
+		sourceLineageTag: source_system
+		summarizeBy: none
+		sourceColumn: source_system
+
+		annotation SummarizationSetBy = Automatic
+
+	column je_status
+		dataType: string
+		lineageTag: a62be860-425d-4a16-8cf7-604b9d77b6ad
+		sourceLineageTag: je_status
+		summarizeBy: none
+		sourceColumn: je_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column debit_amount
+		dataType: double
+		lineageTag: 45306972-2834-47ec-9b11-ce01778f0e60
+		sourceLineageTag: debit_amount
+		summarizeBy: sum
+		sourceColumn: debit_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column credit_amount
+		dataType: double
+		lineageTag: 2cc04442-3b94-4d78-80a7-48dfd91e4d79
+		sourceLineageTag: credit_amount
+		summarizeBy: sum
+		sourceColumn: credit_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column net_amount
+		dataType: double
+		lineageTag: a1682ad7-7547-48ad-ad75-5768a4265ae1
+		sourceLineageTag: net_amount
+		summarizeBy: sum
+		sourceColumn: net_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_gl_activity = entity
+		mode: directLake
+		source
+			entityName: fact_gl_activity
+			schemaName: dbo_marts
+			expressionSource: 'DirectLake - FinanceOps_DW'
+

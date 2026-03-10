@@ -1,0 +1,12 @@
+relationship 8effdb07-f4d6-1c46-5a75-002029df87f0
+	fromColumn: fact_gl_activity.account_key
+	toColumn: dim_accounts.account_key
+
+relationship 0daea69c-9172-781a-e705-a715c88751f6
+	fromColumn: fact_gl_activity.cost_center_key
+	toColumn: dim_cost_centers.cost_center_key
+
+relationship d4040215-9a25-7f92-53b7-15bd0acc965a
+	fromColumn: fact_gl_activity.fiscal_period_key
+	toColumn: dim_fiscal_periods.fiscal_period_key
+

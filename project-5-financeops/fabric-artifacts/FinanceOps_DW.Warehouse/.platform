@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "FinanceOps_DW"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4621e821-fd28-806f-4b3f-017161764733"
+  }
+}

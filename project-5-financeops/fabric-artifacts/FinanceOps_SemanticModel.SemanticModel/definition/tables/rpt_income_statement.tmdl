@@ -1,0 +1,170 @@
+table rpt_income_statement
+	lineageTag: 15c56d50-0676-455c-ad03-a58914ea2ad5
+	sourceLineageTag: [dbo_marts].[rpt_income_statement]
+
+	column fiscal_period_id
+		dataType: string
+		lineageTag: 66ba7830-0300-4883-a653-fb316cf2da8d
+		sourceLineageTag: fiscal_period_id
+		summarizeBy: none
+		sourceColumn: fiscal_period_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c49f8c9-6c8c-40fc-8d0d-e405730b8d63
+		sourceLineageTag: fiscal_year
+		summarizeBy: sum
+		sourceColumn: fiscal_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fa168af-e6f7-4638-94d7-ce4f7c55414a
+		sourceLineageTag: fiscal_month
+		summarizeBy: sum
+		sourceColumn: fiscal_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_quarter
+		dataType: string
+		lineageTag: 3253a930-bd70-48e2-a762-b8d6d01c5df6
+		sourceLineageTag: fiscal_quarter
+		summarizeBy: none
+		sourceColumn: fiscal_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column operating_revenue
+		dataType: double
+		lineageTag: bc8103da-af45-4379-8742-00646e3784ac
+		sourceLineageTag: operating_revenue
+		summarizeBy: sum
+		sourceColumn: operating_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column other_revenue
+		dataType: double
+		lineageTag: bef1dc5c-e926-4223-bfd9-95943dd4d963
+		sourceLineageTag: other_revenue
+		summarizeBy: sum
+		sourceColumn: other_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cost_of_revenue
+		dataType: double
+		lineageTag: 153a9f0c-d759-46c3-a050-8ac947b59a20
+		sourceLineageTag: cost_of_revenue
+		summarizeBy: sum
+		sourceColumn: cost_of_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column operating_expenses
+		dataType: double
+		lineageTag: 267b6702-55a6-4b1c-960e-7a1c6488880c
+		sourceLineageTag: operating_expenses
+		summarizeBy: sum
+		sourceColumn: operating_expenses
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column non_operating_expenses
+		dataType: double
+		lineageTag: e11db3d8-0b62-47a1-b76c-20b518fb3502
+		sourceLineageTag: non_operating_expenses
+		summarizeBy: sum
+		sourceColumn: non_operating_expenses
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_revenue
+		dataType: double
+		lineageTag: 787223d8-e76f-47b2-aff1-343d02771736
+		sourceLineageTag: total_revenue
+		summarizeBy: sum
+		sourceColumn: total_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gross_profit
+		dataType: double
+		lineageTag: 174bead7-c43e-484b-aa5e-914660c48aee
+		sourceLineageTag: gross_profit
+		summarizeBy: sum
+		sourceColumn: gross_profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column operating_income
+		dataType: double
+		lineageTag: 067c928f-55b6-4c2d-9d56-e07fe9b50fe9
+		sourceLineageTag: operating_income
+		summarizeBy: sum
+		sourceColumn: operating_income
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column net_income
+		dataType: double
+		lineageTag: 263d7dfb-6cf9-411b-accf-62513bca80fa
+		sourceLineageTag: net_income
+		summarizeBy: sum
+		sourceColumn: net_income
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gross_margin_pct
+		dataType: double
+		lineageTag: a9873387-dae3-4bcc-9ae9-d18b3e5cf4fd
+		sourceLineageTag: gross_margin_pct
+		summarizeBy: sum
+		sourceColumn: gross_margin_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column operating_margin_pct
+		dataType: double
+		lineageTag: 73915e8c-c74b-471d-9d6a-af06d68b2772
+		sourceLineageTag: operating_margin_pct
+		summarizeBy: sum
+		sourceColumn: operating_margin_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition rpt_income_statement = entity
+		mode: directLake
+		source
+			entityName: rpt_income_statement
+			schemaName: dbo_marts
+			expressionSource: 'DirectLake - FinanceOps_DW'
+

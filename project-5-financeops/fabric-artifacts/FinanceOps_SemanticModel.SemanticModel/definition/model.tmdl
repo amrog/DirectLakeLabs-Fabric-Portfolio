@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DirectLake - FinanceOps_DW"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit"]
+
+ref table dim_cost_centers
+ref table dim_fiscal_periods
+ref table dim_accounts
+ref table rpt_budget_vs_actuals
+ref table rpt_trial_balance
+ref table rpt_income_statement
+ref table fact_gl_activity
+

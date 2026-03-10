@@ -1,0 +1,165 @@
+table rpt_budget_vs_actuals
+	lineageTag: 956e3bf8-fd83-44cf-a0be-36d8300712e7
+	sourceLineageTag: [dbo_marts].[rpt_budget_vs_actuals]
+
+	column fiscal_period_id
+		dataType: string
+		lineageTag: 3ee32ddb-368d-4028-a9b8-bcaf4e14f1d6
+		sourceLineageTag: fiscal_period_id
+		summarizeBy: none
+		sourceColumn: fiscal_period_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_id
+		dataType: string
+		lineageTag: 278cb784-c739-4d11-aa53-ca8bbee1593f
+		sourceLineageTag: account_id
+		summarizeBy: none
+		sourceColumn: account_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost_center_id
+		dataType: string
+		lineageTag: 8cccd54d-b262-467a-aaed-20e8afeaf554
+		sourceLineageTag: cost_center_id
+		summarizeBy: none
+		sourceColumn: cost_center_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column budget_amount
+		dataType: double
+		lineageTag: 8ecb8ef5-bab8-4304-b6a5-a6c661dbf425
+		sourceLineageTag: budget_amount
+		summarizeBy: sum
+		sourceColumn: budget_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_amount
+		dataType: double
+		lineageTag: abb6dcef-781c-4a43-bd81-be6fdef84c1d
+		sourceLineageTag: actual_amount
+		summarizeBy: sum
+		sourceColumn: actual_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column account_name
+		dataType: string
+		lineageTag: f8e6a50f-5042-4513-96d6-09e9fbbf3ff9
+		sourceLineageTag: account_name
+		summarizeBy: none
+		sourceColumn: account_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_type
+		dataType: string
+		lineageTag: 91927b07-7590-4afd-adac-570bffe45c66
+		sourceLineageTag: account_type
+		summarizeBy: none
+		sourceColumn: account_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_subgroup
+		dataType: string
+		lineageTag: 1ffb8da4-55e2-41b4-8c28-c712c8cda3ca
+		sourceLineageTag: account_subgroup
+		summarizeBy: none
+		sourceColumn: account_subgroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column cost_center_name
+		dataType: string
+		lineageTag: 531666fe-7191-4c6b-8d71-78c9b64e1a70
+		sourceLineageTag: cost_center_name
+		summarizeBy: none
+		sourceColumn: cost_center_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_group
+		dataType: string
+		lineageTag: 5ccbbda5-14d0-4cdf-8321-17fc450f8317
+		sourceLineageTag: department_group
+		summarizeBy: none
+		sourceColumn: department_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_year
+		dataType: int64
+		formatString: 0
+		lineageTag: b28b8aa0-090d-4ac2-b6ea-59607b2d59e0
+		sourceLineageTag: fiscal_year
+		summarizeBy: sum
+		sourceColumn: fiscal_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 1890a1e7-1a7e-44c9-8c71-00155bc78027
+		sourceLineageTag: fiscal_month
+		summarizeBy: sum
+		sourceColumn: fiscal_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_quarter
+		dataType: string
+		lineageTag: 4e5e975c-5577-438b-9cfc-034166123940
+		sourceLineageTag: fiscal_quarter
+		summarizeBy: none
+		sourceColumn: fiscal_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column variance_amount
+		dataType: double
+		lineageTag: 01ba6ed4-f3b1-45ac-9122-8c0e16b7c7da
+		sourceLineageTag: variance_amount
+		summarizeBy: sum
+		sourceColumn: variance_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column variance_pct
+		dataType: double
+		lineageTag: 9ca3455b-b36b-4953-af49-ad8af5d6732a
+		sourceLineageTag: variance_pct
+		summarizeBy: sum
+		sourceColumn: variance_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column variance_status
+		dataType: string
+		lineageTag: a71d845d-e69b-436d-aa15-7f14886e25a0
+		sourceLineageTag: variance_status
+		summarizeBy: none
+		sourceColumn: variance_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition rpt_budget_vs_actuals = entity
+		mode: directLake
+		source
+			entityName: rpt_budget_vs_actuals
+			schemaName: dbo_marts
+			expressionSource: 'DirectLake - FinanceOps_DW'
+

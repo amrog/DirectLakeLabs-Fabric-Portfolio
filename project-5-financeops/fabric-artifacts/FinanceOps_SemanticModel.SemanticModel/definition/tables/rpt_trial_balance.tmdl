@@ -1,0 +1,149 @@
+table rpt_trial_balance
+	lineageTag: 1cf85051-3143-44ed-a471-52948b767880
+	sourceLineageTag: [dbo_marts].[rpt_trial_balance]
+
+	column fiscal_period_id
+		dataType: string
+		lineageTag: 0bdd1b45-c3cf-48bd-b58e-3510300e56ee
+		sourceLineageTag: fiscal_period_id
+		summarizeBy: none
+		sourceColumn: fiscal_period_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 39aa0cca-e7f7-4a80-839c-af9864cef526
+		sourceLineageTag: fiscal_year
+		summarizeBy: sum
+		sourceColumn: fiscal_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_month
+		dataType: int64
+		formatString: 0
+		lineageTag: b6f6e213-19e9-4e91-9b9d-39ef43145abb
+		sourceLineageTag: fiscal_month
+		summarizeBy: sum
+		sourceColumn: fiscal_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_quarter
+		dataType: string
+		lineageTag: eb664e1a-15d4-446a-befb-61240b302a4f
+		sourceLineageTag: fiscal_quarter
+		summarizeBy: none
+		sourceColumn: fiscal_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_id
+		dataType: string
+		lineageTag: 81449e0d-3cf6-4ead-9ee3-cdae2e0cc4cf
+		sourceLineageTag: account_id
+		summarizeBy: none
+		sourceColumn: account_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_name
+		dataType: string
+		lineageTag: e6ae2668-4b2e-41e4-9b48-01e5023119a1
+		sourceLineageTag: account_name
+		summarizeBy: none
+		sourceColumn: account_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_type
+		dataType: string
+		lineageTag: a61e1f41-a1b5-4b3d-94e9-e7371395ef27
+		sourceLineageTag: account_type
+		summarizeBy: none
+		sourceColumn: account_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column financial_statement
+		dataType: string
+		lineageTag: 925b2880-2dc3-4533-aeec-af7ddfe1e250
+		sourceLineageTag: financial_statement
+		summarizeBy: none
+		sourceColumn: financial_statement
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_subgroup
+		dataType: string
+		lineageTag: b911a9c3-beb4-4f37-a831-133c12863113
+		sourceLineageTag: account_subgroup
+		summarizeBy: none
+		sourceColumn: account_subgroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_debits
+		dataType: double
+		lineageTag: 7c0924b2-8da0-4327-8032-43681971361a
+		sourceLineageTag: total_debits
+		summarizeBy: sum
+		sourceColumn: total_debits
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_credits
+		dataType: double
+		lineageTag: 46194079-c589-41b0-8fe2-db22a68967c3
+		sourceLineageTag: total_credits
+		summarizeBy: sum
+		sourceColumn: total_credits
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column net_activity
+		dataType: double
+		lineageTag: e0c4f419-805f-4a8e-979c-18d5e3d254b4
+		sourceLineageTag: net_activity
+		summarizeBy: sum
+		sourceColumn: net_activity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ending_balance
+		dataType: double
+		lineageTag: 961f9e27-1e7b-471e-bddc-748eb4d401bc
+		sourceLineageTag: ending_balance
+		summarizeBy: sum
+		sourceColumn: ending_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column reported_balance
+		dataType: double
+		lineageTag: 2350808f-dee2-4cd9-9a7e-9b0a00c09b68
+		sourceLineageTag: reported_balance
+		summarizeBy: sum
+		sourceColumn: reported_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition rpt_trial_balance = entity
+		mode: directLake
+		source
+			entityName: rpt_trial_balance
+			schemaName: dbo_marts
+			expressionSource: 'DirectLake - FinanceOps_DW'
+

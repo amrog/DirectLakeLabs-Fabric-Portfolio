@@ -1,0 +1,1 @@
+CREATE SCHEMA dbo_staging;
