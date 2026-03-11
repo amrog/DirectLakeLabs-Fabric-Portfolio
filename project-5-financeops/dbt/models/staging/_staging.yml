@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_journal_entries
+    description: "Cleaned journal entry headers. Filtered to Posted and Reversed status only."
+    columns:
+      - name: journal_entry_id
+        description: "Unique journal entry identifier"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_journal_entry_lines
+    description: "Cleaned journal entry line items with net_amount derived column."
+    columns:
+      - name: journal_entry_id
+        description: "FK to stg_journal_entries"
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_journal_entries')
+              field: journal_entry_id
+      - name: account_id
+        description: "FK to chart of accounts"
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_chart_of_accounts')
+              field: account_id
+      - name: cost_center_id
+        description: "FK to cost centers"
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_cost_centers')
+              field: cost_center_id
+
+  - name: stg_chart_of_accounts
+    description: "Chart of accounts reference data."
+    columns:
+      - name: account_id
+        description: "Natural key for GL account"
+        data_tests:
+          - unique
+          - not_null
+      - name: account_type
+        data_tests:
+          - accepted_values:
+              values: ['Asset', 'Liability', 'Equity', 'Revenue', 'Expense']
+
+  - name: stg_cost_centers
+    description: "Cost center reference data."
+    columns:
+      - name: cost_center_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_fiscal_periods
+    description: "Fiscal calendar periods (24 months: FY2024-FY2025)."
+    columns:
+      - name: fiscal_period_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_budget_allocations
+    description: "Budget targets by account, cost center, and period."

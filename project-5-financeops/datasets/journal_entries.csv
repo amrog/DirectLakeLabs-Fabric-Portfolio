@@ -1,0 +1,799 @@
+journal_entry_id,posting_date,description,source_system,created_by,status,created_at
+JE-000001,2024-01-28,Product revenue - 2024-01,ERP,Revenue Module,Posted,2024-01-28 00:00:00
+JE-000002,2024-01-28,Service revenue - 2024-01,ERP,Revenue Module,Posted,2024-01-28 00:00:00
+JE-000003,2024-01-28,Subscription revenue - 2024-01,ERP,Revenue Module,Posted,2024-01-28 00:00:00
+JE-000004,2024-01-28,COGS product - 2024-01,ERP,Cost Module,Posted,2024-01-28 00:00:00
+JE-000005,2024-01-28,COGS services - 2024-01,ERP,Cost Module,Posted,2024-01-28 00:00:00
+JE-000006,2024-01-28,COGS subscriptions - 2024-01,ERP,Cost Module,Posted,2024-01-28 00:00:00
+JE-000007,2024-01-28,Payroll - CC100 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000008,2024-01-28,Payroll - CC200 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000009,2024-01-28,Payroll - CC300 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000010,2024-01-28,Payroll - CC400 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000011,2024-01-28,Payroll - CC500 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000012,2024-01-28,Payroll - CC600 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000013,2024-01-28,Payroll - CC700 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000014,2024-01-28,Payroll - CC800 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000015,2024-01-28,Payroll - CC900 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000016,2024-01-28,Benefits - CC100 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000017,2024-01-28,Benefits - CC200 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000018,2024-01-28,Benefits - CC300 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000019,2024-01-28,Benefits - CC400 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000020,2024-01-28,Benefits - CC500 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000021,2024-01-28,Benefits - CC600 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000022,2024-01-28,Benefits - CC700 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000023,2024-01-28,Benefits - CC800 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000024,2024-01-28,Benefits - CC900 - 2024-01,Payroll System,ADP Integration,Posted,2024-01-28 00:00:00
+JE-000025,2024-01-28,Rent and facilities - 2024-01,AP System,Accounts Payable,Posted,2024-01-28 00:00:00
+JE-000026,2024-01-28,Depreciation - 2024-01,Fixed Assets,Depreciation Module,Posted,2024-01-28 00:00:00
+JE-000027,2024-01-28,Marketing spend - 2024-01,AP System,Accounts Payable,Posted,2024-01-28 00:00:00
+JE-000028,2024-01-28,Travel and entertainment - 2024-01,Concur,Expense System,Posted,2024-01-28 00:00:00
+JE-000029,2024-01-28,Software subscriptions - 2024-01,AP System,Accounts Payable,Posted,2024-01-28 00:00:00
+JE-000030,2024-01-28,Utilities - 2024-01,AP System,Accounts Payable,Posted,2024-01-28 00:00:00
+JE-000031,2024-01-28,Interest expense - 2024-01,Treasury,Debt Module,Posted,2024-01-28 00:00:00
+JE-000032,2024-01-23,Cash collections - 2024-01,ERP,Collections Module,Posted,2024-01-23 00:00:00
+JE-000033,2024-01-18,AP payments - 2024-01,AP System,Payment Run,Posted,2024-01-18 00:00:00
+JE-000034,2024-02-28,Product revenue - 2024-02,ERP,Revenue Module,Posted,2024-02-28 00:00:00
+JE-000035,2024-02-28,Service revenue - 2024-02,ERP,Revenue Module,Posted,2024-02-28 00:00:00
+JE-000036,2024-02-28,Subscription revenue - 2024-02,ERP,Revenue Module,Posted,2024-02-28 00:00:00
+JE-000037,2024-02-28,COGS product - 2024-02,ERP,Cost Module,Posted,2024-02-28 00:00:00
+JE-000038,2024-02-28,COGS services - 2024-02,ERP,Cost Module,Posted,2024-02-28 00:00:00
+JE-000039,2024-02-28,COGS subscriptions - 2024-02,ERP,Cost Module,Posted,2024-02-28 00:00:00
+JE-000040,2024-02-28,Payroll - CC100 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000041,2024-02-28,Payroll - CC200 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000042,2024-02-28,Payroll - CC300 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000043,2024-02-28,Payroll - CC400 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000044,2024-02-28,Payroll - CC500 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000045,2024-02-28,Payroll - CC600 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000046,2024-02-28,Payroll - CC700 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000047,2024-02-28,Payroll - CC800 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000048,2024-02-28,Payroll - CC900 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000049,2024-02-28,Benefits - CC100 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000050,2024-02-28,Benefits - CC200 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000051,2024-02-28,Benefits - CC300 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000052,2024-02-28,Benefits - CC400 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000053,2024-02-28,Benefits - CC500 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000054,2024-02-28,Benefits - CC600 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000055,2024-02-28,Benefits - CC700 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000056,2024-02-28,Benefits - CC800 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000057,2024-02-28,Benefits - CC900 - 2024-02,Payroll System,ADP Integration,Posted,2024-02-28 00:00:00
+JE-000058,2024-02-28,Rent and facilities - 2024-02,AP System,Accounts Payable,Posted,2024-02-28 00:00:00
+JE-000059,2024-02-28,Depreciation - 2024-02,Fixed Assets,Depreciation Module,Posted,2024-02-28 00:00:00
+JE-000060,2024-02-28,Professional services - 2024-02,AP System,Accounts Payable,Posted,2024-02-28 00:00:00
+JE-000061,2024-02-28,Marketing spend - 2024-02,AP System,Accounts Payable,Posted,2024-02-28 00:00:00
+JE-000062,2024-02-28,Travel and entertainment - 2024-02,Concur,Expense System,Posted,2024-02-28 00:00:00
+JE-000063,2024-02-28,Software subscriptions - 2024-02,AP System,Accounts Payable,Posted,2024-02-28 00:00:00
+JE-000064,2024-02-28,Utilities - 2024-02,AP System,Accounts Payable,Posted,2024-02-28 00:00:00
+JE-000065,2024-02-28,Interest expense - 2024-02,Treasury,Debt Module,Posted,2024-02-28 00:00:00
+JE-000066,2024-02-23,Cash collections - 2024-02,ERP,Collections Module,Posted,2024-02-23 00:00:00
+JE-000067,2024-02-18,AP payments - 2024-02,AP System,Payment Run,Posted,2024-02-18 00:00:00
+JE-000068,2024-03-28,Product revenue - 2024-03,ERP,Revenue Module,Posted,2024-03-28 00:00:00
+JE-000069,2024-03-28,Service revenue - 2024-03,ERP,Revenue Module,Posted,2024-03-28 00:00:00
+JE-000070,2024-03-28,Subscription revenue - 2024-03,ERP,Revenue Module,Posted,2024-03-28 00:00:00
+JE-000071,2024-03-28,COGS product - 2024-03,ERP,Cost Module,Posted,2024-03-28 00:00:00
+JE-000072,2024-03-28,COGS services - 2024-03,ERP,Cost Module,Posted,2024-03-28 00:00:00
+JE-000073,2024-03-28,COGS subscriptions - 2024-03,ERP,Cost Module,Posted,2024-03-28 00:00:00
+JE-000074,2024-03-28,Payroll - CC100 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000075,2024-03-28,Payroll - CC200 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000076,2024-03-28,Payroll - CC300 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000077,2024-03-28,Payroll - CC400 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000078,2024-03-28,Payroll - CC500 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000079,2024-03-28,Payroll - CC600 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000080,2024-03-28,Payroll - CC700 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000081,2024-03-28,Payroll - CC800 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000082,2024-03-28,Payroll - CC900 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000083,2024-03-28,Benefits - CC100 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000084,2024-03-28,Benefits - CC200 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000085,2024-03-28,Benefits - CC300 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000086,2024-03-28,Benefits - CC400 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000087,2024-03-28,Benefits - CC500 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000088,2024-03-28,Benefits - CC600 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000089,2024-03-28,Benefits - CC700 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000090,2024-03-28,Benefits - CC800 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000091,2024-03-28,Benefits - CC900 - 2024-03,Payroll System,ADP Integration,Posted,2024-03-28 00:00:00
+JE-000092,2024-03-28,Rent and facilities - 2024-03,AP System,Accounts Payable,Posted,2024-03-28 00:00:00
+JE-000093,2024-03-28,Depreciation - 2024-03,Fixed Assets,Depreciation Module,Posted,2024-03-28 00:00:00
+JE-000094,2024-03-28,Professional services - 2024-03,AP System,Accounts Payable,Posted,2024-03-28 00:00:00
+JE-000095,2024-03-28,Marketing spend - 2024-03,AP System,Accounts Payable,Posted,2024-03-28 00:00:00
+JE-000096,2024-03-28,Travel and entertainment - 2024-03,Concur,Expense System,Posted,2024-03-28 00:00:00
+JE-000097,2024-03-28,Software subscriptions - 2024-03,AP System,Accounts Payable,Posted,2024-03-28 00:00:00
+JE-000098,2024-03-28,Insurance - 2024-Q1,AP System,Accounts Payable,Posted,2024-03-28 00:00:00
+JE-000099,2024-03-28,Utilities - 2024-03,AP System,Accounts Payable,Posted,2024-03-28 00:00:00
+JE-000100,2024-03-28,Interest expense - 2024-03,Treasury,Debt Module,Posted,2024-03-28 00:00:00
+JE-000101,2024-03-28,Tax provision - 2024-Q1,Tax System,Tax Module,Posted,2024-03-28 00:00:00
+JE-000102,2024-03-23,Cash collections - 2024-03,ERP,Collections Module,Posted,2024-03-23 00:00:00
+JE-000103,2024-03-18,AP payments - 2024-03,AP System,Payment Run,Posted,2024-03-18 00:00:00
+JE-000104,2024-04-28,Product revenue - 2024-04,ERP,Revenue Module,Posted,2024-04-28 00:00:00
+JE-000105,2024-04-28,Service revenue - 2024-04,ERP,Revenue Module,Posted,2024-04-28 00:00:00
+JE-000106,2024-04-28,Subscription revenue - 2024-04,ERP,Revenue Module,Posted,2024-04-28 00:00:00
+JE-000107,2024-04-28,COGS product - 2024-04,ERP,Cost Module,Posted,2024-04-28 00:00:00
+JE-000108,2024-04-28,COGS services - 2024-04,ERP,Cost Module,Posted,2024-04-28 00:00:00
+JE-000109,2024-04-28,COGS subscriptions - 2024-04,ERP,Cost Module,Posted,2024-04-28 00:00:00
+JE-000110,2024-04-28,Payroll - CC100 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000111,2024-04-28,Payroll - CC200 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000112,2024-04-28,Payroll - CC300 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000113,2024-04-28,Payroll - CC400 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000114,2024-04-28,Payroll - CC500 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000115,2024-04-28,Payroll - CC600 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000116,2024-04-28,Payroll - CC700 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000117,2024-04-28,Payroll - CC800 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000118,2024-04-28,Payroll - CC900 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000119,2024-04-28,Benefits - CC100 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000120,2024-04-28,Benefits - CC200 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000121,2024-04-28,Benefits - CC300 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000122,2024-04-28,Benefits - CC400 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000123,2024-04-28,Benefits - CC500 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000124,2024-04-28,Benefits - CC600 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000125,2024-04-28,Benefits - CC700 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000126,2024-04-28,Benefits - CC800 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000127,2024-04-28,Benefits - CC900 - 2024-04,Payroll System,ADP Integration,Posted,2024-04-28 00:00:00
+JE-000128,2024-04-28,Rent and facilities - 2024-04,AP System,Accounts Payable,Posted,2024-04-28 00:00:00
+JE-000129,2024-04-28,Depreciation - 2024-04,Fixed Assets,Depreciation Module,Posted,2024-04-28 00:00:00
+JE-000130,2024-04-28,Professional services - 2024-04,AP System,Accounts Payable,Posted,2024-04-28 00:00:00
+JE-000131,2024-04-28,Marketing spend - 2024-04,AP System,Accounts Payable,Posted,2024-04-28 00:00:00
+JE-000132,2024-04-28,Travel and entertainment - 2024-04,Concur,Expense System,Posted,2024-04-28 00:00:00
+JE-000133,2024-04-28,Software subscriptions - 2024-04,AP System,Accounts Payable,Posted,2024-04-28 00:00:00
+JE-000134,2024-04-28,Utilities - 2024-04,AP System,Accounts Payable,Posted,2024-04-28 00:00:00
+JE-000135,2024-04-28,Interest expense - 2024-04,Treasury,Debt Module,Posted,2024-04-28 00:00:00
+JE-000136,2024-04-23,Cash collections - 2024-04,ERP,Collections Module,Posted,2024-04-23 00:00:00
+JE-000137,2024-04-18,AP payments - 2024-04,AP System,Payment Run,Posted,2024-04-18 00:00:00
+JE-000138,2024-05-28,Product revenue - 2024-05,ERP,Revenue Module,Posted,2024-05-28 00:00:00
+JE-000139,2024-05-28,Service revenue - 2024-05,ERP,Revenue Module,Posted,2024-05-28 00:00:00
+JE-000140,2024-05-28,Subscription revenue - 2024-05,ERP,Revenue Module,Posted,2024-05-28 00:00:00
+JE-000141,2024-05-28,COGS product - 2024-05,ERP,Cost Module,Posted,2024-05-28 00:00:00
+JE-000142,2024-05-28,COGS services - 2024-05,ERP,Cost Module,Posted,2024-05-28 00:00:00
+JE-000143,2024-05-28,COGS subscriptions - 2024-05,ERP,Cost Module,Posted,2024-05-28 00:00:00
+JE-000144,2024-05-28,Payroll - CC100 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000145,2024-05-28,Payroll - CC200 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000146,2024-05-28,Payroll - CC300 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000147,2024-05-28,Payroll - CC400 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000148,2024-05-28,Payroll - CC500 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000149,2024-05-28,Payroll - CC600 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000150,2024-05-28,Payroll - CC700 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000151,2024-05-28,Payroll - CC800 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000152,2024-05-28,Payroll - CC900 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000153,2024-05-28,Benefits - CC100 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000154,2024-05-28,Benefits - CC200 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000155,2024-05-28,Benefits - CC300 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000156,2024-05-28,Benefits - CC400 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000157,2024-05-28,Benefits - CC500 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000158,2024-05-28,Benefits - CC600 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000159,2024-05-28,Benefits - CC700 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000160,2024-05-28,Benefits - CC800 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000161,2024-05-28,Benefits - CC900 - 2024-05,Payroll System,ADP Integration,Posted,2024-05-28 00:00:00
+JE-000162,2024-05-28,Rent and facilities - 2024-05,AP System,Accounts Payable,Posted,2024-05-28 00:00:00
+JE-000163,2024-05-28,Depreciation - 2024-05,Fixed Assets,Depreciation Module,Posted,2024-05-28 00:00:00
+JE-000164,2024-05-28,Marketing spend - 2024-05,AP System,Accounts Payable,Posted,2024-05-28 00:00:00
+JE-000165,2024-05-28,Travel and entertainment - 2024-05,Concur,Expense System,Posted,2024-05-28 00:00:00
+JE-000166,2024-05-28,Software subscriptions - 2024-05,AP System,Accounts Payable,Posted,2024-05-28 00:00:00
+JE-000167,2024-05-28,Utilities - 2024-05,AP System,Accounts Payable,Posted,2024-05-28 00:00:00
+JE-000168,2024-05-28,Interest expense - 2024-05,Treasury,Debt Module,Posted,2024-05-28 00:00:00
+JE-000169,2024-05-23,Cash collections - 2024-05,ERP,Collections Module,Posted,2024-05-23 00:00:00
+JE-000170,2024-05-18,AP payments - 2024-05,AP System,Payment Run,Posted,2024-05-18 00:00:00
+JE-000171,2024-06-28,Product revenue - 2024-06,ERP,Revenue Module,Posted,2024-06-28 00:00:00
+JE-000172,2024-06-28,Service revenue - 2024-06,ERP,Revenue Module,Posted,2024-06-28 00:00:00
+JE-000173,2024-06-28,Subscription revenue - 2024-06,ERP,Revenue Module,Posted,2024-06-28 00:00:00
+JE-000174,2024-06-28,COGS product - 2024-06,ERP,Cost Module,Posted,2024-06-28 00:00:00
+JE-000175,2024-06-28,COGS services - 2024-06,ERP,Cost Module,Posted,2024-06-28 00:00:00
+JE-000176,2024-06-28,COGS subscriptions - 2024-06,ERP,Cost Module,Posted,2024-06-28 00:00:00
+JE-000177,2024-06-28,Payroll - CC100 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000178,2024-06-28,Payroll - CC200 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000179,2024-06-28,Payroll - CC300 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000180,2024-06-28,Payroll - CC400 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000181,2024-06-28,Payroll - CC500 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000182,2024-06-28,Payroll - CC600 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000183,2024-06-28,Payroll - CC700 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000184,2024-06-28,Payroll - CC800 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000185,2024-06-28,Payroll - CC900 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000186,2024-06-28,Benefits - CC100 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000187,2024-06-28,Benefits - CC200 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000188,2024-06-28,Benefits - CC300 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000189,2024-06-28,Benefits - CC400 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000190,2024-06-28,Benefits - CC500 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000191,2024-06-28,Benefits - CC600 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000192,2024-06-28,Benefits - CC700 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000193,2024-06-28,Benefits - CC800 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000194,2024-06-28,Benefits - CC900 - 2024-06,Payroll System,ADP Integration,Posted,2024-06-28 00:00:00
+JE-000195,2024-06-28,Rent and facilities - 2024-06,AP System,Accounts Payable,Posted,2024-06-28 00:00:00
+JE-000196,2024-06-28,Depreciation - 2024-06,Fixed Assets,Depreciation Module,Posted,2024-06-28 00:00:00
+JE-000197,2024-06-28,Professional services - 2024-06,AP System,Accounts Payable,Posted,2024-06-28 00:00:00
+JE-000198,2024-06-28,Marketing spend - 2024-06,AP System,Accounts Payable,Posted,2024-06-28 00:00:00
+JE-000199,2024-06-28,Travel and entertainment - 2024-06,Concur,Expense System,Posted,2024-06-28 00:00:00
+JE-000200,2024-06-28,Software subscriptions - 2024-06,AP System,Accounts Payable,Posted,2024-06-28 00:00:00
+JE-000201,2024-06-28,Insurance - 2024-Q2,AP System,Accounts Payable,Posted,2024-06-28 00:00:00
+JE-000202,2024-06-28,Utilities - 2024-06,AP System,Accounts Payable,Posted,2024-06-28 00:00:00
+JE-000203,2024-06-28,Interest expense - 2024-06,Treasury,Debt Module,Posted,2024-06-28 00:00:00
+JE-000204,2024-06-28,Tax provision - 2024-Q2,Tax System,Tax Module,Posted,2024-06-28 00:00:00
+JE-000205,2024-06-23,Cash collections - 2024-06,ERP,Collections Module,Posted,2024-06-23 00:00:00
+JE-000206,2024-06-18,AP payments - 2024-06,AP System,Payment Run,Posted,2024-06-18 00:00:00
+JE-000207,2024-07-28,Product revenue - 2024-07,ERP,Revenue Module,Posted,2024-07-28 00:00:00
+JE-000208,2024-07-28,Service revenue - 2024-07,ERP,Revenue Module,Posted,2024-07-28 00:00:00
+JE-000209,2024-07-28,Subscription revenue - 2024-07,ERP,Revenue Module,Posted,2024-07-28 00:00:00
+JE-000210,2024-07-28,COGS product - 2024-07,ERP,Cost Module,Posted,2024-07-28 00:00:00
+JE-000211,2024-07-28,COGS services - 2024-07,ERP,Cost Module,Posted,2024-07-28 00:00:00
+JE-000212,2024-07-28,COGS subscriptions - 2024-07,ERP,Cost Module,Posted,2024-07-28 00:00:00
+JE-000213,2024-07-28,Payroll - CC100 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000214,2024-07-28,Payroll - CC200 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000215,2024-07-28,Payroll - CC300 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000216,2024-07-28,Payroll - CC400 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000217,2024-07-28,Payroll - CC500 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000218,2024-07-28,Payroll - CC600 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000219,2024-07-28,Payroll - CC700 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000220,2024-07-28,Payroll - CC800 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000221,2024-07-28,Payroll - CC900 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000222,2024-07-28,Benefits - CC100 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000223,2024-07-28,Benefits - CC200 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000224,2024-07-28,Benefits - CC300 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000225,2024-07-28,Benefits - CC400 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000226,2024-07-28,Benefits - CC500 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000227,2024-07-28,Benefits - CC600 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000228,2024-07-28,Benefits - CC700 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000229,2024-07-28,Benefits - CC800 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000230,2024-07-28,Benefits - CC900 - 2024-07,Payroll System,ADP Integration,Posted,2024-07-28 00:00:00
+JE-000231,2024-07-28,Rent and facilities - 2024-07,AP System,Accounts Payable,Posted,2024-07-28 00:00:00
+JE-000232,2024-07-28,Depreciation - 2024-07,Fixed Assets,Depreciation Module,Posted,2024-07-28 00:00:00
+JE-000233,2024-07-28,Professional services - 2024-07,AP System,Accounts Payable,Posted,2024-07-28 00:00:00
+JE-000234,2024-07-28,Marketing spend - 2024-07,AP System,Accounts Payable,Posted,2024-07-28 00:00:00
+JE-000235,2024-07-28,Travel and entertainment - 2024-07,Concur,Expense System,Posted,2024-07-28 00:00:00
+JE-000236,2024-07-28,Software subscriptions - 2024-07,AP System,Accounts Payable,Posted,2024-07-28 00:00:00
+JE-000237,2024-07-28,Utilities - 2024-07,AP System,Accounts Payable,Posted,2024-07-28 00:00:00
+JE-000238,2024-07-28,Interest expense - 2024-07,Treasury,Debt Module,Posted,2024-07-28 00:00:00
+JE-000239,2024-07-23,Cash collections - 2024-07,ERP,Collections Module,Posted,2024-07-23 00:00:00
+JE-000240,2024-07-18,AP payments - 2024-07,AP System,Payment Run,Posted,2024-07-18 00:00:00
+JE-000241,2024-08-28,Product revenue - 2024-08,ERP,Revenue Module,Posted,2024-08-28 00:00:00
+JE-000242,2024-08-28,Service revenue - 2024-08,ERP,Revenue Module,Posted,2024-08-28 00:00:00
+JE-000243,2024-08-28,Subscription revenue - 2024-08,ERP,Revenue Module,Posted,2024-08-28 00:00:00
+JE-000244,2024-08-28,COGS product - 2024-08,ERP,Cost Module,Posted,2024-08-28 00:00:00
+JE-000245,2024-08-28,COGS services - 2024-08,ERP,Cost Module,Posted,2024-08-28 00:00:00
+JE-000246,2024-08-28,COGS subscriptions - 2024-08,ERP,Cost Module,Posted,2024-08-28 00:00:00
+JE-000247,2024-08-28,Payroll - CC100 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000248,2024-08-28,Payroll - CC200 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000249,2024-08-28,Payroll - CC300 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000250,2024-08-28,Payroll - CC400 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000251,2024-08-28,Payroll - CC500 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000252,2024-08-28,Payroll - CC600 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000253,2024-08-28,Payroll - CC700 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000254,2024-08-28,Payroll - CC800 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000255,2024-08-28,Payroll - CC900 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000256,2024-08-28,Benefits - CC100 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000257,2024-08-28,Benefits - CC200 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000258,2024-08-28,Benefits - CC300 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000259,2024-08-28,Benefits - CC400 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000260,2024-08-28,Benefits - CC500 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000261,2024-08-28,Benefits - CC600 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000262,2024-08-28,Benefits - CC700 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000263,2024-08-28,Benefits - CC800 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000264,2024-08-28,Benefits - CC900 - 2024-08,Payroll System,ADP Integration,Posted,2024-08-28 00:00:00
+JE-000265,2024-08-28,Rent and facilities - 2024-08,AP System,Accounts Payable,Posted,2024-08-28 00:00:00
+JE-000266,2024-08-28,Depreciation - 2024-08,Fixed Assets,Depreciation Module,Posted,2024-08-28 00:00:00
+JE-000267,2024-08-28,Professional services - 2024-08,AP System,Accounts Payable,Posted,2024-08-28 00:00:00
+JE-000268,2024-08-28,Marketing spend - 2024-08,AP System,Accounts Payable,Posted,2024-08-28 00:00:00
+JE-000269,2024-08-28,Travel and entertainment - 2024-08,Concur,Expense System,Posted,2024-08-28 00:00:00
+JE-000270,2024-08-28,Software subscriptions - 2024-08,AP System,Accounts Payable,Posted,2024-08-28 00:00:00
+JE-000271,2024-08-28,Utilities - 2024-08,AP System,Accounts Payable,Posted,2024-08-28 00:00:00
+JE-000272,2024-08-28,Interest expense - 2024-08,Treasury,Debt Module,Posted,2024-08-28 00:00:00
+JE-000273,2024-08-23,Cash collections - 2024-08,ERP,Collections Module,Posted,2024-08-23 00:00:00
+JE-000274,2024-08-18,AP payments - 2024-08,AP System,Payment Run,Posted,2024-08-18 00:00:00
+JE-000275,2024-09-28,Product revenue - 2024-09,ERP,Revenue Module,Posted,2024-09-28 00:00:00
+JE-000276,2024-09-28,Service revenue - 2024-09,ERP,Revenue Module,Posted,2024-09-28 00:00:00
+JE-000277,2024-09-28,Subscription revenue - 2024-09,ERP,Revenue Module,Posted,2024-09-28 00:00:00
+JE-000278,2024-09-28,COGS product - 2024-09,ERP,Cost Module,Posted,2024-09-28 00:00:00
+JE-000279,2024-09-28,COGS services - 2024-09,ERP,Cost Module,Posted,2024-09-28 00:00:00
+JE-000280,2024-09-28,COGS subscriptions - 2024-09,ERP,Cost Module,Posted,2024-09-28 00:00:00
+JE-000281,2024-09-28,Payroll - CC100 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000282,2024-09-28,Payroll - CC200 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000283,2024-09-28,Payroll - CC300 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000284,2024-09-28,Payroll - CC400 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000285,2024-09-28,Payroll - CC500 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000286,2024-09-28,Payroll - CC600 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000287,2024-09-28,Payroll - CC700 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000288,2024-09-28,Payroll - CC800 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000289,2024-09-28,Payroll - CC900 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000290,2024-09-28,Benefits - CC100 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000291,2024-09-28,Benefits - CC200 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000292,2024-09-28,Benefits - CC300 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000293,2024-09-28,Benefits - CC400 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000294,2024-09-28,Benefits - CC500 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000295,2024-09-28,Benefits - CC600 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000296,2024-09-28,Benefits - CC700 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000297,2024-09-28,Benefits - CC800 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000298,2024-09-28,Benefits - CC900 - 2024-09,Payroll System,ADP Integration,Posted,2024-09-28 00:00:00
+JE-000299,2024-09-28,Rent and facilities - 2024-09,AP System,Accounts Payable,Posted,2024-09-28 00:00:00
+JE-000300,2024-09-28,Depreciation - 2024-09,Fixed Assets,Depreciation Module,Posted,2024-09-28 00:00:00
+JE-000301,2024-09-28,Marketing spend - 2024-09,AP System,Accounts Payable,Posted,2024-09-28 00:00:00
+JE-000302,2024-09-28,Travel and entertainment - 2024-09,Concur,Expense System,Posted,2024-09-28 00:00:00
+JE-000303,2024-09-28,Software subscriptions - 2024-09,AP System,Accounts Payable,Posted,2024-09-28 00:00:00
+JE-000304,2024-09-28,Insurance - 2024-Q3,AP System,Accounts Payable,Posted,2024-09-28 00:00:00
+JE-000305,2024-09-28,Utilities - 2024-09,AP System,Accounts Payable,Posted,2024-09-28 00:00:00
+JE-000306,2024-09-28,Interest expense - 2024-09,Treasury,Debt Module,Posted,2024-09-28 00:00:00
+JE-000307,2024-09-28,Tax provision - 2024-Q3,Tax System,Tax Module,Posted,2024-09-28 00:00:00
+JE-000308,2024-09-23,Cash collections - 2024-09,ERP,Collections Module,Posted,2024-09-23 00:00:00
+JE-000309,2024-09-18,AP payments - 2024-09,AP System,Payment Run,Posted,2024-09-18 00:00:00
+JE-000310,2024-10-28,Product revenue - 2024-10,ERP,Revenue Module,Posted,2024-10-28 00:00:00
+JE-000311,2024-10-28,Service revenue - 2024-10,ERP,Revenue Module,Posted,2024-10-28 00:00:00
+JE-000312,2024-10-28,Subscription revenue - 2024-10,ERP,Revenue Module,Posted,2024-10-28 00:00:00
+JE-000313,2024-10-28,COGS product - 2024-10,ERP,Cost Module,Posted,2024-10-28 00:00:00
+JE-000314,2024-10-28,COGS services - 2024-10,ERP,Cost Module,Posted,2024-10-28 00:00:00
+JE-000315,2024-10-28,COGS subscriptions - 2024-10,ERP,Cost Module,Posted,2024-10-28 00:00:00
+JE-000316,2024-10-28,Payroll - CC100 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000317,2024-10-28,Payroll - CC200 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000318,2024-10-28,Payroll - CC300 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000319,2024-10-28,Payroll - CC400 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000320,2024-10-28,Payroll - CC500 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000321,2024-10-28,Payroll - CC600 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000322,2024-10-28,Payroll - CC700 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000323,2024-10-28,Payroll - CC800 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000324,2024-10-28,Payroll - CC900 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000325,2024-10-28,Benefits - CC100 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000326,2024-10-28,Benefits - CC200 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000327,2024-10-28,Benefits - CC300 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000328,2024-10-28,Benefits - CC400 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000329,2024-10-28,Benefits - CC500 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000330,2024-10-28,Benefits - CC600 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000331,2024-10-28,Benefits - CC700 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000332,2024-10-28,Benefits - CC800 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000333,2024-10-28,Benefits - CC900 - 2024-10,Payroll System,ADP Integration,Posted,2024-10-28 00:00:00
+JE-000334,2024-10-28,Rent and facilities - 2024-10,AP System,Accounts Payable,Posted,2024-10-28 00:00:00
+JE-000335,2024-10-28,Depreciation - 2024-10,Fixed Assets,Depreciation Module,Posted,2024-10-28 00:00:00
+JE-000336,2024-10-28,Professional services - 2024-10,AP System,Accounts Payable,Posted,2024-10-28 00:00:00
+JE-000337,2024-10-28,Marketing spend - 2024-10,AP System,Accounts Payable,Posted,2024-10-28 00:00:00
+JE-000338,2024-10-28,Travel and entertainment - 2024-10,Concur,Expense System,Posted,2024-10-28 00:00:00
+JE-000339,2024-10-28,Software subscriptions - 2024-10,AP System,Accounts Payable,Posted,2024-10-28 00:00:00
+JE-000340,2024-10-28,Utilities - 2024-10,AP System,Accounts Payable,Posted,2024-10-28 00:00:00
+JE-000341,2024-10-28,Interest expense - 2024-10,Treasury,Debt Module,Posted,2024-10-28 00:00:00
+JE-000342,2024-10-23,Cash collections - 2024-10,ERP,Collections Module,Posted,2024-10-23 00:00:00
+JE-000343,2024-10-18,AP payments - 2024-10,AP System,Payment Run,Posted,2024-10-18 00:00:00
+JE-000344,2024-11-28,Product revenue - 2024-11,ERP,Revenue Module,Posted,2024-11-28 00:00:00
+JE-000345,2024-11-28,Service revenue - 2024-11,ERP,Revenue Module,Posted,2024-11-28 00:00:00
+JE-000346,2024-11-28,Subscription revenue - 2024-11,ERP,Revenue Module,Posted,2024-11-28 00:00:00
+JE-000347,2024-11-28,COGS product - 2024-11,ERP,Cost Module,Posted,2024-11-28 00:00:00
+JE-000348,2024-11-28,COGS services - 2024-11,ERP,Cost Module,Posted,2024-11-28 00:00:00
+JE-000349,2024-11-28,COGS subscriptions - 2024-11,ERP,Cost Module,Posted,2024-11-28 00:00:00
+JE-000350,2024-11-28,Payroll - CC100 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000351,2024-11-28,Payroll - CC200 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000352,2024-11-28,Payroll - CC300 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000353,2024-11-28,Payroll - CC400 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000354,2024-11-28,Payroll - CC500 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000355,2024-11-28,Payroll - CC600 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000356,2024-11-28,Payroll - CC700 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000357,2024-11-28,Payroll - CC800 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000358,2024-11-28,Payroll - CC900 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000359,2024-11-28,Benefits - CC100 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000360,2024-11-28,Benefits - CC200 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000361,2024-11-28,Benefits - CC300 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000362,2024-11-28,Benefits - CC400 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000363,2024-11-28,Benefits - CC500 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000364,2024-11-28,Benefits - CC600 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000365,2024-11-28,Benefits - CC700 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000366,2024-11-28,Benefits - CC800 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000367,2024-11-28,Benefits - CC900 - 2024-11,Payroll System,ADP Integration,Posted,2024-11-28 00:00:00
+JE-000368,2024-11-28,Rent and facilities - 2024-11,AP System,Accounts Payable,Posted,2024-11-28 00:00:00
+JE-000369,2024-11-28,Depreciation - 2024-11,Fixed Assets,Depreciation Module,Posted,2024-11-28 00:00:00
+JE-000370,2024-11-28,Professional services - 2024-11,AP System,Accounts Payable,Posted,2024-11-28 00:00:00
+JE-000371,2024-11-28,Marketing spend - 2024-11,AP System,Accounts Payable,Posted,2024-11-28 00:00:00
+JE-000372,2024-11-28,Travel and entertainment - 2024-11,Concur,Expense System,Posted,2024-11-28 00:00:00
+JE-000373,2024-11-28,Software subscriptions - 2024-11,AP System,Accounts Payable,Posted,2024-11-28 00:00:00
+JE-000374,2024-11-28,Utilities - 2024-11,AP System,Accounts Payable,Posted,2024-11-28 00:00:00
+JE-000375,2024-11-28,Interest expense - 2024-11,Treasury,Debt Module,Posted,2024-11-28 00:00:00
+JE-000376,2024-11-23,Cash collections - 2024-11,ERP,Collections Module,Posted,2024-11-23 00:00:00
+JE-000377,2024-11-18,AP payments - 2024-11,AP System,Payment Run,Posted,2024-11-18 00:00:00
+JE-000378,2024-12-28,Product revenue - 2024-12,ERP,Revenue Module,Posted,2024-12-28 00:00:00
+JE-000379,2024-12-28,Service revenue - 2024-12,ERP,Revenue Module,Posted,2024-12-28 00:00:00
+JE-000380,2024-12-28,Subscription revenue - 2024-12,ERP,Revenue Module,Posted,2024-12-28 00:00:00
+JE-000381,2024-12-28,COGS product - 2024-12,ERP,Cost Module,Posted,2024-12-28 00:00:00
+JE-000382,2024-12-28,COGS services - 2024-12,ERP,Cost Module,Posted,2024-12-28 00:00:00
+JE-000383,2024-12-28,COGS subscriptions - 2024-12,ERP,Cost Module,Posted,2024-12-28 00:00:00
+JE-000384,2024-12-28,Payroll - CC100 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000385,2024-12-28,Payroll - CC200 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000386,2024-12-28,Payroll - CC300 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000387,2024-12-28,Payroll - CC400 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000388,2024-12-28,Payroll - CC500 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000389,2024-12-28,Payroll - CC600 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000390,2024-12-28,Payroll - CC700 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000391,2024-12-28,Payroll - CC800 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000392,2024-12-28,Payroll - CC900 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000393,2024-12-28,Benefits - CC100 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000394,2024-12-28,Benefits - CC200 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000395,2024-12-28,Benefits - CC300 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000396,2024-12-28,Benefits - CC400 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000397,2024-12-28,Benefits - CC500 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000398,2024-12-28,Benefits - CC600 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000399,2024-12-28,Benefits - CC700 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000400,2024-12-28,Benefits - CC800 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000401,2024-12-28,Benefits - CC900 - 2024-12,Payroll System,ADP Integration,Posted,2024-12-28 00:00:00
+JE-000402,2024-12-28,Rent and facilities - 2024-12,AP System,Accounts Payable,Posted,2024-12-28 00:00:00
+JE-000403,2024-12-28,Depreciation - 2024-12,Fixed Assets,Depreciation Module,Posted,2024-12-28 00:00:00
+JE-000404,2024-12-28,Professional services - 2024-12,AP System,Accounts Payable,Posted,2024-12-28 00:00:00
+JE-000405,2024-12-28,Marketing spend - 2024-12,AP System,Accounts Payable,Posted,2024-12-28 00:00:00
+JE-000406,2024-12-28,Travel and entertainment - 2024-12,Concur,Expense System,Posted,2024-12-28 00:00:00
+JE-000407,2024-12-28,Software subscriptions - 2024-12,AP System,Accounts Payable,Posted,2024-12-28 00:00:00
+JE-000408,2024-12-28,Insurance - 2024-Q4,AP System,Accounts Payable,Posted,2024-12-28 00:00:00
+JE-000409,2024-12-28,Utilities - 2024-12,AP System,Accounts Payable,Posted,2024-12-28 00:00:00
+JE-000410,2024-12-28,Interest expense - 2024-12,Treasury,Debt Module,Posted,2024-12-28 00:00:00
+JE-000411,2024-12-28,Tax provision - 2024-Q4,Tax System,Tax Module,Posted,2024-12-28 00:00:00
+JE-000412,2024-12-23,Cash collections - 2024-12,ERP,Collections Module,Posted,2024-12-23 00:00:00
+JE-000413,2024-12-18,AP payments - 2024-12,AP System,Payment Run,Posted,2024-12-18 00:00:00
+JE-000414,2025-01-28,Product revenue - 2025-01,ERP,Revenue Module,Posted,2025-01-28 00:00:00
+JE-000415,2025-01-28,Service revenue - 2025-01,ERP,Revenue Module,Posted,2025-01-28 00:00:00
+JE-000416,2025-01-28,Subscription revenue - 2025-01,ERP,Revenue Module,Posted,2025-01-28 00:00:00
+JE-000417,2025-01-28,COGS product - 2025-01,ERP,Cost Module,Posted,2025-01-28 00:00:00
+JE-000418,2025-01-28,COGS services - 2025-01,ERP,Cost Module,Posted,2025-01-28 00:00:00
+JE-000419,2025-01-28,COGS subscriptions - 2025-01,ERP,Cost Module,Posted,2025-01-28 00:00:00
+JE-000420,2025-01-28,Payroll - CC100 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000421,2025-01-28,Payroll - CC200 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000422,2025-01-28,Payroll - CC300 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000423,2025-01-28,Payroll - CC400 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000424,2025-01-28,Payroll - CC500 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000425,2025-01-28,Payroll - CC600 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000426,2025-01-28,Payroll - CC700 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000427,2025-01-28,Payroll - CC800 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000428,2025-01-28,Payroll - CC900 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000429,2025-01-28,Benefits - CC100 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000430,2025-01-28,Benefits - CC200 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000431,2025-01-28,Benefits - CC300 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000432,2025-01-28,Benefits - CC400 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000433,2025-01-28,Benefits - CC500 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000434,2025-01-28,Benefits - CC600 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000435,2025-01-28,Benefits - CC700 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000436,2025-01-28,Benefits - CC800 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000437,2025-01-28,Benefits - CC900 - 2025-01,Payroll System,ADP Integration,Posted,2025-01-28 00:00:00
+JE-000438,2025-01-28,Rent and facilities - 2025-01,AP System,Accounts Payable,Posted,2025-01-28 00:00:00
+JE-000439,2025-01-28,Depreciation - 2025-01,Fixed Assets,Depreciation Module,Posted,2025-01-28 00:00:00
+JE-000440,2025-01-28,Professional services - 2025-01,AP System,Accounts Payable,Posted,2025-01-28 00:00:00
+JE-000441,2025-01-28,Marketing spend - 2025-01,AP System,Accounts Payable,Posted,2025-01-28 00:00:00
+JE-000442,2025-01-28,Travel and entertainment - 2025-01,Concur,Expense System,Posted,2025-01-28 00:00:00
+JE-000443,2025-01-28,Software subscriptions - 2025-01,AP System,Accounts Payable,Posted,2025-01-28 00:00:00
+JE-000444,2025-01-28,Utilities - 2025-01,AP System,Accounts Payable,Posted,2025-01-28 00:00:00
+JE-000445,2025-01-28,Interest expense - 2025-01,Treasury,Debt Module,Posted,2025-01-28 00:00:00
+JE-000446,2025-01-23,Cash collections - 2025-01,ERP,Collections Module,Posted,2025-01-23 00:00:00
+JE-000447,2025-01-18,AP payments - 2025-01,AP System,Payment Run,Posted,2025-01-18 00:00:00
+JE-000448,2025-02-28,Product revenue - 2025-02,ERP,Revenue Module,Posted,2025-02-28 00:00:00
+JE-000449,2025-02-28,Service revenue - 2025-02,ERP,Revenue Module,Posted,2025-02-28 00:00:00
+JE-000450,2025-02-28,Subscription revenue - 2025-02,ERP,Revenue Module,Posted,2025-02-28 00:00:00
+JE-000451,2025-02-28,COGS product - 2025-02,ERP,Cost Module,Posted,2025-02-28 00:00:00
+JE-000452,2025-02-28,COGS services - 2025-02,ERP,Cost Module,Posted,2025-02-28 00:00:00
+JE-000453,2025-02-28,COGS subscriptions - 2025-02,ERP,Cost Module,Posted,2025-02-28 00:00:00
+JE-000454,2025-02-28,Payroll - CC100 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000455,2025-02-28,Payroll - CC200 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000456,2025-02-28,Payroll - CC300 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000457,2025-02-28,Payroll - CC400 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000458,2025-02-28,Payroll - CC500 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000459,2025-02-28,Payroll - CC600 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000460,2025-02-28,Payroll - CC700 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000461,2025-02-28,Payroll - CC800 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000462,2025-02-28,Payroll - CC900 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000463,2025-02-28,Benefits - CC100 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000464,2025-02-28,Benefits - CC200 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000465,2025-02-28,Benefits - CC300 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000466,2025-02-28,Benefits - CC400 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000467,2025-02-28,Benefits - CC500 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000468,2025-02-28,Benefits - CC600 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000469,2025-02-28,Benefits - CC700 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000470,2025-02-28,Benefits - CC800 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000471,2025-02-28,Benefits - CC900 - 2025-02,Payroll System,ADP Integration,Posted,2025-02-28 00:00:00
+JE-000472,2025-02-28,Rent and facilities - 2025-02,AP System,Accounts Payable,Posted,2025-02-28 00:00:00
+JE-000473,2025-02-28,Depreciation - 2025-02,Fixed Assets,Depreciation Module,Posted,2025-02-28 00:00:00
+JE-000474,2025-02-28,Professional services - 2025-02,AP System,Accounts Payable,Posted,2025-02-28 00:00:00
+JE-000475,2025-02-28,Marketing spend - 2025-02,AP System,Accounts Payable,Posted,2025-02-28 00:00:00
+JE-000476,2025-02-28,Travel and entertainment - 2025-02,Concur,Expense System,Posted,2025-02-28 00:00:00
+JE-000477,2025-02-28,Software subscriptions - 2025-02,AP System,Accounts Payable,Posted,2025-02-28 00:00:00
+JE-000478,2025-02-28,Utilities - 2025-02,AP System,Accounts Payable,Posted,2025-02-28 00:00:00
+JE-000479,2025-02-28,Interest expense - 2025-02,Treasury,Debt Module,Posted,2025-02-28 00:00:00
+JE-000480,2025-02-23,Cash collections - 2025-02,ERP,Collections Module,Posted,2025-02-23 00:00:00
+JE-000481,2025-02-18,AP payments - 2025-02,AP System,Payment Run,Posted,2025-02-18 00:00:00
+JE-000482,2025-03-28,Product revenue - 2025-03,ERP,Revenue Module,Posted,2025-03-28 00:00:00
+JE-000483,2025-03-28,Service revenue - 2025-03,ERP,Revenue Module,Posted,2025-03-28 00:00:00
+JE-000484,2025-03-28,Subscription revenue - 2025-03,ERP,Revenue Module,Posted,2025-03-28 00:00:00
+JE-000485,2025-03-28,COGS product - 2025-03,ERP,Cost Module,Posted,2025-03-28 00:00:00
+JE-000486,2025-03-28,COGS services - 2025-03,ERP,Cost Module,Posted,2025-03-28 00:00:00
+JE-000487,2025-03-28,COGS subscriptions - 2025-03,ERP,Cost Module,Posted,2025-03-28 00:00:00
+JE-000488,2025-03-28,Payroll - CC100 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000489,2025-03-28,Payroll - CC200 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000490,2025-03-28,Payroll - CC300 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000491,2025-03-28,Payroll - CC400 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000492,2025-03-28,Payroll - CC500 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000493,2025-03-28,Payroll - CC600 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000494,2025-03-28,Payroll - CC700 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000495,2025-03-28,Payroll - CC800 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000496,2025-03-28,Payroll - CC900 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000497,2025-03-28,Benefits - CC100 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000498,2025-03-28,Benefits - CC200 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000499,2025-03-28,Benefits - CC300 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000500,2025-03-28,Benefits - CC400 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000501,2025-03-28,Benefits - CC500 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000502,2025-03-28,Benefits - CC600 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000503,2025-03-28,Benefits - CC700 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000504,2025-03-28,Benefits - CC800 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000505,2025-03-28,Benefits - CC900 - 2025-03,Payroll System,ADP Integration,Posted,2025-03-28 00:00:00
+JE-000506,2025-03-28,Rent and facilities - 2025-03,AP System,Accounts Payable,Posted,2025-03-28 00:00:00
+JE-000507,2025-03-28,Depreciation - 2025-03,Fixed Assets,Depreciation Module,Posted,2025-03-28 00:00:00
+JE-000508,2025-03-28,Professional services - 2025-03,AP System,Accounts Payable,Posted,2025-03-28 00:00:00
+JE-000509,2025-03-28,Marketing spend - 2025-03,AP System,Accounts Payable,Posted,2025-03-28 00:00:00
+JE-000510,2025-03-28,Travel and entertainment - 2025-03,Concur,Expense System,Posted,2025-03-28 00:00:00
+JE-000511,2025-03-28,Software subscriptions - 2025-03,AP System,Accounts Payable,Posted,2025-03-28 00:00:00
+JE-000512,2025-03-28,Insurance - 2025-Q1,AP System,Accounts Payable,Posted,2025-03-28 00:00:00
+JE-000513,2025-03-28,Utilities - 2025-03,AP System,Accounts Payable,Posted,2025-03-28 00:00:00
+JE-000514,2025-03-28,Interest expense - 2025-03,Treasury,Debt Module,Posted,2025-03-28 00:00:00
+JE-000515,2025-03-28,Tax provision - 2025-Q1,Tax System,Tax Module,Posted,2025-03-28 00:00:00
+JE-000516,2025-03-23,Cash collections - 2025-03,ERP,Collections Module,Posted,2025-03-23 00:00:00
+JE-000517,2025-03-18,AP payments - 2025-03,AP System,Payment Run,Posted,2025-03-18 00:00:00
+JE-000518,2025-04-28,Product revenue - 2025-04,ERP,Revenue Module,Posted,2025-04-28 00:00:00
+JE-000519,2025-04-28,Service revenue - 2025-04,ERP,Revenue Module,Posted,2025-04-28 00:00:00
+JE-000520,2025-04-28,Subscription revenue - 2025-04,ERP,Revenue Module,Posted,2025-04-28 00:00:00
+JE-000521,2025-04-28,COGS product - 2025-04,ERP,Cost Module,Posted,2025-04-28 00:00:00
+JE-000522,2025-04-28,COGS services - 2025-04,ERP,Cost Module,Posted,2025-04-28 00:00:00
+JE-000523,2025-04-28,COGS subscriptions - 2025-04,ERP,Cost Module,Posted,2025-04-28 00:00:00
+JE-000524,2025-04-28,Payroll - CC100 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000525,2025-04-28,Payroll - CC200 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000526,2025-04-28,Payroll - CC300 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000527,2025-04-28,Payroll - CC400 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000528,2025-04-28,Payroll - CC500 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000529,2025-04-28,Payroll - CC600 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000530,2025-04-28,Payroll - CC700 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000531,2025-04-28,Payroll - CC800 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000532,2025-04-28,Payroll - CC900 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000533,2025-04-28,Benefits - CC100 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000534,2025-04-28,Benefits - CC200 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000535,2025-04-28,Benefits - CC300 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000536,2025-04-28,Benefits - CC400 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000537,2025-04-28,Benefits - CC500 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000538,2025-04-28,Benefits - CC600 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000539,2025-04-28,Benefits - CC700 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000540,2025-04-28,Benefits - CC800 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000541,2025-04-28,Benefits - CC900 - 2025-04,Payroll System,ADP Integration,Posted,2025-04-28 00:00:00
+JE-000542,2025-04-28,Rent and facilities - 2025-04,AP System,Accounts Payable,Posted,2025-04-28 00:00:00
+JE-000543,2025-04-28,Depreciation - 2025-04,Fixed Assets,Depreciation Module,Posted,2025-04-28 00:00:00
+JE-000544,2025-04-28,Professional services - 2025-04,AP System,Accounts Payable,Posted,2025-04-28 00:00:00
+JE-000545,2025-04-28,Marketing spend - 2025-04,AP System,Accounts Payable,Posted,2025-04-28 00:00:00
+JE-000546,2025-04-28,Travel and entertainment - 2025-04,Concur,Expense System,Posted,2025-04-28 00:00:00
+JE-000547,2025-04-28,Software subscriptions - 2025-04,AP System,Accounts Payable,Posted,2025-04-28 00:00:00
+JE-000548,2025-04-28,Utilities - 2025-04,AP System,Accounts Payable,Posted,2025-04-28 00:00:00
+JE-000549,2025-04-28,Interest expense - 2025-04,Treasury,Debt Module,Posted,2025-04-28 00:00:00
+JE-000550,2025-04-23,Cash collections - 2025-04,ERP,Collections Module,Posted,2025-04-23 00:00:00
+JE-000551,2025-04-18,AP payments - 2025-04,AP System,Payment Run,Posted,2025-04-18 00:00:00
+JE-000552,2025-05-28,Product revenue - 2025-05,ERP,Revenue Module,Posted,2025-05-28 00:00:00
+JE-000553,2025-05-28,Service revenue - 2025-05,ERP,Revenue Module,Posted,2025-05-28 00:00:00
+JE-000554,2025-05-28,Subscription revenue - 2025-05,ERP,Revenue Module,Posted,2025-05-28 00:00:00
+JE-000555,2025-05-28,COGS product - 2025-05,ERP,Cost Module,Posted,2025-05-28 00:00:00
+JE-000556,2025-05-28,COGS services - 2025-05,ERP,Cost Module,Posted,2025-05-28 00:00:00
+JE-000557,2025-05-28,COGS subscriptions - 2025-05,ERP,Cost Module,Posted,2025-05-28 00:00:00
+JE-000558,2025-05-28,Payroll - CC100 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000559,2025-05-28,Payroll - CC200 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000560,2025-05-28,Payroll - CC300 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000561,2025-05-28,Payroll - CC400 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000562,2025-05-28,Payroll - CC500 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000563,2025-05-28,Payroll - CC600 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000564,2025-05-28,Payroll - CC700 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000565,2025-05-28,Payroll - CC800 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000566,2025-05-28,Payroll - CC900 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000567,2025-05-28,Benefits - CC100 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000568,2025-05-28,Benefits - CC200 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000569,2025-05-28,Benefits - CC300 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000570,2025-05-28,Benefits - CC400 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000571,2025-05-28,Benefits - CC500 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000572,2025-05-28,Benefits - CC600 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000573,2025-05-28,Benefits - CC700 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000574,2025-05-28,Benefits - CC800 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000575,2025-05-28,Benefits - CC900 - 2025-05,Payroll System,ADP Integration,Posted,2025-05-28 00:00:00
+JE-000576,2025-05-28,Rent and facilities - 2025-05,AP System,Accounts Payable,Posted,2025-05-28 00:00:00
+JE-000577,2025-05-28,Depreciation - 2025-05,Fixed Assets,Depreciation Module,Posted,2025-05-28 00:00:00
+JE-000578,2025-05-28,Professional services - 2025-05,AP System,Accounts Payable,Posted,2025-05-28 00:00:00
+JE-000579,2025-05-28,Marketing spend - 2025-05,AP System,Accounts Payable,Posted,2025-05-28 00:00:00
+JE-000580,2025-05-28,Travel and entertainment - 2025-05,Concur,Expense System,Posted,2025-05-28 00:00:00
+JE-000581,2025-05-28,Software subscriptions - 2025-05,AP System,Accounts Payable,Posted,2025-05-28 00:00:00
+JE-000582,2025-05-28,Utilities - 2025-05,AP System,Accounts Payable,Posted,2025-05-28 00:00:00
+JE-000583,2025-05-28,Interest expense - 2025-05,Treasury,Debt Module,Posted,2025-05-28 00:00:00
+JE-000584,2025-05-23,Cash collections - 2025-05,ERP,Collections Module,Posted,2025-05-23 00:00:00
+JE-000585,2025-05-18,AP payments - 2025-05,AP System,Payment Run,Posted,2025-05-18 00:00:00
+JE-000586,2025-06-28,Product revenue - 2025-06,ERP,Revenue Module,Posted,2025-06-28 00:00:00
+JE-000587,2025-06-28,Service revenue - 2025-06,ERP,Revenue Module,Posted,2025-06-28 00:00:00
+JE-000588,2025-06-28,Subscription revenue - 2025-06,ERP,Revenue Module,Posted,2025-06-28 00:00:00
+JE-000589,2025-06-28,COGS product - 2025-06,ERP,Cost Module,Posted,2025-06-28 00:00:00
+JE-000590,2025-06-28,COGS services - 2025-06,ERP,Cost Module,Posted,2025-06-28 00:00:00
+JE-000591,2025-06-28,COGS subscriptions - 2025-06,ERP,Cost Module,Posted,2025-06-28 00:00:00
+JE-000592,2025-06-28,Payroll - CC100 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000593,2025-06-28,Payroll - CC200 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000594,2025-06-28,Payroll - CC300 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000595,2025-06-28,Payroll - CC400 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000596,2025-06-28,Payroll - CC500 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000597,2025-06-28,Payroll - CC600 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000598,2025-06-28,Payroll - CC700 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000599,2025-06-28,Payroll - CC800 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000600,2025-06-28,Payroll - CC900 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000601,2025-06-28,Benefits - CC100 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000602,2025-06-28,Benefits - CC200 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000603,2025-06-28,Benefits - CC300 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000604,2025-06-28,Benefits - CC400 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000605,2025-06-28,Benefits - CC500 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000606,2025-06-28,Benefits - CC600 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000607,2025-06-28,Benefits - CC700 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000608,2025-06-28,Benefits - CC800 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000609,2025-06-28,Benefits - CC900 - 2025-06,Payroll System,ADP Integration,Posted,2025-06-28 00:00:00
+JE-000610,2025-06-28,Rent and facilities - 2025-06,AP System,Accounts Payable,Posted,2025-06-28 00:00:00
+JE-000611,2025-06-28,Depreciation - 2025-06,Fixed Assets,Depreciation Module,Posted,2025-06-28 00:00:00
+JE-000612,2025-06-28,Professional services - 2025-06,AP System,Accounts Payable,Posted,2025-06-28 00:00:00
+JE-000613,2025-06-28,Marketing spend - 2025-06,AP System,Accounts Payable,Posted,2025-06-28 00:00:00
+JE-000614,2025-06-28,Travel and entertainment - 2025-06,Concur,Expense System,Posted,2025-06-28 00:00:00
+JE-000615,2025-06-28,Software subscriptions - 2025-06,AP System,Accounts Payable,Posted,2025-06-28 00:00:00
+JE-000616,2025-06-28,Insurance - 2025-Q2,AP System,Accounts Payable,Posted,2025-06-28 00:00:00
+JE-000617,2025-06-28,Utilities - 2025-06,AP System,Accounts Payable,Posted,2025-06-28 00:00:00
+JE-000618,2025-06-28,Interest expense - 2025-06,Treasury,Debt Module,Posted,2025-06-28 00:00:00
+JE-000619,2025-06-28,Tax provision - 2025-Q2,Tax System,Tax Module,Posted,2025-06-28 00:00:00
+JE-000620,2025-06-23,Cash collections - 2025-06,ERP,Collections Module,Posted,2025-06-23 00:00:00
+JE-000621,2025-06-18,AP payments - 2025-06,AP System,Payment Run,Posted,2025-06-18 00:00:00
+JE-000622,2025-07-28,Product revenue - 2025-07,ERP,Revenue Module,Posted,2025-07-28 00:00:00
+JE-000623,2025-07-28,Service revenue - 2025-07,ERP,Revenue Module,Posted,2025-07-28 00:00:00
+JE-000624,2025-07-28,Subscription revenue - 2025-07,ERP,Revenue Module,Posted,2025-07-28 00:00:00
+JE-000625,2025-07-28,COGS product - 2025-07,ERP,Cost Module,Posted,2025-07-28 00:00:00
+JE-000626,2025-07-28,COGS services - 2025-07,ERP,Cost Module,Posted,2025-07-28 00:00:00
+JE-000627,2025-07-28,COGS subscriptions - 2025-07,ERP,Cost Module,Posted,2025-07-28 00:00:00
+JE-000628,2025-07-28,Payroll - CC100 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000629,2025-07-28,Payroll - CC200 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000630,2025-07-28,Payroll - CC300 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000631,2025-07-28,Payroll - CC400 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000632,2025-07-28,Payroll - CC500 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000633,2025-07-28,Payroll - CC600 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000634,2025-07-28,Payroll - CC700 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000635,2025-07-28,Payroll - CC800 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000636,2025-07-28,Payroll - CC900 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000637,2025-07-28,Benefits - CC100 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000638,2025-07-28,Benefits - CC200 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000639,2025-07-28,Benefits - CC300 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000640,2025-07-28,Benefits - CC400 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000641,2025-07-28,Benefits - CC500 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000642,2025-07-28,Benefits - CC600 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000643,2025-07-28,Benefits - CC700 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000644,2025-07-28,Benefits - CC800 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000645,2025-07-28,Benefits - CC900 - 2025-07,Payroll System,ADP Integration,Posted,2025-07-28 00:00:00
+JE-000646,2025-07-28,Rent and facilities - 2025-07,AP System,Accounts Payable,Posted,2025-07-28 00:00:00
+JE-000647,2025-07-28,Depreciation - 2025-07,Fixed Assets,Depreciation Module,Posted,2025-07-28 00:00:00
+JE-000648,2025-07-28,Professional services - 2025-07,AP System,Accounts Payable,Posted,2025-07-28 00:00:00
+JE-000649,2025-07-28,Marketing spend - 2025-07,AP System,Accounts Payable,Posted,2025-07-28 00:00:00
+JE-000650,2025-07-28,Travel and entertainment - 2025-07,Concur,Expense System,Posted,2025-07-28 00:00:00
+JE-000651,2025-07-28,Software subscriptions - 2025-07,AP System,Accounts Payable,Posted,2025-07-28 00:00:00
+JE-000652,2025-07-28,Utilities - 2025-07,AP System,Accounts Payable,Posted,2025-07-28 00:00:00
+JE-000653,2025-07-28,Interest expense - 2025-07,Treasury,Debt Module,Posted,2025-07-28 00:00:00
+JE-000654,2025-07-23,Cash collections - 2025-07,ERP,Collections Module,Posted,2025-07-23 00:00:00
+JE-000655,2025-07-18,AP payments - 2025-07,AP System,Payment Run,Posted,2025-07-18 00:00:00
+JE-000656,2025-08-28,Product revenue - 2025-08,ERP,Revenue Module,Posted,2025-08-28 00:00:00
+JE-000657,2025-08-28,Service revenue - 2025-08,ERP,Revenue Module,Posted,2025-08-28 00:00:00
+JE-000658,2025-08-28,Subscription revenue - 2025-08,ERP,Revenue Module,Posted,2025-08-28 00:00:00
+JE-000659,2025-08-28,COGS product - 2025-08,ERP,Cost Module,Posted,2025-08-28 00:00:00
+JE-000660,2025-08-28,COGS services - 2025-08,ERP,Cost Module,Posted,2025-08-28 00:00:00
+JE-000661,2025-08-28,COGS subscriptions - 2025-08,ERP,Cost Module,Posted,2025-08-28 00:00:00
+JE-000662,2025-08-28,Payroll - CC100 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000663,2025-08-28,Payroll - CC200 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000664,2025-08-28,Payroll - CC300 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000665,2025-08-28,Payroll - CC400 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000666,2025-08-28,Payroll - CC500 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000667,2025-08-28,Payroll - CC600 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000668,2025-08-28,Payroll - CC700 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000669,2025-08-28,Payroll - CC800 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000670,2025-08-28,Payroll - CC900 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000671,2025-08-28,Benefits - CC100 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000672,2025-08-28,Benefits - CC200 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000673,2025-08-28,Benefits - CC300 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000674,2025-08-28,Benefits - CC400 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000675,2025-08-28,Benefits - CC500 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000676,2025-08-28,Benefits - CC600 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000677,2025-08-28,Benefits - CC700 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000678,2025-08-28,Benefits - CC800 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000679,2025-08-28,Benefits - CC900 - 2025-08,Payroll System,ADP Integration,Posted,2025-08-28 00:00:00
+JE-000680,2025-08-28,Rent and facilities - 2025-08,AP System,Accounts Payable,Posted,2025-08-28 00:00:00
+JE-000681,2025-08-28,Depreciation - 2025-08,Fixed Assets,Depreciation Module,Posted,2025-08-28 00:00:00
+JE-000682,2025-08-28,Professional services - 2025-08,AP System,Accounts Payable,Posted,2025-08-28 00:00:00
+JE-000683,2025-08-28,Marketing spend - 2025-08,AP System,Accounts Payable,Posted,2025-08-28 00:00:00
+JE-000684,2025-08-28,Travel and entertainment - 2025-08,Concur,Expense System,Posted,2025-08-28 00:00:00
+JE-000685,2025-08-28,Software subscriptions - 2025-08,AP System,Accounts Payable,Posted,2025-08-28 00:00:00
+JE-000686,2025-08-28,Utilities - 2025-08,AP System,Accounts Payable,Posted,2025-08-28 00:00:00
+JE-000687,2025-08-28,Interest expense - 2025-08,Treasury,Debt Module,Posted,2025-08-28 00:00:00
+JE-000688,2025-08-23,Cash collections - 2025-08,ERP,Collections Module,Posted,2025-08-23 00:00:00
+JE-000689,2025-08-18,AP payments - 2025-08,AP System,Payment Run,Posted,2025-08-18 00:00:00
+JE-000690,2025-09-28,Product revenue - 2025-09,ERP,Revenue Module,Posted,2025-09-28 00:00:00
+JE-000691,2025-09-28,Service revenue - 2025-09,ERP,Revenue Module,Posted,2025-09-28 00:00:00
+JE-000692,2025-09-28,Subscription revenue - 2025-09,ERP,Revenue Module,Posted,2025-09-28 00:00:00
+JE-000693,2025-09-28,COGS product - 2025-09,ERP,Cost Module,Posted,2025-09-28 00:00:00
+JE-000694,2025-09-28,COGS services - 2025-09,ERP,Cost Module,Posted,2025-09-28 00:00:00
+JE-000695,2025-09-28,COGS subscriptions - 2025-09,ERP,Cost Module,Posted,2025-09-28 00:00:00
+JE-000696,2025-09-28,Payroll - CC100 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000697,2025-09-28,Payroll - CC200 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000698,2025-09-28,Payroll - CC300 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000699,2025-09-28,Payroll - CC400 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000700,2025-09-28,Payroll - CC500 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000701,2025-09-28,Payroll - CC600 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000702,2025-09-28,Payroll - CC700 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000703,2025-09-28,Payroll - CC800 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000704,2025-09-28,Payroll - CC900 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000705,2025-09-28,Benefits - CC100 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000706,2025-09-28,Benefits - CC200 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000707,2025-09-28,Benefits - CC300 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000708,2025-09-28,Benefits - CC400 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000709,2025-09-28,Benefits - CC500 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000710,2025-09-28,Benefits - CC600 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000711,2025-09-28,Benefits - CC700 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000712,2025-09-28,Benefits - CC800 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000713,2025-09-28,Benefits - CC900 - 2025-09,Payroll System,ADP Integration,Posted,2025-09-28 00:00:00
+JE-000714,2025-09-28,Rent and facilities - 2025-09,AP System,Accounts Payable,Posted,2025-09-28 00:00:00
+JE-000715,2025-09-28,Depreciation - 2025-09,Fixed Assets,Depreciation Module,Posted,2025-09-28 00:00:00
+JE-000716,2025-09-28,Professional services - 2025-09,AP System,Accounts Payable,Posted,2025-09-28 00:00:00
+JE-000717,2025-09-28,Marketing spend - 2025-09,AP System,Accounts Payable,Posted,2025-09-28 00:00:00
+JE-000718,2025-09-28,Travel and entertainment - 2025-09,Concur,Expense System,Posted,2025-09-28 00:00:00
+JE-000719,2025-09-28,Software subscriptions - 2025-09,AP System,Accounts Payable,Posted,2025-09-28 00:00:00
+JE-000720,2025-09-28,Insurance - 2025-Q3,AP System,Accounts Payable,Posted,2025-09-28 00:00:00
+JE-000721,2025-09-28,Utilities - 2025-09,AP System,Accounts Payable,Posted,2025-09-28 00:00:00
+JE-000722,2025-09-28,Interest expense - 2025-09,Treasury,Debt Module,Posted,2025-09-28 00:00:00
+JE-000723,2025-09-28,Tax provision - 2025-Q3,Tax System,Tax Module,Posted,2025-09-28 00:00:00
+JE-000724,2025-09-23,Cash collections - 2025-09,ERP,Collections Module,Posted,2025-09-23 00:00:00
+JE-000725,2025-09-18,AP payments - 2025-09,AP System,Payment Run,Posted,2025-09-18 00:00:00
+JE-000726,2025-10-28,Product revenue - 2025-10,ERP,Revenue Module,Posted,2025-10-28 00:00:00
+JE-000727,2025-10-28,Service revenue - 2025-10,ERP,Revenue Module,Posted,2025-10-28 00:00:00
+JE-000728,2025-10-28,Subscription revenue - 2025-10,ERP,Revenue Module,Posted,2025-10-28 00:00:00
+JE-000729,2025-10-28,COGS product - 2025-10,ERP,Cost Module,Posted,2025-10-28 00:00:00
+JE-000730,2025-10-28,COGS services - 2025-10,ERP,Cost Module,Posted,2025-10-28 00:00:00
+JE-000731,2025-10-28,COGS subscriptions - 2025-10,ERP,Cost Module,Posted,2025-10-28 00:00:00
+JE-000732,2025-10-28,Payroll - CC100 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000733,2025-10-28,Payroll - CC200 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000734,2025-10-28,Payroll - CC300 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000735,2025-10-28,Payroll - CC400 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000736,2025-10-28,Payroll - CC500 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000737,2025-10-28,Payroll - CC600 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000738,2025-10-28,Payroll - CC700 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000739,2025-10-28,Payroll - CC800 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000740,2025-10-28,Payroll - CC900 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000741,2025-10-28,Benefits - CC100 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000742,2025-10-28,Benefits - CC200 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000743,2025-10-28,Benefits - CC300 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000744,2025-10-28,Benefits - CC400 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000745,2025-10-28,Benefits - CC500 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000746,2025-10-28,Benefits - CC600 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000747,2025-10-28,Benefits - CC700 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000748,2025-10-28,Benefits - CC800 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000749,2025-10-28,Benefits - CC900 - 2025-10,Payroll System,ADP Integration,Posted,2025-10-28 00:00:00
+JE-000750,2025-10-28,Rent and facilities - 2025-10,AP System,Accounts Payable,Posted,2025-10-28 00:00:00
+JE-000751,2025-10-28,Depreciation - 2025-10,Fixed Assets,Depreciation Module,Posted,2025-10-28 00:00:00
+JE-000752,2025-10-28,Professional services - 2025-10,AP System,Accounts Payable,Posted,2025-10-28 00:00:00
+JE-000753,2025-10-28,Marketing spend - 2025-10,AP System,Accounts Payable,Posted,2025-10-28 00:00:00
+JE-000754,2025-10-28,Travel and entertainment - 2025-10,Concur,Expense System,Posted,2025-10-28 00:00:00
+JE-000755,2025-10-28,Software subscriptions - 2025-10,AP System,Accounts Payable,Posted,2025-10-28 00:00:00
+JE-000756,2025-10-28,Utilities - 2025-10,AP System,Accounts Payable,Posted,2025-10-28 00:00:00
+JE-000757,2025-10-28,Interest expense - 2025-10,Treasury,Debt Module,Posted,2025-10-28 00:00:00
+JE-000758,2025-10-23,Cash collections - 2025-10,ERP,Collections Module,Posted,2025-10-23 00:00:00
+JE-000759,2025-10-18,AP payments - 2025-10,AP System,Payment Run,Posted,2025-10-18 00:00:00
+JE-000760,2025-11-28,Product revenue - 2025-11,ERP,Revenue Module,Posted,2025-11-28 00:00:00
+JE-000761,2025-11-28,Service revenue - 2025-11,ERP,Revenue Module,Posted,2025-11-28 00:00:00
+JE-000762,2025-11-28,Subscription revenue - 2025-11,ERP,Revenue Module,Posted,2025-11-28 00:00:00
+JE-000763,2025-11-28,COGS product - 2025-11,ERP,Cost Module,Posted,2025-11-28 00:00:00
+JE-000764,2025-11-28,COGS services - 2025-11,ERP,Cost Module,Posted,2025-11-28 00:00:00
+JE-000765,2025-11-28,COGS subscriptions - 2025-11,ERP,Cost Module,Posted,2025-11-28 00:00:00
+JE-000766,2025-11-28,Payroll - CC100 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000767,2025-11-28,Payroll - CC200 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000768,2025-11-28,Payroll - CC300 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000769,2025-11-28,Payroll - CC400 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000770,2025-11-28,Payroll - CC500 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000771,2025-11-28,Payroll - CC600 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000772,2025-11-28,Payroll - CC700 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000773,2025-11-28,Payroll - CC800 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000774,2025-11-28,Payroll - CC900 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000775,2025-11-28,Benefits - CC100 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000776,2025-11-28,Benefits - CC200 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000777,2025-11-28,Benefits - CC300 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000778,2025-11-28,Benefits - CC400 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000779,2025-11-28,Benefits - CC500 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000780,2025-11-28,Benefits - CC600 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000781,2025-11-28,Benefits - CC700 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000782,2025-11-28,Benefits - CC800 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000783,2025-11-28,Benefits - CC900 - 2025-11,Payroll System,ADP Integration,Posted,2025-11-28 00:00:00
+JE-000784,2025-11-28,Rent and facilities - 2025-11,AP System,Accounts Payable,Posted,2025-11-28 00:00:00
+JE-000785,2025-11-28,Depreciation - 2025-11,Fixed Assets,Depreciation Module,Posted,2025-11-28 00:00:00
+JE-000786,2025-11-28,Professional services - 2025-11,AP System,Accounts Payable,Posted,2025-11-28 00:00:00
+JE-000787,2025-11-28,Marketing spend - 2025-11,AP System,Accounts Payable,Posted,2025-11-28 00:00:00
+JE-000788,2025-11-28,Travel and entertainment - 2025-11,Concur,Expense System,Posted,2025-11-28 00:00:00
+JE-000789,2025-11-28,Software subscriptions - 2025-11,AP System,Accounts Payable,Posted,2025-11-28 00:00:00
+JE-000790,2025-11-28,Utilities - 2025-11,AP System,Accounts Payable,Posted,2025-11-28 00:00:00
+JE-000791,2025-11-28,Interest expense - 2025-11,Treasury,Debt Module,Posted,2025-11-28 00:00:00
+JE-000792,2025-11-23,Cash collections - 2025-11,ERP,Collections Module,Posted,2025-11-23 00:00:00
+JE-000793,2025-11-18,AP payments - 2025-11,AP System,Payment Run,Posted,2025-11-18 00:00:00
+JE-000794,2025-03-15,Rounding error entry,Manual,J.Smith,Posted,2025-03-15 14:22:00
+JE-000795,2025-06-10,Incorrect vendor payment,AP System,Accounts Payable,Reversed,2025-06-10 09:00:00
+JE-000796,2025-06-12,Reversal of JE-000795,AP System,Accounts Payable,Posted,2025-06-12 11:30:00
+JE-000797,2025-08-28,Marketing spend - 2025-08,AP System,Accounts Payable,Posted,2025-08-28 08:00:00
+JE-000798,2025-08-28,Marketing spend - 2025-08,AP System,Accounts Payable,Posted,2025-08-28 08:05:00

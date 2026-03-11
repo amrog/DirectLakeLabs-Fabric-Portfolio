@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: dim_accounts
+    description: "Account dimension with surrogate key, account metadata, and normal balance type."
+    columns:
+      - name: account_key
+        description: "Surrogate key (MD5 hash of account_id)"
+        data_tests:
+          - unique
+          - not_null
+      - name: account_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_cost_centers
+    description: "Cost center dimension with surrogate key and department grouping."
+    columns:
+      - name: cost_center_key
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_fiscal_periods
+    description: "Fiscal period dimension with calendar attributes and close status."
+    columns:
+      - name: fiscal_period_key
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fact_gl_activity
+    description: >
+      Core fact table at the journal entry line grain.
+      Each row is a single debit or credit posting, linked
+      to account, cost center, and fiscal period dimensions
+      via surrogate keys.
+    columns:
+      - name: account_key
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_accounts')
+              field: account_key
+      - name: cost_center_key
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_cost_centers')
+              field: cost_center_key
+      - name: fiscal_period_key
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_fiscal_periods')
+              field: fiscal_period_key
+
+  - name: rpt_trial_balance
+    description: >
+      Trial balance by period and account. Balance Sheet accounts
+      carry cumulative balances; Income Statement accounts show
+      period activity.
+
+  - name: rpt_income_statement
+    description: >
+      Monthly P&L with operating revenue, COGS, gross profit,
+      operating expenses, operating income, and net income.
+      Includes gross and operating margin percentages.
+
+  - name: rpt_budget_vs_actuals
+    description: >
+      Budget variance report comparing planned vs actual amounts
+      by account, cost center, and period. Classifies variances
+      as Favorable or Unfavorable based on account type.

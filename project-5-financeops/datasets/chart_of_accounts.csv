@@ -1,0 +1,40 @@
+account_id,account_name,account_type,financial_statement,account_subgroup,is_active
+1010,Cash and Cash Equivalents,Asset,Balance Sheet,Current Assets,TRUE
+1020,Accounts Receivable,Asset,Balance Sheet,Current Assets,TRUE
+1030,Inventory,Asset,Balance Sheet,Current Assets,TRUE
+1040,Prepaid Expenses,Asset,Balance Sheet,Current Assets,TRUE
+1110,Property Plant and Equipment,Asset,Balance Sheet,Fixed Assets,TRUE
+1120,Accumulated Depreciation,Asset,Balance Sheet,Fixed Assets,TRUE
+1210,Intangible Assets,Asset,Balance Sheet,Other Assets,TRUE
+2010,Accounts Payable,Liability,Balance Sheet,Current Liabilities,TRUE
+2020,Accrued Liabilities,Liability,Balance Sheet,Current Liabilities,TRUE
+2030,Short-term Debt,Liability,Balance Sheet,Current Liabilities,TRUE
+2040,Unearned Revenue,Liability,Balance Sheet,Current Liabilities,TRUE
+2110,Long-term Debt,Liability,Balance Sheet,Long-term Liabilities,TRUE
+3010,Common Stock,Equity,Balance Sheet,Shareholders Equity,TRUE
+3020,Retained Earnings,Equity,Balance Sheet,Shareholders Equity,TRUE
+3030,Other Comprehensive Income,Equity,Balance Sheet,Shareholders Equity,TRUE
+4010,Product Revenue,Revenue,Income Statement,Operating Revenue,TRUE
+4020,Service Revenue,Revenue,Income Statement,Operating Revenue,TRUE
+4030,Subscription Revenue,Revenue,Income Statement,Operating Revenue,TRUE
+4040,Licensing Revenue,Revenue,Income Statement,Operating Revenue,TRUE
+4910,Interest Income,Revenue,Income Statement,Non-operating Revenue,TRUE
+4920,Other Income,Revenue,Income Statement,Non-operating Revenue,TRUE
+5010,Cost of Goods Sold - Product,Expense,Income Statement,Cost of Revenue,TRUE
+5020,Cost of Services,Expense,Income Statement,Cost of Revenue,TRUE
+5030,Cost of Subscriptions,Expense,Income Statement,Cost of Revenue,TRUE
+6010,Salaries and Wages,Expense,Income Statement,Operating Expenses,TRUE
+6020,Employee Benefits,Expense,Income Statement,Operating Expenses,TRUE
+6030,Rent and Facilities,Expense,Income Statement,Operating Expenses,TRUE
+6040,Depreciation Expense,Expense,Income Statement,Operating Expenses,TRUE
+6050,Professional Services,Expense,Income Statement,Operating Expenses,TRUE
+6060,Marketing and Advertising,Expense,Income Statement,Operating Expenses,TRUE
+6070,Travel and Entertainment,Expense,Income Statement,Operating Expenses,TRUE
+6080,Software and Subscriptions,Expense,Income Statement,Operating Expenses,TRUE
+6090,Insurance,Expense,Income Statement,Operating Expenses,TRUE
+6100,Utilities,Expense,Income Statement,Operating Expenses,TRUE
+6110,Office Supplies,Expense,Income Statement,Operating Expenses,TRUE
+6120,Training and Development,Expense,Income Statement,Operating Expenses,TRUE
+7010,Interest Expense,Expense,Income Statement,Non-operating Expenses,TRUE
+7020,Tax Expense,Expense,Income Statement,Non-operating Expenses,TRUE
+7030,Foreign Exchange Loss,Expense,Income Statement,Non-operating Expenses,TRUE

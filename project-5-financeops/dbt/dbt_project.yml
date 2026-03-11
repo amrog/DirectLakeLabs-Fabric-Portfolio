@@ -1,0 +1,46 @@
+name: 'financeops'
+version: '1.0.0'
+config-version: 2
+
+profile: 'financeops'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+seeds:
+  financeops:
+    +schema: raw
+    chart_of_accounts:
+      +column_types:
+        account_id: varchar(10)
+        is_active: varchar(5)
+    cost_centers:
+      +column_types:
+        cost_center_id: varchar(10)
+        is_active: varchar(5)
+    fiscal_periods:
+      +column_types:
+        fiscal_period_id: varchar(10)
+        fiscal_year: int
+        fiscal_month: int
+        is_closed: varchar(5)
+
+models:
+  financeops:
+    staging:
+      +schema: staging
+      +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+    marts:
+      +schema: marts
+      +materialized: table

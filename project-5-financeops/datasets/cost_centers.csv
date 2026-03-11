@@ -1,0 +1,11 @@
+cost_center_id,cost_center_name,department_group,manager_name,is_active
+CC100,Engineering,Technology,Sarah Chen,TRUE
+CC200,Sales,Revenue,Mike Torres,TRUE
+CC300,Marketing,Revenue,Lisa Park,TRUE
+CC400,Finance,G&A,James Wright,TRUE
+CC500,Human Resources,G&A,Ana Rodriguez,TRUE
+CC600,Operations,Operations,David Kim,TRUE
+CC700,Customer Support,Operations,Rachel Green,TRUE
+CC800,Executive,G&A,Board,TRUE
+CC900,Research and Development,Technology,Tom Nguyen,TRUE
+CC999,Corporate Allocations,G&A,CFO Office,TRUE

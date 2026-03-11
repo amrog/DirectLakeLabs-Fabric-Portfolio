@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw financial data loaded into Fabric Warehouse via Copy Activity"
+    schema: raw
+    tables:
+      - name: journal_entries
+        description: "Journal entry headers from ERP and sub-ledger systems"
+        columns:
+          - name: journal_entry_id
+            description: "Unique identifier for each journal entry"
+            data_tests:
+              - unique
+              - not_null
+          - name: posting_date
+            description: "Date the entry was posted to the GL"
+          - name: status
+            description: "Entry status: Posted, Reversed, Draft"
+
+      - name: journal_entry_lines
+        description: "Individual debit/credit lines within a journal entry"
+        columns:
+          - name: journal_entry_id
+            description: "FK to journal_entries"
+            data_tests:
+              - not_null
+          - name: line_number
+            description: "Line sequence within the journal entry"
+          - name: account_id
+            description: "FK to chart of accounts"
+          - name: debit_amount
+            description: "Debit amount (0 if credit line)"
+          - name: credit_amount
+            description: "Credit amount (0 if debit line)"

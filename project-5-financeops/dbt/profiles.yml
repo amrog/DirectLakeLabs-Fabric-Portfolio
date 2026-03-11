@@ -1,0 +1,17 @@
+financeops:
+  target: fabric-dev
+  outputs:
+    fabric-dev:
+      type: fabric
+      driver: "ODBC Driver 18 for SQL Server"
+      server: "<my-warehouse-sql-endpoint.datawarehouse.fabric.microsoft.com>"
+      port: 1433
+      database: "FinanceOps_DW"
+      schema: dbo
+      threads: 4
+      authentication: CLI
+      # For CI/CD or automation, use ServicePrincipal:
+      # authentication: ServicePrincipal
+      # tenant_id: "<your-tenant-id>"
+      # client_id: "<your-client-id>"
+      # client_secret: "<your-client-secret>"
