@@ -158,6 +158,9 @@ NB_Gold_HR_Model
 ### gold_dim_department
 
 Department reference dimension.
+![Source Data](images/notebook_dim_department.png)
+
+
 
 ### gold_dim_employee
 
@@ -178,6 +181,7 @@ CASE
  ELSE 'Veteran (5+ yrs)'
 END
 ```
+![Source Data](images/notebook_dim_employee.png)
 
 ---
 
