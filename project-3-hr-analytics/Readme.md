@@ -66,7 +66,7 @@ departments.csv | 10 | Department reference table |
 performance_reviews.csv | ~1,179 | Employee review history |
 salary_history.csv | ~2,204 | Salary change history |
 
-![Source CSV Files](images/1_Source CSV_Files.png)
+| ![Source CSV Files](images/1_Source CSV_Files.png) |
 
 ---
 
