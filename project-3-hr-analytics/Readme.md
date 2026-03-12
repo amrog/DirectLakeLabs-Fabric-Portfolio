@@ -90,22 +90,21 @@ HR_LH
 ```
 ![Source Data](images/lakehouse_bronze_tables.png)
 
-## 3. Upload the four CSV files to:
+## 3. Upload the four CSV files to lakehouse:
 
 ```
 Files/
 ```
-
+![Source Data](images/upload_files.png)
 ---
 
 # Phase 2 — Dataflow Gen2 Ingestion
 
-Create a Dataflow:
+## Create a Dataflow:
 
 ```
 DF_HR_Ingest_and_Clean
 ```
-
 ![Source Data](images/dataflows_gen2.png)
 
 ### Transformations
