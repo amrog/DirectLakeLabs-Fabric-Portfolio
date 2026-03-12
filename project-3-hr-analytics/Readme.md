@@ -120,6 +120,8 @@ Key Power Query steps applied:
 - Compute tenure
 - Create employee full name column
 
+  ![Source Data](images/transformations.png)
+
 ### Data Quality Fixes
 
 | Issue | Fix |
@@ -136,6 +138,8 @@ employees | bronze_employees |
 departments | bronze_departments |
 performance_reviews | bronze_performance_reviews |
 salary_history | bronze_salary_history |
+
+![Source Data](images/lakehouse_bronze_tables.png)
 
 ---
 
