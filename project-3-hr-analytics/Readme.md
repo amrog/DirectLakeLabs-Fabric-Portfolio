@@ -189,6 +189,8 @@ END
 
 ### gold_fact_performance
 
+![Source Data](images/notebook_fact_performance.png)
+
 Contains review events.
 
 Metrics:
@@ -200,6 +202,8 @@ Metrics:
 ### gold_fact_salary_history
 
 Contains salary changes over time.
+
+![Source Data](images/notebook_fact_salary.png)
 
 ---
 
@@ -218,6 +222,7 @@ Department KPIs:
 
 Department performance metrics by review cycle.
 
+![Source Data](images/notebook_gold_aggregate.png)
 ---
 
 # Phase 4 — Semantic Model
@@ -227,6 +232,7 @@ Semantic model:
 ```
 HR_SemanticModel
 ```
+![Source Data](images/semantic_model.png)
 
 Tables included:
 
@@ -249,6 +255,7 @@ gold_fact_salary_history.employee_id → gold_dim_employee.employee_id
 gold_dim_employee.department_id → gold_dim_department.department_id
 ```
 
+![Source Data](images/gold_star_schema.png)
 ---
 
 # Phase 5 — Power BI Report
@@ -265,6 +272,7 @@ Visuals:
 - Gender Distribution
 - Division and Department slicers
 
+![Source Data](images/report_page1.png)
 ---
 
 ## Page 2 — Performance Analytics
@@ -276,6 +284,7 @@ Visuals:
 - Employee performance table
 - Department and cycle slicers
 
+![Source Data](images/report_page2.png)
 ---
 
 ## Page 3 — Compensation Analysis
@@ -287,12 +296,14 @@ Visuals:
 - Salary history drill‑through
 - Education level slicer
 
+![Source Data](images/report_page3.png)
 ---
 
 # Phase 6 — Pipeline Orchestration
 
 Pipeline:
 
+![Source Data](images/fabric_pipeline.png)
 ```
 PL_HR_Analytics
 ```
