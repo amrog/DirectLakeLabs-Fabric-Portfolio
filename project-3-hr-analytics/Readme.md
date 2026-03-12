@@ -66,27 +66,31 @@ departments.csv | 10 | Department reference table |
 performance_reviews.csv | ~1,179 | Employee review history |
 salary_history.csv | ~2,204 | Salary change history |
 
-## Dataset
+### The project begins with four HR source datasets.
 
-The project begins with four HR source datasets.
-
-![Source CSV Files](images/1_Source CSV_Files.png)
+![Source Data](images/source_csv_files.png)
 
 ---
 
 # Phase 1 — Workspace Setup
 
-1. Create a new Fabric workspace:
+
+## 1. Create a new Fabric workspace:
 ```
 HR_Analytics
 ```
+### Completed Workspace
 
-2. Create a **Lakehouse**
+![Source Data](images/workspace.png)
+
+
+## 2. Create a **Lakehouse**
 ```
 HR_LH
 ```
+![Source Data](images/lakehouse_bronze_tables.png)
 
-3. Upload the four CSV files to:
+## 3. Upload the four CSV files to:
 
 ```
 Files/
@@ -101,6 +105,8 @@ Create a Dataflow:
 ```
 DF_HR_Ingest_and_Clean
 ```
+
+![Source Data](images/dataflows_gen2.png)
 
 ### Transformations
 
