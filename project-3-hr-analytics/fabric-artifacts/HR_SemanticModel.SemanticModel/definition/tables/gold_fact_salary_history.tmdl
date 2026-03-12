@@ -1,0 +1,87 @@
+table gold_fact_salary_history
+	lineageTag: 77e2af5b-a222-428e-82a2-c21b2fde044b
+	sourceLineageTag: [dbo].[gold_fact_salary_history]
+
+	column salary_history_id
+		dataType: string
+		lineageTag: 37d50e5a-39af-4009-b17e-f509066299fe
+		sourceLineageTag: salary_history_id
+		summarizeBy: none
+		sourceColumn: salary_history_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column employee_id
+		dataType: string
+		lineageTag: b99d9143-7a33-4c54-95c5-7291d7d1b828
+		sourceLineageTag: employee_id
+		summarizeBy: none
+		sourceColumn: employee_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ede35c8b-2cf7-416a-a636-4af1407b3d11
+		sourceLineageTag: effective_date
+		summarizeBy: none
+		sourceColumn: effective_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column salary_amount
+		dataType: int64
+		formatString: 0
+		lineageTag: 26745eb9-f209-4428-93b0-1a226ab6f8c7
+		sourceLineageTag: salary_amount
+		summarizeBy: sum
+		sourceColumn: salary_amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column change_type
+		dataType: string
+		lineageTag: 8a670161-bf63-43de-b6d6-c53f47630197
+		sourceLineageTag: change_type
+		summarizeBy: none
+		sourceColumn: change_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column change_pct
+		dataType: double
+		lineageTag: 4b3a1b7d-3368-46cf-8d70-49bd4477b80f
+		sourceLineageTag: change_pct
+		summarizeBy: sum
+		sourceColumn: change_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column department_id
+		dataType: string
+		lineageTag: e0e02f86-ed30-4470-b479-a70b42defc67
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_title
+		dataType: string
+		lineageTag: 66ebdaa4-0e39-4ced-be2c-f981cc3d0f69
+		sourceLineageTag: job_title
+		summarizeBy: none
+		sourceColumn: job_title
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_fact_salary_history = entity
+		mode: directLake
+		source
+			entityName: gold_fact_salary_history
+			schemaName: dbo
+			expressionSource: 'DirectLake - HR_LH'
+

@@ -1,0 +1,62 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "DF_HR_Ingest_and_Clean",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "departments csv": {
+      "queryId": "c0d194e9-4c6f-4a3c-9a00-c7fd3ebc4cab",
+      "queryName": "departments csv",
+      "loadEnabled": false
+    },
+    "employees csv": {
+      "queryId": "074f3a00-b199-4b33-b957-33feff5b2708",
+      "queryName": "employees csv",
+      "loadEnabled": false
+    },
+    "performance_reviews csv": {
+      "queryId": "6636cf38-a47c-4f45-bcc5-26bd4d180cbc",
+      "queryName": "performance_reviews csv",
+      "loadEnabled": false
+    },
+    "salary_history csv": {
+      "queryId": "bd80c98c-63e7-4b52-a33d-6b00092b0ec7",
+      "queryName": "salary_history csv",
+      "loadEnabled": false
+    },
+    "departments csv_DataDestination": {
+      "queryId": "45bcfcd9-cdb6-481c-9ccf-f9cc59858c98",
+      "queryName": "departments csv_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "employees csv_DataDestination": {
+      "queryId": "8fe614c4-aef0-44bc-ada9-602f57356df4",
+      "queryName": "employees csv_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "salary_history csv_DataDestination": {
+      "queryId": "66d6b655-9eac-4242-9c46-2e95479c5deb",
+      "queryName": "salary_history csv_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "performance_reviews csv_DataDestination": {
+      "queryId": "5ee4e779-8eb6-4887-a72e-76b827784009",
+      "queryName": "performance_reviews csv_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"38026eb1-4f7e-481c-a9a7-239af8dc3954\",\"DatasourceId\":\"fcd245b5-5520-4669-a4f2-9a6657c8bae0\"}"
+    }
+  ]
+}

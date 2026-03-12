@@ -1,0 +1,25 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DirectLake - HR_LH","Workforce_Measures","Performance Analytics_Measures","Compensation Analysis_Measures","Strong extra measures"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit"]
+
+ref table gold_agg_dept_summary
+ref table gold_agg_performance_by_dept
+ref table gold_fact_salary_history
+ref table gold_dim_department
+ref table gold_dim_employee
+ref table gold_fact_performance
+ref table Workforce_Measures
+ref table 'Performance Analytics_Measures'
+ref table 'Compensation Analysis_Measures'
+ref table 'Strong extra measures'
+

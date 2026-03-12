@@ -1,0 +1,64 @@
+table 'Strong extra measures'
+	lineageTag: 12fe5084-e254-4947-9cb0-e2f9451bb5da
+
+	measure 'Active Employee %' =
+			
+			DIVIDE ( [Active Employees], [Total Headcount] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: ce6c2005-9cbf-4cac-954e-4389f0fe515c
+
+	measure 'Female Employees' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( gold_dim_employee[employee_id] ),
+			    gold_dim_employee[gender] = "Female"
+			)
+		formatString: 0
+		lineageTag: 9f8787ef-da18-4e62-8903-c9c83faa42b5
+
+	measure 'Female Employee %' =
+			
+			DIVIDE ( [Female Employees], [Total Headcount] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 36fc5f90-ed44-4b4e-a0c3-f8590baf8f77
+
+	measure 'Employees with Reviews' =
+			
+			DISTINCTCOUNT ( gold_fact_performance[employee_id] )
+		formatString: 0
+		lineageTag: da6aa118-1a95-4b1f-bf30-935db22d72e4
+
+	measure 'Review Coverage %' =
+			
+			DIVIDE ( [Employees with Reviews], [Total Headcount] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 159c4c89-4fbc-4618-b69e-8ffa1ac84959
+
+	measure 'Average Rating (Active Employees)' =
+			
+			CALCULATE (
+			    [Average Rating],
+			    gold_dim_employee[is_active] = TRUE()
+			)
+		lineageTag: f26765b8-2e8e-44ec-a1a3-9b2a0da58e9f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Headcount to Budget Ratio' =
+			
+			DIVIDE ( [Actual Headcount], [Budgeted Headcount] )
+		lineageTag: 43dbf40d-d0d0-40a6-8d89-d1b3ca83df56
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Strong extra measures' = m
+		mode: import
+		source =
+				let
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				  #"Removed Columns" = Table.RemoveColumns(Source, {"Column1"})
+				in
+				  #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

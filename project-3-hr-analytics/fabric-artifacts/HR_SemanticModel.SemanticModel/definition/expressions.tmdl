@@ -1,0 +1,11 @@
+expression 'DirectLake - HR_LH' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/43d31b4f-3433-413a-b1c7-24d6452587f4/aefedc79-f516-4dd5-802f-6908eab8505b", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: ce194465-c31d-4380-b701-c6b191bce896
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[bronze_departments]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[bronze_salary_history]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[bronze_employees]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[bronze_performance_reviews]"}},"objectType":"Table"}]
+

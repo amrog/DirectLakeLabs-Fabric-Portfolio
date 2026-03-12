@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "PL_HR_Analytics"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "137dc221-cfc7-b5f4-4b94-7251e91cd105"
+  }
+}

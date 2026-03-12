@@ -1,0 +1,90 @@
+table gold_agg_performance_by_dept
+	lineageTag: 7321f644-6eda-4371-bbf2-874e61a80e72
+	sourceLineageTag: [dbo].[gold_agg_performance_by_dept]
+
+	column department_id
+		dataType: string
+		lineageTag: 754f9ecc-bf6c-4fcb-b05b-4e96577f6db4
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_name
+		dataType: string
+		lineageTag: 91c2ff1a-c295-4e66-98c3-39247f34ea07
+		sourceLineageTag: department_name
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_cycle
+		dataType: string
+		lineageTag: 5a739465-9d32-40a5-89bc-d784a965ec88
+		sourceLineageTag: review_cycle
+		summarizeBy: none
+		sourceColumn: review_cycle
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 5daa5c47-2885-4591-bda2-ca0e7e2a8490
+		sourceLineageTag: review_count
+		summarizeBy: sum
+		sourceColumn: review_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_rating
+		dataType: double
+		lineageTag: 6f285af9-d764-4401-904b-068bf67de7d7
+		sourceLineageTag: avg_rating
+		summarizeBy: sum
+		sourceColumn: avg_rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_goals_met_pct
+		dataType: double
+		lineageTag: 21be53aa-28bc-4150-b3f7-fdbd058794db
+		sourceLineageTag: avg_goals_met_pct
+		summarizeBy: sum
+		sourceColumn: avg_goals_met_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column high_performers
+		dataType: int64
+		formatString: 0
+		lineageTag: 295a0446-baeb-41f3-99ce-2e8d9c719a39
+		sourceLineageTag: high_performers
+		summarizeBy: sum
+		sourceColumn: high_performers
+
+		annotation SummarizationSetBy = Automatic
+
+	column low_performers
+		dataType: int64
+		formatString: 0
+		lineageTag: 286cb61f-f07c-433f-b353-b6b6ff8bf4ad
+		sourceLineageTag: low_performers
+		summarizeBy: sum
+		sourceColumn: low_performers
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_agg_performance_by_dept = entity
+		mode: directLake
+		source
+			entityName: gold_agg_performance_by_dept
+			schemaName: dbo
+			expressionSource: 'DirectLake - HR_LH'
+

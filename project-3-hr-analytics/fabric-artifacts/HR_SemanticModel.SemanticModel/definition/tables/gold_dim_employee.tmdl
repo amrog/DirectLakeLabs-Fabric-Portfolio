@@ -1,0 +1,214 @@
+table gold_dim_employee
+	lineageTag: ed299e40-a03f-45ee-a394-f67d611c0891
+	sourceLineageTag: [dbo].[gold_dim_employee]
+
+	column employee_id
+		dataType: string
+		lineageTag: 296a542f-4479-4e3d-88dc-eada8851de32
+		sourceLineageTag: employee_id
+		summarizeBy: none
+		sourceColumn: employee_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column full_name
+		dataType: string
+		lineageTag: 19afc90c-d602-4df1-b8b4-94eeacb57be5
+		sourceLineageTag: full_name
+		summarizeBy: none
+		sourceColumn: full_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: 19e5da74-1c50-471f-a736-a53de6cf5dcb
+		sourceLineageTag: first_name
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: a9a0e54a-417d-4b7e-bda1-a84a8f135c91
+		sourceLineageTag: last_name
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 3d22afdd-8785-4255-a51c-9af6ab0d5509
+		sourceLineageTag: email
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_title
+		dataType: string
+		lineageTag: ec1377c3-beee-41da-b4af-d3d73d8ba286
+		sourceLineageTag: job_title
+		summarizeBy: none
+		sourceColumn: job_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_id
+		dataType: string
+		lineageTag: 6cf31c84-237e-479c-84a1-20765f75bdd5
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_name
+		dataType: string
+		lineageTag: 86490dfb-4d39-4be6-a77c-8cae5d28dc3b
+		sourceLineageTag: department_name
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column division
+		dataType: string
+		lineageTag: 286be5d7-fe15-4ec4-9c02-8e129daa6bd4
+		sourceLineageTag: division
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	column hire_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 831301b1-4570-4911-b9fd-a28bc0e7ccc8
+		sourceLineageTag: hire_date
+		summarizeBy: none
+		sourceColumn: hire_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column termination_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 907cb1bc-4092-43c9-ac18-f5be4b6cf9fa
+		sourceLineageTag: termination_date
+		summarizeBy: none
+		sourceColumn: termination_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column termination_reason
+		dataType: string
+		lineageTag: 41af494c-1eb7-404e-ab22-74ae002fa03b
+		sourceLineageTag: termination_reason
+		summarizeBy: none
+		sourceColumn: termination_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column employment_type
+		dataType: string
+		lineageTag: daba4bfc-534c-4c7b-a727-aa7a96fe8364
+		sourceLineageTag: employment_type
+		summarizeBy: none
+		sourceColumn: employment_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column salary
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a7a0d39-7764-44b8-a503-41b10b825ff8
+		sourceLineageTag: salary
+		summarizeBy: sum
+		sourceColumn: salary
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: 3384aa76-ddef-4906-ae6d-f86cb015b241
+		sourceLineageTag: gender
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column ethnicity
+		dataType: string
+		lineageTag: bebe8e75-8b5a-4327-b85f-de78409b49d4
+		sourceLineageTag: ethnicity
+		summarizeBy: none
+		sourceColumn: ethnicity
+
+		annotation SummarizationSetBy = Automatic
+
+	column education_level
+		dataType: string
+		lineageTag: 40eb3e3f-a9c0-49e4-8a99-69e60df012fe
+		sourceLineageTag: education_level
+		summarizeBy: none
+		sourceColumn: education_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_id
+		dataType: string
+		lineageTag: 8bd84ed2-ca02-45b0-b04f-ce8174e1a67d
+		sourceLineageTag: manager_id
+		summarizeBy: none
+		sourceColumn: manager_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4ba25a5f-0d9b-4f3b-98c8-4b1025ca5d71
+		sourceLineageTag: is_active
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: eff41a80-f308-4f5a-9fed-49a86634dd84
+		sourceLineageTag: location
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure_years
+		dataType: int64
+		formatString: 0
+		lineageTag: 0130054d-7fdb-4d5b-9bfd-e8bf47cc8c1c
+		sourceLineageTag: tenure_years
+		summarizeBy: sum
+		sourceColumn: tenure_years
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure_band
+		dataType: string
+		lineageTag: 8ac40029-c930-49bb-82b8-48080fe5145b
+		sourceLineageTag: tenure_band
+		summarizeBy: none
+		sourceColumn: tenure_band
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gold_dim_employee = entity
+		mode: directLake
+		source
+			entityName: gold_dim_employee
+			schemaName: dbo
+			expressionSource: 'DirectLake - HR_LH'
+

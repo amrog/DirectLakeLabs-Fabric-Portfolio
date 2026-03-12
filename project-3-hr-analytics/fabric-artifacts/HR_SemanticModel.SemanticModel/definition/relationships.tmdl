@@ -1,0 +1,12 @@
+relationship 41d75dc2-8bc2-7062-af80-9a90a3d7787e
+	fromColumn: gold_fact_performance.employee_id
+	toColumn: gold_dim_employee.employee_id
+
+relationship 1272a7cd-a388-0efa-c3be-86cb10c789d3
+	fromColumn: gold_fact_salary_history.employee_id
+	toColumn: gold_dim_employee.employee_id
+
+relationship 8d9c9a1a-cc4e-8efe-0ee8-529b3209caef
+	fromColumn: gold_dim_employee.department_id
+	toColumn: gold_dim_department.department_id
+

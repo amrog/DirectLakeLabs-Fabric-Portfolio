@@ -1,0 +1,210 @@
+{
+  "config": "{\"version\":\"5.70\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU02\",\"type\":2,\"version\":{\"visual\":\"2.6.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY26SU02",
+            "path": "BaseThemes/CY26SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Performance Analytics",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "458f4fbca7e6612ae1a5",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"4358a69eb042c53469ed\",\"layouts\":[{\"id\":0,\"position\":{\"x\":552.4584103512015,\"y\":403.40110905730126,\"z\":0,\"width\":705.0646950092421,\"height\":227.13493530499076,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Performance Analytics_Measures.Average Rating\"}],\"Category\":[{\"queryRef\":\"gold_fact_performance.review_cycle\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Performance Analytics_Measures\",\"Type\":0},{\"Name\":\"g\",\"Entity\":\"gold_fact_performance\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Average Rating\"},\"Name\":\"Performance Analytics_Measures.Average Rating\",\"NativeReferenceName\":\"Average Rating\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"review_cycle\"},\"Name\":\"gold_fact_performance.review_cycle\",\"NativeReferenceName\":\"review_cycle\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Average Rating\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average rating by review cycle (trend)'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 227.13,
+          "width": 705.06,
+          "x": 552.46,
+          "y": 403.40,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"95ada00b0c63d06de80d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":403.3260393873085,\"z\":2,\"width\":525.1641137855579,\"height\":309.4967177242888,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_dim_employee.full_name\"},{\"queryRef\":\"Sum(gold_fact_performance.overall_rating)\"},{\"queryRef\":\"Performance Analytics_Measures.Average Goals Met %\"},{\"queryRef\":\"Performance Analytics_Measures.Performance Band Label\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_fact_performance\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Performance Analytics_Measures\",\"Type\":0},{\"Name\":\"g1\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"overall_rating\"}},\"Function\":1},\"Name\":\"Sum(gold_fact_performance.overall_rating)\",\"NativeReferenceName\":\"Overall Rating\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Average Goals Met %\"},\"Name\":\"Performance Analytics_Measures.Average Goals Met %\",\"NativeReferenceName\":\"Avg. Goals Met %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Performance Band Label\"},\"Name\":\"Performance Analytics_Measures.Performance Band Label\",\"NativeReferenceName\":\"Performance Band Label\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"full_name\"},\"Name\":\"gold_dim_employee.full_name\",\"NativeReferenceName\":\"Name\"}]},\"columnProperties\":{\"gold_dim_employee.full_name\":{\"displayName\":\"Name\"},\"Sum(gold_fact_performance.overall_rating)\":{\"displayName\":\"Overall Rating\"},\"Performance Analytics_Measures.Average Goals Met %\":{\"displayName\":\"Avg. Goals Met %\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"129.6039378100557D\"}}}},\"selector\":{\"metadata\":\"Performance Analytics_Measures.Average Goals Met %\"}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"gold_dim_employee\"}},\"Property\":\"full_name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"g1\",\"Entity\":\"gold_dim_employee\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Performance Analytics_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"full_name\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Average Goals Met %\"}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"g1\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"full_name\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 309.50,
+          "width": 525.16,
+          "x": 0.00,
+          "y": 403.33,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"adb24f5f17010de02749\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":86.82713347921225,\"z\":3,\"width\":133.04157549234134,\"height\":240.8752735229759,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"listSlicer\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_agg_performance_by_dept.review_cycle\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_agg_performance_by_dept\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"review_cycle\"},\"Name\":\"gold_agg_performance_by_dept.review_cycle\",\"NativeReferenceName\":\"review_cycle\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Review Cycle'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 240.88,
+          "width": 133.04,
+          "x": 0.00,
+          "y": 86.83,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"bca13981c0d0072e9793\",\"layouts\":[{\"id\":0,\"position\":{\"x\":152.64770240700219,\"y\":85.42669584245075,\"z\":4,\"width\":277.2866520787746,\"height\":306.69584245076584,\"tabOrder\":4}}],\"singleVisual\":{\"visualType\":\"listSlicer\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_dim_employee.department_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g1\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_employee.department_name\",\"NativeReferenceName\":\"department_name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Review Cycle'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"dfcc8b19c44c0e163418\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"gold_dim_employee\"}},\"Property\":\"department_name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 306.70,
+          "width": 277.29,
+          "x": 152.65,
+          "y": 85.43,
+          "z": 4.00
+        },
+        {
+          "config": "{\"name\":\"c48f0e5c6930e7b06607\",\"layouts\":[{\"id\":0,\"position\":{\"x\":552.4584103512015,\"y\":11.829944547134936,\"z\":1,\"width\":703.8817005545286,\"height\":391.57116451016634,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Performance Analytics_Measures.High Performers\"},{\"queryRef\":\"Performance Analytics_Measures.Low Performers\"}],\"Category\":[{\"queryRef\":\"gold_dim_department.department_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Performance Analytics_Measures\",\"Type\":0},{\"Name\":\"g\",\"Entity\":\"gold_dim_department\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"High Performers\"},\"Name\":\"Performance Analytics_Measures.High Performers\",\"NativeReferenceName\":\"High Performers\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Low Performers\"},\"Name\":\"Performance Analytics_Measures.Low Performers\",\"NativeReferenceName\":\"Low Performers\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_department.department_name\",\"NativeReferenceName\":\"department_name\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"High Performers\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'High Performers vs Low Performers '\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 391.57,
+          "width": 703.88,
+          "x": 552.46,
+          "y": 11.83,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Compensation Analysis",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "854c599c0c45db3305c4",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"47df48290db750e07866\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640,\"y\":419.9630314232902,\"z\":1,\"width\":597.4121996303143,\"height\":300.48059149722735,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_dim_department.department_name\",\"active\":true}],\"Y\":[{\"queryRef\":\"Compensation Analysis_Measures.Average Comp Salary\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_department\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Compensation Analysis_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_department.department_name\",\"NativeReferenceName\":\"department_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Average Comp Salary\"},\"Name\":\"Compensation Analysis_Measures.Average Comp Salary\",\"NativeReferenceName\":\"Average Salary\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Average Comp Salary\"}}}]},\"columnProperties\":{\"Compensation Analysis_Measures.Average Comp Salary\":{\"displayName\":\"Average Salary\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average Salary by Dept.'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 300.48,
+          "width": 597.41,
+          "x": 640.00,
+          "y": 419.96,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"541b96d0b5d08c303ae5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":241.33086876155267,\"z\":2,\"width\":188.09611829944546,\"height\":414.04805914972275,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"listSlicer\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_dim_employee.department_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_employee.department_name\",\"NativeReferenceName\":\"department_name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Department'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"6833bf8cc8e3067d902a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"gold_dim_employee\"}},\"Property\":\"department_name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 414.05,
+          "width": 188.10,
+          "x": 0.00,
+          "y": 241.33,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"65fa7036bbb270dea4dc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640,\"y\":0,\"z\":0,\"width\":597.4121996303143,\"height\":404.5841035120148,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"Sum(gold_dim_employee.salary)\",\"active\":true}],\"Series\":[{\"queryRef\":\"gold_dim_department.department_name\"}],\"Y\":[{\"queryRef\":\"Sum(gold_dim_employee.tenure_years)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_employee\",\"Type\":0},{\"Name\":\"g1\",\"Entity\":\"gold_dim_department\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"salary\"},\"Name\":\"Sum(gold_dim_employee.salary)\",\"NativeReferenceName\":\"salary\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g1\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_department.department_name\",\"NativeReferenceName\":\"department_name\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"tenure_years\"}},\"Function\":0},\"Name\":\"Sum(gold_dim_employee.tenure_years)\",\"NativeReferenceName\":\"Sum of tenure_years\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Left'\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Salary vs Tenure'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 404.58,
+          "width": 597.41,
+          "x": 640.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"6717a63aee90085bca02\",\"layouts\":[{\"id\":0,\"position\":{\"x\":218.8539741219963,\"y\":241.33086876155267,\"z\":3,\"width\":171.53419593345654,\"height\":405.7670979667283,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"listSlicer\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_dim_employee.education_level\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"education_level\"},\"Name\":\"gold_dim_employee.education_level\",\"NativeReferenceName\":\"education_level\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Education Level'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"6833bf8cc8e3067d902a\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"gold_dim_employee\"}},\"Property\":\"department_name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 405.77,
+          "width": 171.53,
+          "x": 218.85,
+          "y": 241.33,
+          "z": 3.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Workforce Overview",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "8f7237de4b749d2ae488",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2f42536700e1c41e5a25\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":142.47551202137134,\"z\":5000,\"width\":398.93143365983974,\"height\":316.86553873552987,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"gold_dim_employee.gender\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(gold_dim_employee.gender)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"gender\"},\"Name\":\"gold_dim_employee.gender\",\"NativeReferenceName\":\"gender\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"gender\"}},\"Function\":5},\"Name\":\"CountNonNull(gold_dim_employee.gender)\",\"NativeReferenceName\":\"Count of gender\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"gender\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'TopCenter'\"}}}}}],\"labels\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'inside'\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Gender Distribution'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 316.87,
+          "width": 398.93,
+          "x": 0.00,
+          "y": 142.48,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"449da5ac852080e98be0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":524.3098842386465,\"z\":6000,\"width\":216.56277827248442,\"height\":196.04630454140695,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_dim_department.division\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_department\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"division\"},\"Name\":\"gold_dim_department.division\",\"NativeReferenceName\":\"division\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{}}],\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Division'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[{\"name\":\"2ee477b6ceb5223aac43\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"gold_dim_department\"}},\"Property\":\"division\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_department\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"division\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 196.05,
+          "width": 216.56,
+          "x": 0.00,
+          "y": 524.31,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"6b26532faa8b50c97a73\",\"layouts\":[{\"id\":0,\"position\":{\"x\":406.91006233303654,\"y\":142.47551202137134,\"z\":4000,\"width\":832.0569902048086,\"height\":381.8343722172752,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Workforce_Measures.Actual Headcount\"},{\"queryRef\":\"Workforce_Measures.Budgeted Headcount\"}],\"Category\":[{\"queryRef\":\"gold_dim_department.department_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Workforce_Measures\",\"Type\":0},{\"Name\":\"g\",\"Entity\":\"gold_dim_department\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Actual Headcount\"},\"Name\":\"Workforce_Measures.Actual Headcount\",\"NativeReferenceName\":\"Actual Headcount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_department.department_name\",\"NativeReferenceName\":\"Count of department_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Budgeted Headcount\"},\"Name\":\"Workforce_Measures.Budgeted Headcount\",\"NativeReferenceName\":\"Budgeted Headcount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Actual Headcount\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"legend\":[{\"properties\":{\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'TopCenter'\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'OutsideEnd'\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"enableTitleDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 381.83,
+          "width": 832.06,
+          "x": 406.91,
+          "y": 142.48,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"7cc712ec90aa5e59d334\",\"layouts\":[{\"id\":0,\"position\":{\"x\":406.91006233303654,\"y\":10.258236865538736,\"z\":0,\"width\":165.27159394479074,\"height\":108.28138913624221,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Workforce_Measures.Total Headcount\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Workforce_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Total Headcount\"},\"Name\":\"Workforce_Measures.Total Headcount\",\"NativeReferenceName\":\"Total Headcount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Total Headcount\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total Headcount'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.28,
+          "width": 165.27,
+          "x": 406.91,
+          "y": 10.26,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"a4901d058e4870285905\",\"layouts\":[{\"id\":0,\"position\":{\"x\":949.4568121104186,\"y\":10.258236865538736,\"z\":3000,\"width\":177.8094390026714,\"height\":117.39982190560998,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Compensation Analysis_Measures.Department Avg Salary\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Compensation Analysis_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department Avg Salary\"},\"Name\":\"Compensation Analysis_Measures.Department Avg Salary\",\"NativeReferenceName\":\"Department Avg Salary\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Department Avg Salary\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Avg. Salary'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 117.40,
+          "width": 177.81,
+          "x": 949.46,
+          "y": 10.26,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"bb4f2352c2268c96e34a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":225.68121104185218,\"y\":524.3098842386465,\"z\":7000,\"width\":216.56277827248442,\"height\":196.04630454140695,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"gold_dim_employee.department_name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"},\"Name\":\"gold_dim_employee.department_name\",\"NativeReferenceName\":\"department_name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{}}],\"layout\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}}}}],\"overFlow\":[{\"properties\":{\"overFlowDirection\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Department'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}}",
+          "filters": "[{\"name\":\"df08d50cd8cd51cde082\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"gold_dim_employee\"}},\"Property\":\"department_name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"gold_dim_employee\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"department_name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 196.05,
+          "width": 216.56,
+          "x": 225.68,
+          "y": 524.31,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"fe0715023ae19540c017\",\"layouts\":[{\"id\":0,\"position\":{\"x\":772.7871772039181,\"y\":10.258236865538736,\"z\":2000,\"width\":157.29296527159394,\"height\":108.28138913624221,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Workforce_Measures.Turnover Rate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Workforce_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Turnover Rate\"},\"Name\":\"Workforce_Measures.Turnover Rate\",\"NativeReferenceName\":\"Turnover Rate\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Turnover Rate\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Turnover Rate'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.28,
+          "width": 157.29,
+          "x": 772.79,
+          "y": 10.26,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"ff1f7d5b89232bd856a3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":591.5583259127337,\"y\":10.258236865538736,\"z\":1000,\"width\":162.9919857524488,\"height\":108.28138913624221,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Workforce_Measures.Active Employees\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"w\",\"Entity\":\"Workforce_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Active Employees\"},\"Name\":\"Workforce_Measures.Active Employees\",\"NativeReferenceName\":\"Active Employees\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"w\"}},\"Property\":\"Active Employees\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"fillCustom\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Active Employees'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.28,
+          "width": 162.99,
+          "x": 591.56,
+          "y": 10.26,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

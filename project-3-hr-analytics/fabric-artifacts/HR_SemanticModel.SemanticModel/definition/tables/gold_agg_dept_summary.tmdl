@@ -1,0 +1,140 @@
+table gold_agg_dept_summary
+	lineageTag: d0e9e0f5-968b-4980-bd0f-89048dd6232f
+	sourceLineageTag: [dbo].[gold_agg_dept_summary]
+
+	measure 'Average Salary' =
+			
+			AVERAGE ( gold_dim_employee[salary] )
+		lineageTag: 294a18a8-64dc-4702-9fa4-29efdaa189bd
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column department_id
+		dataType: string
+		lineageTag: 8c226439-884d-4503-9218-ccac6572a165
+		sourceLineageTag: department_id
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_name
+		dataType: string
+		lineageTag: adf86221-7154-4973-a582-af0393e69f48
+		sourceLineageTag: department_name
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column division
+		dataType: string
+		lineageTag: 655d8376-1483-437e-852d-2157a5c3bce6
+		sourceLineageTag: division
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	column head_count_budget
+		dataType: int64
+		formatString: 0
+		lineageTag: 65c4402d-9881-48af-bc78-699948e488e5
+		sourceLineageTag: head_count_budget
+		summarizeBy: sum
+		sourceColumn: head_count_budget
+
+		annotation SummarizationSetBy = Automatic
+
+	column active_headcount
+		dataType: int64
+		formatString: 0
+		lineageTag: 667306bf-7d36-4812-8e4c-8daf82b784f5
+		sourceLineageTag: active_headcount
+		summarizeBy: sum
+		sourceColumn: active_headcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column headcount_variance
+		dataType: int64
+		formatString: 0
+		lineageTag: 9fb9daa9-8dbe-4fab-9362-e09be4bbaf2b
+		sourceLineageTag: headcount_variance
+		summarizeBy: sum
+		sourceColumn: headcount_variance
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_salary
+		dataType: double
+		lineageTag: dbf10c30-29ae-4ecf-9f42-050416a2de14
+		sourceLineageTag: avg_salary
+		summarizeBy: sum
+		sourceColumn: avg_salary
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column min_salary
+		dataType: int64
+		formatString: 0
+		lineageTag: 034761b4-5f1a-46aa-83b9-67a78ff3292d
+		sourceLineageTag: min_salary
+		summarizeBy: sum
+		sourceColumn: min_salary
+
+		annotation SummarizationSetBy = Automatic
+
+	column max_salary
+		dataType: int64
+		formatString: 0
+		lineageTag: 88fd8065-8263-4746-83fd-66624d2dd1ab
+		sourceLineageTag: max_salary
+		summarizeBy: sum
+		sourceColumn: max_salary
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_tenure_years
+		dataType: double
+		lineageTag: 00bfc607-2306-4ae0-bd25-9bc9e7939e11
+		sourceLineageTag: avg_tenure_years
+		summarizeBy: sum
+		sourceColumn: avg_tenure_years
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column terminated_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 95487314-5d39-40bb-80f7-e84851b32c9c
+		sourceLineageTag: terminated_count
+		summarizeBy: sum
+		sourceColumn: terminated_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column turnover_pct
+		dataType: double
+		lineageTag: a93702af-754d-4bf2-9da6-21641ab387fe
+		sourceLineageTag: turnover_pct
+		summarizeBy: sum
+		sourceColumn: turnover_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition gold_agg_dept_summary = entity
+		mode: directLake
+		source
+			entityName: gold_agg_dept_summary
+			schemaName: dbo
+			expressionSource: 'DirectLake - HR_LH'
+

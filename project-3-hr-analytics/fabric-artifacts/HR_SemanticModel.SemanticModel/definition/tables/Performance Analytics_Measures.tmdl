@@ -1,0 +1,94 @@
+table 'Performance Analytics_Measures'
+	lineageTag: 5b9c4a0b-2243-4d97-8a83-0002f581da4a
+
+	measure 'Review Count' =
+			
+			COUNTROWS ( gold_fact_performance )
+		formatString: 0
+		lineageTag: 3c17a5d7-c933-4931-b521-7bc863a0b42b
+
+	measure 'Reviewed Employees' =
+			
+			DISTINCTCOUNT ( gold_fact_performance[employee_id] )
+		formatString: 0
+		lineageTag: 106798eb-1e06-4ba1-a4fa-edfea4e4aa5a
+
+	measure 'Average Goals Met %' =
+			
+			AVERAGE ( gold_fact_performance[goals_met_pct] )
+		lineageTag: adb603dc-21cc-42c2-9f3a-fd17e2ca0b6a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Rating' =
+			
+			AVERAGE ( gold_fact_performance[overall_rating] )
+		lineageTag: 3df1d4a7-ba46-4991-9feb-b44cc5c52e16
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'High Performers' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( gold_fact_performance[employee_id] ),
+			    gold_fact_performance[overall_rating] >= 4
+			)
+		formatString: 0
+		lineageTag: 447cf4c8-0354-47bc-ab8f-2e0f77b1512c
+
+	measure 'Low Performers' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( gold_fact_performance[employee_id] ),
+			    gold_fact_performance[overall_rating] < 3
+			)
+		formatString: 0
+		lineageTag: e799178e-6718-4cdc-94b6-323330a9c4dd
+
+	measure 'High Performer %' =
+			
+			DIVIDE ( [High Performers], [Reviewed Employees] )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: eb7555b4-7eb3-4dea-b984-709c2e4860d8
+
+	measure 'Low Performer %' =
+			
+			DIVIDE ( [Low Performers], [Reviewed Employees] )
+		formatString: 0.0
+		lineageTag: 1e550829-b636-4536-b1f9-a07cf40e460b
+
+	measure 'Performance Band Label' =
+			
+			VAR AvgRate = [Average Rating]
+			RETURN
+			    SWITCH (
+			        TRUE(),
+			        AvgRate >= 4.5, "Top Tier",
+			        AvgRate >= 3.5, "Strong",
+			        AvgRate >= 2.5, "Needs Development",
+			        "Low"
+			    )
+		lineageTag: 6fa66fc0-dea8-49c8-bb7e-6abf15ba5d01
+
+	measure 'Department Performance Rank' =
+			
+			RANKX (
+			    ALL ( gold_dim_department[department_name] ),
+			    [Average Rating],
+			    ,
+			    DESC
+			)
+		formatString: 0
+		lineageTag: 0f8a7273-66fe-4822-9805-4f5093a78182
+
+	partition 'Performance Analytics_Measures' = m
+		mode: import
+		source =
+				let
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				  #"Removed Columns" = Table.RemoveColumns(Source, {"Column1"})
+				in
+				  #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
