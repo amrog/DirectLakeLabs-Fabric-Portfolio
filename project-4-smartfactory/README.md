@@ -232,7 +232,7 @@ The `fabric-artifacts/` subfolder contains workspace items synced via Git integr
   
 - KQL query results (sensor overview, anomaly detection)
   
-  ![Source Data](images/kql_query_editor_anomalies.png)
+  ![Source Data](images/kql_query_editor_anomalies.png)   ![Source Data](images/kql_query_editor_.png)
 
   
 - Real-Time Dashboard with all four tiles populated
