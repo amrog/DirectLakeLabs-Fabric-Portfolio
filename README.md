@@ -137,8 +137,8 @@ DirectLakeLabs-Fabric-Portfolio/
 │   ├── screenshots/
 │   └── fabric-artifacts/                  ← Git-synced from SmartFactory_IoT_Monitoring workspace
 │
-├── project-3-hr-analytics/               ← Coming soon
-├── project-5-financeops/                  ← Coming soon
+├── project-3-hr-analytics/               ← Complete
+├── project-5-financeops/                  ← Complete
 └── project-6-crossplatform/              ← Coming soon
 ```
 
