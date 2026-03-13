@@ -240,9 +240,6 @@ The `fabric-artifacts/` subfolder contains workspace items synced via Git integr
   ![Source Data](images/real_time_dashboard.png)
   
   
-- Lakehouse showing the `iot_sensor_raw` Delta table
-
- 
 
 - Workspace overview showing all items
 
