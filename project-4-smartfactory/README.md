@@ -224,19 +224,25 @@ The `fabric-artifacts/` subfolder contains workspace items synced via Git integr
 
 ## Screenshots
 
-*(Add screenshots to the `screenshots/` folder)*
 
-Recommended captures:
 - Eventstream canvas showing source → two destinations
+
+  ![Source Data](images/iot_eventstream_w_data.png)
+  
+  
 - KQL query results (sensor overview, anomaly detection)
   
-  ![Source Data](images/query_editor_anomalies.png)
+  ![Source Data](images/kql_query_editor_anomalies.png)
+
   
 - Real-Time Dashboard with all four tiles populated
 
   ![Source Data](images/real_time_dashboard.png)
-- 
+  
+  
 - Lakehouse showing the `iot_sensor_raw` Delta table
+
+ 
 
 - Workspace overview showing all items
 
