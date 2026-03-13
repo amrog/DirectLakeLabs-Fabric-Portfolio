@@ -163,8 +163,20 @@ Done. PASS=15 WARN=0 ERROR=0 SKIP=0 TOTAL=15
 $ dbt test --profiles-dir .
 Completed successfully.
 Done. PASS=35 WARN=0 ERROR=0 SKIP=0 TOTAL=35
-```
 
+
+```
+![Source Data](images/13-dbt_model_Build.png)
+
+![Source Data](images/12_dbt_test_profiles.png)
+
+# DBT DAG Environment
+
+![Source Data](images/dbt_dag_.png)
+
+## dbt Lineage Graph
+
+![Source Data](images/dbt_lineage_graph.png)
 ---
 
 ## Data Quality Tests
@@ -191,12 +203,17 @@ Done. PASS=35 WARN=0 ERROR=0 SKIP=0 TOTAL=35
 ### Page 1: Executive Summary
 Monthly revenue trend (FY2024 vs FY2025), gross margin and operating margin combo chart, KPI cards for revenue, net income, gross profit, and operating income. Year slicer for FY2024/FY2025 comparison.
 
+![Source Data](images/executive_summary.png)
+
 ### Page 2: Budget vs Actuals
 Budget allocation by cost center (bar chart), variance detail table with account, cost center, budget, actual, variance amount, variance percentage, and favorable/unfavorable status. Period slicer for month-level filtering.
+
+![Source Data](images/rpt_budget_vs_actuals.png)
 
 ### Page 3: GL Drill-Through
 Detail-level journal entry lookup with drill-through on account name. Shows posting date, JE ID, description, account, cost center, debit, credit, and net amount. Summary cards for total debits and credits. Account type and fiscal quarter slicers. The $0.02 net imbalance from the planted data quality issue is visible in the totals.
 
+![Source Data](images/gl_drill_through.png)
 ---
 
 ## Key Engineering Decisions
