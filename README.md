@@ -51,7 +51,7 @@ Two retries with 30-second intervals for Bronze (external data, transient failur
 
 ### Project 3: HR Analytics — Dataflows Gen2
 **Workspace:** `HR_Analytics`
-**Status:** Planned
+**Status:** Complete
 
 A people analytics project built with Dataflows Gen2 instead of notebooks to demonstrate low-code ETL capabilities. Employee data, performance reviews, and department hierarchies are ingested and transformed through the visual Power Query editor, then modeled in a Gold layer for reporting.
 
@@ -81,7 +81,7 @@ Separate workspace from RetailOps because batch and streaming workloads have dif
 
 ### Project 5: FinanceOps — Data Warehouse + dbt
 **Workspace:** `FinanceOps_Warehouse`
-**Status:** Planned
+**Status:** Complete
 
 A financial analytics project built on a Fabric Data Warehouse instead of a Lakehouse, using dbt jobs for SQL-first transformations. This project demonstrates the ELT pattern and the architectural judgment of knowing when a warehouse is the better fit.
 
