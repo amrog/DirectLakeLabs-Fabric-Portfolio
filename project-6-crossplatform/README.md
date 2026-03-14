@@ -64,7 +64,7 @@ External                              Fabric
 
 The project starts outside of Fabric entirely. An Azure SQL Database (`CrossPlatformDB`) was created on server `flowanalytics` in the `rg-fabric-portfolio` resource group to simulate a CRM/ERP system that exists outside the analytics platform.
 
-![Azure SQL Database deployment complete](screenshots/azure_sql_creation.png)
+![Azure SQL Database deployment complete](images/azure_sql_creation_2.png)
 
 Four tables were created and loaded: `crm_customers` (100 records), `erp_orders` (500), `erp_products` (15), and `erp_order_items` (1,247). These represent the kind of operational data that typically lives in a transactional database and needs to flow into analytics without building traditional ETL.
 
@@ -74,7 +74,7 @@ Four tables were created and loaded: `crm_customers` (100 records), `erp_orders`
 
 To simulate a production CRM/ERP environment, the operational schema was created directly inside the Azure SQL Database using the Azure Portal Query Editor. This approach mirrors how engineering teams often provision lightweight development or staging schemas without requiring external tooling.
 
-![Azure SQL Query Editor showing CRM table schema creation](screenshots/azure_sql_table_creation.png)
+![Azure SQL Query Editor showing CRM table schema creation](images/azure_sql_table_creation.png)
 
 The schema includes four tables that represent a simplified operational system:
 
@@ -91,7 +91,7 @@ These tables simulate the type of transactional data typically produced by opera
 
 After creating the schema and loading sample data, the Azure SQL Query Editor confirms that all operational tables exist and are accessible.
 
-![Azure SQL database tables visible in query editor](screenshots/azure_sql_table_complete.png)
+![Azure SQL database tables visible in query editor](images/azure_sql_table_complete.png)
 
 This step mirrors a common production validation practice: verifying that source system tables exist and contain data before configuring downstream replication or integration services.
 
@@ -101,7 +101,7 @@ This step mirrors a common production validation practice: verifying that source
 
 A Mirrored Azure SQL Database item (`CrossPlatform_Mirror`) was created in the Fabric workspace, connecting to the Azure SQL source. Fabric discovers the tables automatically and begins continuous replication into OneLake as Delta tables.
 
-![Mirrored database verification — 4 tables replicated, query confirms data](screenshots/mirror_verification.png)
+![Mirrored database verification — 4 tables replicated, query confirms data](images/mirror_verification.png)
 
 The verification query confirms all 4 source tables are visible in the mirrored database's SQL analytics endpoint. The data replicates in near-real-time — when a new row is inserted in Azure SQL, it appears in Fabric within seconds. No pipeline, no schedule, no code.
 
@@ -111,13 +111,15 @@ The verification query confirms all 4 source tables are visible in the mirrored 
 
 This is where data virtualization comes together. Inside `Integration_LH`, OneLake Shortcuts were created to reference Gold tables from two other Fabric workspaces — without copying any data.
 
-![Right-click on dbo schema to create table shortcuts](screenshots/shortcut_creation_steps.png)
+![Right-click on dbo schema to create table shortcuts](images/shortcut_steps_careful.png)
 
-The shortcut creation process: right-click on the `dbo` schema (not the Tables folder) → select **New table shortcut** → navigate to the source workspace and select the target table.
+#### A. The shortcut creation process: right-click on the `dbo` schema (not the Tables folder) → select **New table shortcut** → navigate to the source workspace and select the target table.
 
-![RetailOps Gold tables appearing as shortcuts in Integration_LH](screenshots/established_shortcuts.png)
+---
 
-After creating shortcuts, the `Integration_LH` lakehouse shows RetailOps Gold tables (`gold_dim_customer`, `gold_dim_product`, `gold_fact_sales`) as if they were local — but the data physically lives in the `RetailOps_Analytics` workspace. Any updates to those tables are reflected immediately.
+![RetailOps Gold tables appearing as shortcuts in Integration_LH](images/established_shortcuts.png)
+
+#### B. After creating shortcuts, the `Integration_LH` lakehouse shows RetailOps Gold tables (`gold_dim_customer`, `gold_dim_product`, `gold_fact_sales`) as if they were local — but the data physically lives in the `RetailOps_Analytics` workspace. Any updates to those tables are reflected immediately.
 
 ---
 
@@ -125,7 +127,7 @@ After creating shortcuts, the `Integration_LH` lakehouse shows RetailOps Gold ta
 
 The OneLake catalog provides a unified view of all data assets across the tenant. Here you can see the integration pattern clearly — `Integration_LH` and `CrossPlatform_Mirror` are the two primary items in the `CrossPlatform_Integration` workspace, alongside data from other workspaces (HR_LH, FinanceOps_DW, RetailOps_LH) that are referenced through shortcuts.
 
-![OneLake catalog showing integrated source attachments and mirrored operational database](screenshots/data_connection_view.png)
+![OneLake catalog showing integrated source attachments and mirrored operational database](images/data_connection_attachment.png)
 
 ---
 
@@ -133,7 +135,7 @@ The OneLake catalog provides a unified view of all data assets across the tenant
 
 A notebook (`NB_CrossPlatform_Analytics`) joins data across all three sources using Spark SQL — mirrored CRM/ERP data, shortcutted RetailOps sales data, and shortcutted HR workforce data — to produce three unified analytical tables.
 
-![Semantic model showing the three unified tables with their columns](screenshots/semantic_model_unified_tables.png)
+![Semantic model showing the three unified tables with their columns](images/semantic_model_unified_tbls.png)
 
 The semantic model exposes these three tables:
 - **unified_customer_360** — Mirrored CRM customer profiles enriched with ERP order history (orders, spend, average order value, last order date)
@@ -144,15 +146,17 @@ The semantic model exposes these three tables:
 
 ### Step 8: Cross-Platform Power BI Report
 
+
+
 **Page 1: Cross-Platform Overview**
 
-![Report page 1 — KPI cards, revenue by department, and Customer 360 table](screenshots/report_page_1.png)
+![Report page 1 — KPI cards, revenue by department, and Customer 360 table](images/report_page_1.png)
 
 The overview page shows data flowing from all three sources into a single dashboard: Total Customers and Total Orders from the mirrored CRM/ERP, Retail Revenue from the shortcutted RetailOps workspace, and Total Headcount from the shortcutted HR workspace. The Customer 360 table combines mirrored customer profiles with their order history — including the "Test Mirroring" record that was inserted to verify real-time sync.
 
 **Page 2: Data Integration Map**
 
-![Report page 2 — Architecture diagram showing data flow from sources through unified tables to report](screenshots/report_page_2.png)
+![Report page 2 — Architecture diagram showing data flow from sources through unified tables to report](images/report_page_2.png)
 
 This page serves as a portfolio showcase. It visually maps each data source (CRM Customers, ERP Orders, HR Workforce, Retail Sales) to its integration type (Mirrored or Shortcut), the unified table it feeds, and the key metric it contributes. The architecture flows from source → Integration_LH → Unified Tables → Power BI Report, making the data virtualization pattern immediately clear to anyone viewing the report.
 
@@ -160,7 +164,7 @@ This page serves as a portfolio showcase. It visually maps each data source (CRM
 
 ### The Complete Workspace
 
-![CrossPlatform_Integration workspace with all items](screenshots/workspace_view.png)
+![CrossPlatform_Integration workspace with all items](images/work_space.png)
 
 The final workspace contains: a Mirrored Database with its SQL analytics endpoint, the Integration Lakehouse with shortcuts and unified tables, the analytics notebook, a semantic model, and the 2-page Power BI report. Seven items total — lean and focused.
 
