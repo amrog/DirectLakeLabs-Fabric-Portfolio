@@ -95,7 +95,7 @@ Lakehouses and warehouses solve different problems. This project shows the abili
 
 ### Project 6: CrossPlatform — Mirroring + Shortcuts
 **Workspace:** `CrossPlatform_Integration`
-**Status:** Planned
+**Status:** Complete
 
 A data integration project focused on connecting external sources to Fabric without traditional ETL. Mirroring replicates data from Azure SQL in near real-time, OneLake Shortcuts virtualize data from external storage, and both are combined into a unified Gold layer.
 
