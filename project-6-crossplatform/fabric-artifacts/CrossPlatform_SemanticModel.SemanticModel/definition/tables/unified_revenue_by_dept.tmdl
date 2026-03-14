@@ -1,0 +1,71 @@
+table unified_revenue_by_dept
+	lineageTag: 665ae5a0-8264-4c2f-a336-0898676b62cc
+	sourceLineageTag: [dbo].[unified_revenue_by_dept]
+
+	column department_name
+		dataType: string
+		lineageTag: fbca4572-20d5-41f6-9e10-ee99e213b11e
+		sourceLineageTag: department_name
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column division
+		dataType: string
+		lineageTag: f62a35b1-527f-4828-8d2b-fedbde7ae885
+		sourceLineageTag: division
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	column active_headcount
+		dataType: int64
+		formatString: 0
+		lineageTag: 948cb5dd-0fde-40b4-85f9-b68ba43cb74b
+		sourceLineageTag: active_headcount
+		summarizeBy: sum
+		sourceColumn: active_headcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_orders
+		dataType: int64
+		formatString: 0
+		lineageTag: f618c0aa-942d-4908-8b31-d404a30f9f11
+		sourceLineageTag: total_orders
+		summarizeBy: sum
+		sourceColumn: total_orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_revenue
+		dataType: double
+		lineageTag: f629abe5-6cca-4937-8130-fe7b8dcc948e
+		sourceLineageTag: total_revenue
+		summarizeBy: sum
+		sourceColumn: total_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column revenue_per_employee
+		dataType: double
+		lineageTag: 098e1ded-ffaf-498c-b110-1e1d4d779d02
+		sourceLineageTag: revenue_per_employee
+		summarizeBy: sum
+		sourceColumn: revenue_per_employee
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition unified_revenue_by_dept = entity
+		mode: directLake
+		source
+			entityName: unified_revenue_by_dept
+			schemaName: dbo
+			expressionSource: 'DirectLake - Integration_LH'
+

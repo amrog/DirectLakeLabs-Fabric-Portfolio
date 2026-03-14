@@ -1,0 +1,62 @@
+table unified_efficiency_metrics
+	lineageTag: 8e89e8c5-ba99-4490-9e01-a666c2bdc873
+	sourceLineageTag: [dbo].[unified_efficiency_metrics]
+
+	column division
+		dataType: string
+		lineageTag: d3c3003c-5d78-41a2-9808-09470216f88f
+		sourceLineageTag: division
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_headcount
+		dataType: int64
+		formatString: 0
+		lineageTag: 0af062d3-ca28-469b-8e92-334d32843951
+		sourceLineageTag: total_headcount
+		summarizeBy: sum
+		sourceColumn: total_headcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_compensation
+		dataType: double
+		lineageTag: 1843477e-a9db-40d0-9ca3-cf4448fb62d7
+		sourceLineageTag: total_compensation
+		summarizeBy: sum
+		sourceColumn: total_compensation
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column mirrored_order_count
+		dataType: int64
+		formatString: 0
+		lineageTag: f1003731-0a65-4bf4-aa40-bf71f5104cb6
+		sourceLineageTag: mirrored_order_count
+		summarizeBy: sum
+		sourceColumn: mirrored_order_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column mirrored_revenue
+		dataType: double
+		lineageTag: ebbef823-928f-4628-b580-b101162ebf30
+		sourceLineageTag: mirrored_revenue
+		summarizeBy: sum
+		sourceColumn: mirrored_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition unified_efficiency_metrics = entity
+		mode: directLake
+		source
+			entityName: unified_efficiency_metrics
+			schemaName: dbo
+			expressionSource: 'DirectLake - Integration_LH'
+

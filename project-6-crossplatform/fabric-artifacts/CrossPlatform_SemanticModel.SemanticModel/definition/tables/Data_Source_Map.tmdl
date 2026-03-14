@@ -1,0 +1,116 @@
+table Data_Source_Map
+	lineageTag: e42808ee-37f4-4674-b04d-f51928685ac5
+
+	measure 'Total Customers' =
+			
+			COUNT(unified_customer_360[crm_customer_id])
+		formatString: 0
+		lineageTag: 8a00a3c9-ca7a-436c-ae11-4d39945cbaa6
+
+	measure 'Total Orders' =
+			
+			SUM(unified_customer_360[total_orders])
+		formatString: 0
+		lineageTag: cca645f0-50e8-46d6-b4dc-ef0b141aa639
+
+	measure 'Retail Revenue' =
+			
+			SUM(unified_revenue_by_dept[total_revenue])
+		lineageTag: 20079c8a-e83c-4c8c-8a2b-ddaa3ce69b0d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Headcount' =
+			
+			SUM(unified_efficiency_metrics[total_headcount])
+		formatString: 0
+		lineageTag: 2d804664-5efd-44c4-aee2-8b7b432e98d4
+
+	measure 'Integration Metric' =
+			
+			SWITCH(
+			    SELECTEDVALUE(Data_Source_Map[Data Source]),
+			    "CRM Customers", COUNT(unified_customer_360[crm_customer_id]),
+			    "ERP Orders", SUM(unified_customer_360[total_orders]),
+			    "HR Workforce", SUM(unified_efficiency_metrics[total_headcount]),
+			    "Retail Sales", SUM(unified_revenue_by_dept[total_revenue])
+			)
+		formatString: 0
+		lineageTag: 51153561-fc49-4128-8545-0ebd2bbfd00f
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Integration Metric (Formatted)' =
+			
+			VAR v =
+			SWITCH(
+			    SELECTEDVALUE(Data_Source_Map[Data Source]),
+			    "CRM Customers", COUNT(unified_customer_360[crm_customer_id]),
+			    "ERP Orders", SUM(unified_customer_360[total_orders]),
+			    "HR Workforce", SUM(unified_efficiency_metrics[total_headcount]),
+			    "Retail Sales", SUM(unified_revenue_by_dept[total_revenue])
+			)
+			RETURN
+			IF(
+			    SELECTEDVALUE(Data_Source_Map[Data Source]) = "Retail Sales",
+			    FORMAT(v / 1000000, "0") & "M",
+			    FORMAT(v, "#,0")
+			)
+		lineageTag: dd34a257-7142-4b17-bdc0-b0f67257b5ff
+
+	column 'Data Source'
+		lineageTag: 6bf116e6-a2fd-466e-a118-01cabc53142c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Data Source]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Integration Type'
+		lineageTag: aab5d306-fd9f-4df5-943b-7eadda601b6b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Integration Type]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unified Table'
+		lineageTag: d8b4e1ef-78bc-4cdc-9672-107e808d7ee1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Unified Table]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Metric =
+			
+			SWITCH(
+			    Data_Source_Map[Data Source],
+			    "CRM Customers", "Customer Records",
+			    "ERP Orders", "Total Orders",
+			    "HR Workforce", "Employee Count",
+			    "Retail Sales", "Total Revenue"
+			)
+		lineageTag: 09006450-fe70-4b90-9522-b04ef4cff4e5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Data_Source_Map = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Data Source", STRING,
+				    "Integration Type", STRING,
+				    "Unified Table", STRING,
+				{
+				    {"CRM Customers","Mirrored","unified_customer_360"},
+				    {"ERP Orders","Mirrored","unified_customer_360"},
+				    {"HR Workforce","Shortcut","unified_efficiency_metrics"},
+				    {"Retail Sales","Shortcut","unified_revenue_by_dept"}
+				}
+				)
+
+	annotation PBI_Id = d0da6971c95045d4806c591df5f358fd
+

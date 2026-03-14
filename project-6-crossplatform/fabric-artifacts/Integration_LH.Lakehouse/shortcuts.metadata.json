@@ -1,0 +1,126 @@
+[
+  {
+    "name": "gold_fact_sales",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/gold_fact_sales",
+        "itemId": "0ccb13ab-c4a2-4919-abdb-4c4966e4adf0",
+        "workspaceId": "bfb13f36-a445-478e-a53d-9f19dcb161ab"
+      }
+    }
+  },
+  {
+    "name": "gold_dim_product",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/gold_dim_product",
+        "itemId": "0ccb13ab-c4a2-4919-abdb-4c4966e4adf0",
+        "workspaceId": "bfb13f36-a445-478e-a53d-9f19dcb161ab"
+      }
+    }
+  },
+  {
+    "name": "gold_dim_employee",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/gold_dim_employee",
+        "itemId": "aefedc79-f516-4dd5-802f-6908eab8505b",
+        "workspaceId": "43d31b4f-3433-413a-b1c7-24d6452587f4"
+      }
+    }
+  },
+  {
+    "name": "gold_dim_department",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/gold_dim_department",
+        "itemId": "aefedc79-f516-4dd5-802f-6908eab8505b",
+        "workspaceId": "43d31b4f-3433-413a-b1c7-24d6452587f4"
+      }
+    }
+  },
+  {
+    "name": "gold_dim_customer",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/gold_dim_customer",
+        "itemId": "0ccb13ab-c4a2-4919-abdb-4c4966e4adf0",
+        "workspaceId": "bfb13f36-a445-478e-a53d-9f19dcb161ab"
+      }
+    }
+  },
+  {
+    "name": "gold_agg_dept_summary",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/gold_agg_dept_summary",
+        "itemId": "aefedc79-f516-4dd5-802f-6908eab8505b",
+        "workspaceId": "43d31b4f-3433-413a-b1c7-24d6452587f4"
+      }
+    }
+  },
+  {
+    "name": "erp_products",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/erp_products",
+        "itemId": "7ed12ea3-7f52-842b-45f5-5ea83a4c1c69",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "MountedRelationalDatabase"
+      }
+    }
+  },
+  {
+    "name": "erp_orders",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/erp_orders",
+        "itemId": "7ed12ea3-7f52-842b-45f5-5ea83a4c1c69",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "MountedRelationalDatabase"
+      }
+    }
+  },
+  {
+    "name": "erp_order_items",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/erp_order_items",
+        "itemId": "7ed12ea3-7f52-842b-45f5-5ea83a4c1c69",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "MountedRelationalDatabase"
+      }
+    }
+  },
+  {
+    "name": "crm_customers",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/crm_customers",
+        "itemId": "7ed12ea3-7f52-842b-45f5-5ea83a4c1c69",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "MountedRelationalDatabase"
+      }
+    }
+  }
+]

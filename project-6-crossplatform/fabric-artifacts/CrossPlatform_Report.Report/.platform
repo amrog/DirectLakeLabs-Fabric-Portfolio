@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "CrossPlatform_Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "23234164-9ada-99e2-4169-c45c2b16a661"
+  }
+}

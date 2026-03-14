@@ -1,0 +1,127 @@
+table unified_customer_360
+	lineageTag: b1842df6-312b-4085-a40e-9bccc3647b97
+	sourceLineageTag: [dbo].[unified_customer_360]
+
+	column crm_customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b54e31fd-965f-4b93-bf13-b9b944b23403
+		sourceLineageTag: crm_customer_id
+		summarizeBy: sum
+		sourceColumn: crm_customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: 7854c11d-9cbc-4e00-8706-4fad51572868
+		sourceLineageTag: first_name
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: 1baf9559-b71b-48bd-a9a8-beb556a392e9
+		sourceLineageTag: last_name
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_name
+		dataType: string
+		lineageTag: 35b26001-6c0a-401e-b15b-12d76793b5fa
+		sourceLineageTag: company_name
+		summarizeBy: none
+		sourceColumn: company_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column industry
+		dataType: string
+		lineageTag: 5b392932-31b7-4ae5-ad68-0396e5c4fd98
+		sourceLineageTag: industry
+		summarizeBy: none
+		sourceColumn: industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: e7a3bdd1-9400-46a8-85d9-c6c3d321bd8e
+		sourceLineageTag: region
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column crm_lifetime_value
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d772b4fa-8315-4b2a-8201-b255243df8f5
+		sourceLineageTag: crm_lifetime_value
+		summarizeBy: sum
+		sourceColumn: crm_lifetime_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column total_orders
+		dataType: int64
+		formatString: 0
+		lineageTag: 82bde9b5-be7f-48a1-a44c-b460b5118a18
+		sourceLineageTag: total_orders
+		summarizeBy: sum
+		sourceColumn: total_orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_spend
+		dataType: double
+		lineageTag: 7bbc559f-964b-422f-a49c-0845bc1fc9d4
+		sourceLineageTag: total_spend
+		summarizeBy: sum
+		sourceColumn: total_spend
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_order_value
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: f5b187d9-6deb-4d2b-a4c2-46180f93edbf
+		sourceLineageTag: avg_order_value
+		summarizeBy: sum
+		sourceColumn: avg_order_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column last_order_date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: b78688f6-e119-47ac-b583-7cdd7b1d81ac
+		sourceLineageTag: last_order_date
+		summarizeBy: none
+		sourceColumn: last_order_date
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition unified_customer_360 = entity
+		mode: directLake
+		source
+			entityName: unified_customer_360
+			schemaName: dbo
+			expressionSource: 'DirectLake - Integration_LH'
+
