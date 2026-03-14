@@ -1,5 +1,5 @@
 
-# Project 3 — HR Analytics with Microsoft Fabric (Dataflows Gen2)
+# Project 3: HR Analytics with Microsoft Fabric (Dataflows Gen2)
 
 ## Overview
 This project demonstrates a complete **HR / People Analytics data pipeline built in Microsoft Fabric** using a hybrid approach:
