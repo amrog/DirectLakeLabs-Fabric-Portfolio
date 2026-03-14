@@ -70,7 +70,34 @@ Four tables were created and loaded: `crm_customers` (100 records), `erp_orders`
 
 ---
 
-### Step 2: Mirror the Database into Fabric
+### Step 2: Create the Operational Schema
+
+To simulate a production CRM/ERP environment, the operational schema was created directly inside the Azure SQL Database using the Azure Portal Query Editor. This approach mirrors how engineering teams often provision lightweight development or staging schemas without requiring external tooling.
+
+![Azure SQL Query Editor showing CRM table schema creation](screenshots/azure_sql_table_creation.png)
+
+The schema includes four tables that represent a simplified operational system:
+
+- `crm_customers` — Customer master records (CRM system)
+- `erp_orders` — Order headers
+- `erp_order_items` — Line items associated with each order
+- `erp_products` — Product catalog
+
+These tables simulate the type of transactional data typically produced by operational applications.
+
+---
+
+### Step 3: Verify the Operational Tables
+
+After creating the schema and loading sample data, the Azure SQL Query Editor confirms that all operational tables exist and are accessible.
+
+![Azure SQL database tables visible in query editor](screenshots/azure_sql_table_complete.png)
+
+This step mirrors a common production validation practice: verifying that source system tables exist and contain data before configuring downstream replication or integration services.
+
+---
+
+### Step 4: Mirror the Database into Fabric
 
 A Mirrored Azure SQL Database item (`CrossPlatform_Mirror`) was created in the Fabric workspace, connecting to the Azure SQL source. Fabric discovers the tables automatically and begins continuous replication into OneLake as Delta tables.
 
@@ -80,7 +107,7 @@ The verification query confirms all 4 source tables are visible in the mirrored 
 
 ---
 
-### Step 3: Create OneLake Shortcuts
+### Step 5: Create OneLake Shortcuts
 
 This is where data virtualization comes together. Inside `Integration_LH`, OneLake Shortcuts were created to reference Gold tables from two other Fabric workspaces — without copying any data.
 
@@ -94,7 +121,7 @@ After creating shortcuts, the `Integration_LH` lakehouse shows RetailOps Gold ta
 
 ---
 
-### Step 4: The OneLake Catalog View
+### Step 6: The OneLake Catalog View
 
 The OneLake catalog provides a unified view of all data assets across the tenant. Here you can see the integration pattern clearly — `Integration_LH` and `CrossPlatform_Mirror` are the two primary items in the `CrossPlatform_Integration` workspace, alongside data from other workspaces (HR_LH, FinanceOps_DW, RetailOps_LH) that are referenced through shortcuts.
 
@@ -102,7 +129,7 @@ The OneLake catalog provides a unified view of all data assets across the tenant
 
 ---
 
-### Step 5: Build Unified Analytical Tables
+### Step 7: Build Unified Analytical Tables
 
 A notebook (`NB_CrossPlatform_Analytics`) joins data across all three sources using Spark SQL — mirrored CRM/ERP data, shortcutted RetailOps sales data, and shortcutted HR workforce data — to produce three unified analytical tables.
 
@@ -115,7 +142,7 @@ The semantic model exposes these three tables:
 
 ---
 
-### Step 6: Cross-Platform Power BI Report
+### Step 8: Cross-Platform Power BI Report
 
 **Page 1: Cross-Platform Overview**
 
