@@ -185,13 +185,13 @@ Single-page dashboard with:
 
 | | |
 |---|---|
-| ![Workspace](workspace_overview.png) | ![Lakehouse](lakehouse_structure.png) |
+| ![Workspace](images/workspace_overview.png) | ![Lakehouse](images/lakehouse_structure.png) |
 | Workspace overview | Lakehouse with all medallion layers |
-| ![Bronze Ingest](notebook_bronze_ingest.png) | ![Silver Clean](notebook_silver_clean.png) |
+| ![Bronze Ingest](images/notebook_bronze_ingest.png) | ![Silver Clean](images/notebook_silver_clean.png) |
 | Bronze ingestion with metadata | Silver dedup with window functions |
-| ![Gold Modeling](notebook_gold_model.png) | ![Report](power_bi_report.png) |
+| ![Gold Modeling](images/notebook_gold_model.png) | ![Report](images/power_bi_report.png) |
 | Gold star schema in Spark SQL | Final Power BI dashboard |
-| ![Semantic Model](semantic_model_overview.png) | ![Semantic Diagram](semantic_model_diagram.png) |
+| ![Semantic Model](images/semantic_model_overview.png) | ![Semantic Diagram](images/semantic_model_diagram.png) |
 | Semantic model tables | Star schema relationships ||
 
 ---
