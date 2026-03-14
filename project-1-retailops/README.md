@@ -1,4 +1,4 @@
-# RetailOps Analytics — End-to-End Data Engineering in Microsoft Fabric
+# Project 1 & 2: RetailOps Analytics — End-to-End Data Engineering in Microsoft Fabric
 
 This is my first real end-to-end data engineering project. I built it from scratch in Microsoft Fabric — from generating synthetic retail data all the way through to a Power BI report. No templates, no follow-along tutorials. Just me, a lakehouse, and a lot of coffee at Brot in Orange, CA.
 
